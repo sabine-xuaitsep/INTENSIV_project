@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "sass": "^1.32.13"
+  }, 
+  "scripts": {
+    "dev": "parcel serve src/index.html",
+    "clean": "rmdir dist .cache /s /q"
+  }
+}
