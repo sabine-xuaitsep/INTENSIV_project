@@ -7,8 +7,42 @@
 // MODULE VARIABLES
 // ---------------------------------
 
+$colorAccent: #18bfff;
+$colorLight: #f6f6f6;
+$colorDim: #717981;
+$colorDusky: #4e403d;
+$colorDark: #212931;
+
+$colors: (
+  'accent': $colorAccent, 
+  'white': #fff,
+  'light': $colorLight, 
+  'dim': $colorDim, 
+  'dusky': $colorDusky, 
+  'dark': $colorDark
+  );
 
 
 // ---------------------------------
 // MODULE SPECIFICATIONS
 // ---------------------------------
+
+body {
+  background: radial-gradient(50% 13% at 50% 7%, $colorDusky, $colorDark);
+}
+
+.bckgrnd-nav {
+  background: radial-gradient(#6a605a, #494e53);
+}
+
+@each $label, $color in $colors {
+  // bckgrnd-x
+  .bckgrnd-#{$label} {
+    background: #{$color};
+  }
+  .color-#{$label} {
+    // color-x
+    color: #{$color};
+  }
+}
+

@@ -35,6 +35,13 @@ body {
   margin: 0 auto;
 }
 
+// HR -------------
+hr {
+  border: none;
+  border-top: $colorLight 2px solid;
+  margin: 3rem 0;
+}
+
 // RESET -------------
 ul, ol, figure {
   margin: 0;
