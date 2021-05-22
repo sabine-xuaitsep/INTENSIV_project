@@ -9,464 +9,468 @@
 </head>
 <body>
 
-  <header class="siteHeader">
-    <h1>Intensiv'</h1>
-    <nav class="mainNav">
-      <ul>
-        <li class="mainNavItem"><a href="index.html">This is Intensiv'</a></li>
-        <li class="mainNavItem"><a href="generic.html">Generic Page</a></li>
-        <li class="isActive mainNavItem"><a href="elements.html">Elements Reference</a></li>
+  <header>
+    <div class="appHeader">
+      <h1 class="display-none appHeader__title">This is Intensiv'</h1>
+      <h2 class="display-none appHeader__subtitle">A fully responsive HTML5 + CSS3 design by <a href="https://github.com/sabine-xuaitsep">SaBiNeXuaiTseP</a> for <a href="https://www.promotion-sociale.be/">IEPS</a> and release for free under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license.</a></h2>
+      <div class="appHeader__logo"><a href="./index.html">Intensiv'</a></div>
+    </div>
+    <div class="container">
+      <nav>
+        <ul class="mainNav">
+          <li class="mainNav__item"><a href="./index.html">This is Intensiv'</a></li>
+          <li class="mainNav__item"><a href="./generic.html">Generic Page</a></li>
+          <li class="isActive mainNav__item"><a href="./elements.html">Elements Reference</a></li>
+        </ul>
+      </nav>
+      <ul class="socialNav">
+        <li class="socialNav__item"><a href="#">Twitter</a></li>
+        <li class="socialNav__item"><a href="#">Facebook</a></li>
+        <li class="socialNav__item"><a href="#">Instagram</a></li>
+        <li class="socialNav__item"><a href="#">GitHub</a></li>
       </ul>
-    </nav>
-    <ul class="socialNav ">
-      <li class="socialItem"><a href="#">Twitter</a></li>
-      <li class="socialItem"><a href="#">Facebook</a></li>
-      <li class="socialItem"><a href="#">Instagram</a></li>
-      <li class="socialItem"><a href="#">GitHub</a></li>
-    </ul>
+    </div>
   </header>
 
   <div class="container">
     <main class="mainContent">
-      <h1>Elements Reference</h1>
-      <section>
-        <h2>Colors</h2>
-        <div class="colorBlock"></div>
-        <div class="colorBlock"></div>
-        <div class="colorBlock"></div>
-        <div class="colorBlock"></div>
-        <div class="colorBlock"></div>
-      </section>
-  
-      <hr />
-  
-      <section>
-        <h2>Text - "Merriweather", Georgia, serif | #212931</h2>
-        <p>
-          This is <strong>strong</strong> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <span class="underlined">underlined</span> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.
-        </p>
-      </section>
 
-      <hr />
-  
-      <section>
-        <h2>Headers - "Source Sans Pro", Helvetica, sans-serif | #212931</h2>
-        <h1>HEADING LEVEL 1</h1>
-        <h2>HEADING LEVEL 2</h2>
-        <h3>HEADING LEVEL 3</h3>
-        <h4>HEADING LEVEL 4</h4>
-        <h5>HEADING LEVEL 5</h5>
-        <h6>HEADING LEVEL 6</h6>
-      </section>
+      <article>
+        <h1>Elements Reference</h1>
 
-      <hr />
-  
-      <section>
-        <h2>Heading with a subtitle</h2>
-        <div class="subTitle-1">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</div>
-        <p>
-          Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
-        </p>
-
-        <h3>Heading with a subtitle</h3>
-        <div class="subTitle-2">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</div>
-        <p>
-          Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
-        </p>
-
-        <h4>Heading with a subtitle</h4>
-        <div class="subTitle-3">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</div>
-        <p>
-          Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
-        </p>
-      </section>
-
-      <hr />
-
-      <section>
-
-        <h2>Lists</h2>
-
-        <h3>Unordered - UL</h3>
-        <ul class="ul">
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Ipsam, magni? Reiciendis, distinctio.</li>
-          <li>Alias incidunt obcaecati nesciunt.</li>
-          <li>Libero impedit nesciunt reprehenderit.</li>
-        </ul>
-        <h3>Alternate - UL.alernate</h3>
-        <ul class="ul-alt">
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Ipsam, magni? Reiciendis, distinctio.</li>
-          <li>Alias incidunt obcaecati nesciunt.</li>
-          <li>Libero impedit nesciunt reprehenderit.</li>
-        </ul>
-        <h3>Ordered - OL</h3>
-        <ol>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Non ipsa magni necessitatibus.</li>
-          <li>Eius consequuntur cum aperiam?</li>
-          <li>Deleniti odit quidem tempora!</li>
-        </ol>
-
-        <h3>Icons</h3>
-        <ul class="socialNav ">
-          <li class="socialItem"><a href="#">Twitter</a></li>
-          <li class="socialItem"><a href="#">Facebook</a></li>
-          <li class="socialItem"><a href="#">Instagram</a></li>
-          <li class="socialItem"><a href="#">GitHub</a></li>
-        </ul>
-        <ul class="socialNav ">
-          <li class="socialItem socialItemAlt"><a href="#">Twitter</a></li>
-          <li class="socialItem socialItemAlt"><a href="#">Facebook</a></li>
-          <li class="socialItem socialItemAlt"><a href="#">Instagram</a></li>
-          <li class="socialItem socialItemAlt"><a href="#">GitHub</a></li>
-        </ul>
-
-        <h3>Definition</h3>
-        <dl>
-          <dt>Item 1</dt>
-          <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
-        </dl>
-        <dl>
-          <dt>Item 2</dt>
-          <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
-        </dl>
-        <dl>
-          <dt>Item 3</dt>
-          <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
-        </dl>
-
-        <h3>Actions</h3>
-        <div>
-          <input type="submit" value="Primary" class="btn btnPrimary"/>
-          <input type="submit" value="Default" class="btn"/>
-        </div>
-        <div>
-          <input type="submit" value="Small" class="btn btnPrimary btnSmall"/>
-          <input type="submit" value="Small" class="btn btnSmall"/>
-        </div>
-        <div>
-          <input type="submit" value="Default" class="btn btnPrimary"/>
-          <input type="submit" value="Default" class="btn"/>
-        </div>
-        <div>
-          <input type="submit" value="Small" class="btn btnPrimary btnSmall"/>
-          <input type="submit" value="Small" class="btn btnSmall"/>
-        </div>
-        <div>
-          <input type="submit" value="Default" class="btn btnPrimary btnFit"/>
-          <input type="submit" value="Default" class="btn btnFit"/>
-        </div>
-        <div>
-          <input type="submit" value="Small" class="btn btnPrimary btnFit"/>
-          <input type="submit" value="Small" class="btn btnFit"/>  
-        </div>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Blockquote</h2>
-        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate officia consectetur laudantium iure minus eligendi laboriosam itaque est beatae culpa magni incidunt consequuntur quaerat sapiente, quo enim dolor corporis!</blockquote>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Table</h2>
-
-        <h3>Default</h3>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Item 1</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-            <tr>
-              <td>Item 2</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>19.99</td>
-            </tr>
-            <tr>
-              <td>Item 3</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-            <tr>
-              <td>Item 4</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>19.99</td>
-            </tr>
-            <tr>
-              <td>Item 5</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="2"></td>
-              <td>100.00</td>
-            </tr>
-          </tfoot>
-        </table>
-
-        <h3>Alternate</h3>
-        <table class="table tableAlt">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Item 1</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-            <tr>
-              <td>Item 2</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>19.99</td>
-            </tr>
-            <tr>
-              <td>Item 3</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-            <tr>
-              <td>Item 4</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>19.99</td>
-            </tr>
-            <tr>
-              <td>Item 5</td>
-              <td>Lorem ipsum dolor sit amet.</td>
-              <td>29.99</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="2"></td>
-              <td>100.00</td>
-            </tr>
-          </tfoot>
-        </table>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Buttons</h2>
-        <div>
-          <button class="btn btnPrimary">Primary</button>
-          <button class="btn">Default</button>
-        </div>
-        <div>
-          <button class="btn btnPrimary btnLarge">Large</button>
-          <button class="btn">Default</button>
-          <button class="btn btnSmall">Small</button>
-        </div>
-        <div>
-          <button class="btn btnPrimary btnFit">Fit</button>
-          <button class="btn btnFit">Fit</button>
-        </div>
-        <div>
-          <button class="btn btnPrimary btnFit btnSmall">Fit + Small</button>
-          <button class="btn btnFit btnSmall">Fit + Small</button>
-        </div>
-        <div>
-          <button class="btn btnPrimary btnIcon">Icon</button>
-          <button class="btn btnIcon">Icon</button>
-        </div>
-        <div>
-          <button class="btn btnPrimary btnDisabled">Primary</button>
-          <button class="btn btnDisabled">Default</button>
-        </div>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Form</h2>
-
-        <form action="elements.html" method="get">
-          <div>
-            <label>Name
-              <input type="text" name="name" placeholder="Name" />
-            </label>
-  
-            <label>Email
-              <input type="email" name="email" placeholder="Email" />
-            </label>
-          </div>
-
-          <div>
-            <label>-Category-
-              <select name="category">
-                <option disabled selected>-Category-</option>
-                <option value="baraki">Baraki</option>
-                <option value="deglingo">Déglingo</option>
-                <option value="groseille">Groseille</option>
-              </select>
-            </label>
-          </div>
-
-          <div>
-            <label><input type="radio" name="intensity" value="low" checked="checked" />Low</label>
-            <label><input type="radio" name="intensity" value="normal" />Normal</label>
-            <label><input type="radio" name="intensity" value="high" />High</label>
-          </div>
-
-          <div>
-            <label>Email a copy
-              <input type="checkbox" name="mailCopy" />Email me a copy
-            </label>
-  
-            <label>Human?
-              <input type="checkbox" name="humanNonRobot" />I'm a human
-            </label>
-          </div>
-
-          <div>
-            <label>Message
-              <textarea name="message" placeholder="Enter your message"></textarea>
-            </label>
-          </div>
-
-          <div>
-            <input type="submit" value="Send Message" class="btn btnPrimary"/>
-            <input type="reset" value="Reset" class="btn" />
-          </div>
-          
-        </form>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Image</h2>
-        <h3>Fit</h3>
-        <img src="https://picsum.photos/600" alt="Lorem Picsum">
-        <div>
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-          <img src="https://picsum.photos/100" alt="Lorem Picsum">
-        </div>
-
-        <h3>Left & Right</h3>
-        <div>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum" class="leftFloat">
+        <section>
+          <h2>Colors</h2>
+          <div class="box__thumb bckgrnd-accent color-light">#18bffff</div>
+          <div class="box__thumb bckgrnd-light color-light">#f6f6f6</div>
+          <div class="box__thumb bckgrnd-dim">#717981</div>
+          <div class="box__thumb bckgrnd-dusky color-light">#4e403d</div>
+          <div class="box__thumb bckgrnd-dark color-light">#212931</div>
+        </section>
+    
+        <hr />
+    
+        <section>
+          <h2>Text <span class="h5">- "Merriweather", Georgia, serif | #212931</span></h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem temporibus a animi cumque consectetur dolore, ipsa, tempore numquam fugit est porro doloremque esse aut illum quam voluptas. Non vel dolores cumque veniam modi minus omnis sunt ad quis consequuntur aperiam expedita, officia nostrum, inventore obcaecati animi, fuga ducimus illo rerum mollitia provident assumenda quisquam! Id labore perspiciatis tempora libero. Tempore ea dignissimos dolorum! Soluta ducimus, assumenda, pariatur incidunt ratione eligendi optio repudiandae quia dolor minus nemo sed mollitia adipisci voluptate ullam doloribus laudantium ex voluptatem dolorum quis odio odit, amet aspernatur laboriosam? Repellat perferendis temporibus, rem placeat labore inventore! Natus!
+            This is <strong>strong</strong> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <span class="txt-underlined">underlined</span> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.
           </p>
-        </div>
-        <div>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum" class="leftRight">
+        </section>
+  
+        <hr />
+    
+        <section>
+          <h2>Headers <span class="h5">- "Source Sans Pro", Helvetica, sans-serif | #212931</span></h2>
+          <h1 class="h1">HEADING LEVEL 1</h1>
+          <h2 class="h2">HEADING LEVEL 2</h2>
+          <h3 class="h3">HEADING LEVEL 3</h3>
+          <h4 class="h4">HEADING LEVEL 4</h4>
+          <h5 class="h5">HEADING LEVEL 5</h5>
+          <h6 class="h6">HEADING LEVEL 6</h6>
+        </section>
+  
+        <hr />
+    
+        <section>
+          <h2>Heading with a subtitle</h2>
+          <p class="subtitle2">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem temporibus a animi cumque consectetur dolore, ipsa, tempore numquam fugit est porro doloremque esse aut illum quam voluptas. Non vel dolores cumque veniam modi minus omnis sunt ad quis consequuntur aperiam expedita, officia nostrum, inventore obcaecati animi, fuga ducimus illo rerum mollitia provident assumenda quisquam! Id labore perspiciatis tempora libero. Tempore ea dignissimos dolorum! Soluta ducimus, assumenda, pariatur incidunt ratione eligendi optio repudiandae quia dolor minus nemo sed mollitia adipisci voluptate ullam doloribus laudantium ex voluptatem dolorum quis odio odit, amet aspernatur laboriosam? Repellat perferendis temporibus, rem placeat labore inventore! Natus!
+            Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
           </p>
-        </div>
-      </section>
-
-      <hr />
-
-      <section>
-        <h3>Box</h3>
-        <div>
+  
+          <h3>Heading with a subtitle</h3>
+          <p class="subtitle3">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente possimus cum sed reiciendis sint quibusdam, recusandae iure, totam perspiciatis consectetur earum ullam sequi fugit nam maiores dolore maxime. Inventore neque id quis blanditiis quidem delectus fugit unde? Rem quos similique placeat in, obcaecati assumenda earum aspernatur eligendi magni? Consectetur vitae, nesciunt ex porro eos itaque blanditiis, officiis voluptas sit iste laborum sequi eum harum molestias minus. Vitae quod et facere. Dolor blanditiis repellat nam odit dolore maiores deserunt nostrum natus ipsam adipisci hic mollitia corporis consequuntur corrupti aspernatur similique, excepturi a nisi neque? Adipisci numquam magni cupiditate cumque architecto.
+            Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
           </p>
-        </div>
-      </section>
-
-      <hr />
-
-      <section>
-
-        <h2>Preformatted</h2>
-        <pre>
-          <code>
-            i = 0;
-
-            while (!deck.isInOrder()) {
-                print 'Iteration ' + i;
-                deck.shuffle();
-                i++;
-            }
-
-            print 'It took ' + i + ' iterations to sort the deck.';
-          </code>
-        </pre>
-
-      </section>
-
-      <footer>
-
-        <div>
-          <form action="elements.html" method="get">
-            <label>Name
-              <input type="text" name="name" />
-            </label>
-    
-            <label>Email
-              <input type="email" name="email" />
-            </label>
-    
-            <label>Message
-              <textarea name="message" placeholder="Enter your message"></textarea>
-            </label>
-    
-            <input type="submit" value="Send Message" class="btn"/>
-          </form>
-        </div>
-    
-        <address>
-          <div>
-            9 rue Charles Deliège 4247 <br />
-            Fléron, TN 00000-0000
-          </div>
-      
-          <div>
-            <a href="tel:+0000000000">(000) 000-0000</a>
-          </div>
-      
-          <div>
-            <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
-          </div>
-        </address>
-        <div>
-          <ul class="socialNav ">
-            <li class="socialItem"><a href="#">Twitter</a></li>
-            <li class="socialItem"><a href="#">Facebook</a></li>
-            <li class="socialItem"><a href="#">Instagram</a></li>
-            <li class="socialItem"><a href="#">GitHub</a></li>
+  
+          <h4>Heading with a subtitle</h4>
+          <p class="subtitle4">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+          <p>
+            Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
+          </p>
+        </section>
+  
+        <hr />
+  
+        <section>
+  
+          <h2>Lists</h2>
+  
+          <h3>Unordered - UL</h3>
+          <ul class="uList">
+            <li class="uList__item">Lorem ipsum dolor sit.</li>
+            <li class="uList__item">Ipsam, magni? Reiciendis, distinctio.</li>
+            <li class="uList__item">Alias incidunt obcaecati nesciunt.</li>
+            <li class="uList__item">Libero impedit nesciunt reprehenderit.</li>
           </ul>
-        </div>
+  
+          <h3>Alternate - UL.alernate</h3>
+          <ul class="uList--alt">
+            <li class="uList__item">Lorem ipsum dolor sit.</li>
+            <li class="uList__item">Ipsam, magni? Reiciendis, distinctio.</li>
+            <li class="uList__item">Alias incidunt obcaecati nesciunt.</li>
+            <li class="uList__item">Libero impedit nesciunt reprehenderit.</li>
+          </ul>
+  
+          <h3>Ordered - OL</h3>
+          <ol class="oList">
+            <li class="oList__item">Lorem ipsum dolor sit.</li>
+            <li class="oList__item">Non ipsa magni necessitatibus.</li>
+            <li class="oList__item">Eius consequuntur cum aperiam?</li>
+            <li class="oList__item">Deleniti odit quidem tempora!</li>
+          </ol>
+  
+          <h3>Icons</h3>
+          <ul class="socialNav">
+            <li class="socialNav__item"><a href="#">Twitter</a></li>
+            <li class="socialNav__item"><a href="#">Facebook</a></li>
+            <li class="socialNav__item"><a href="#">Instagram</a></li>
+            <li class="socialNav__item"><a href="#">GitHub</a></li>
+          </ul>
+          <ul class="socialNav">
+            <li class="socialNav__item--alt"><a href="#">Twitter</a></li>
+            <li class="socialNav__item--alt"><a href="#">Facebook</a></li>
+            <li class="socialNav__item--alt"><a href="#">Instagram</a></li>
+            <li class="socialNav__item--alt"><a href="#">GitHub</a></li>
+          </ul>
+  
+          <h3>Deescription list</h3>
+          <dl>
+            <dt>Definition 1</dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
+          </dl>
+          <dl>
+            <dt>Definition 2</dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
+          </dl>
+          <dl>
+            <dt>Definition 3</dt>
+            <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
+          </dl>
+  
+        <hr />
+  
+        <section>
+          <h2>Blockquote</h2>
+          <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate officia consectetur laudantium iure minus eligendi laboriosam itaque est beatae culpa magni incidunt consequuntur quaerat sapiente, quo enim dolor corporis!</blockquote>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h2>Table</h2>
+  
+          <table class="table">
+            <caption class="h3">Default</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>19.99</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>19.99</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"></td>
+                <td>100.00</td>
+              </tr>
+            </tfoot>
+          </table>
+  
+          <table class="table--alt">
+            <caption class="h3">Alternate</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>19.99</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>19.99</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Lorem ipsum dolor sit amet.</td>
+                <td>29.99</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"></td>
+                <td>100.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h3>CTAs</h3>
+          <div>
+            <input type="submit" value="inputSubmit Primary" class="btn--primary" />
+            <input type="submit" value="inputSubmit Default" class="btn" />
+          </div>
+          <div>
+            <input type="reset" value="inputReset Primary" class="btn--primary" />
+            <input type="reset" value="inputReset Default" class="btn" />
+          </div>
+          <div>
+            <input type="button" value="inputButton Primary" class="btn--primary" />
+            <input type="button" value="inputButton Default" class="btn" />
+          </div>
+          <div>
+            <a href="#" class="btn--primary">Link Primary</a>
+            <a href="#" class="btn">Link Default</a>
+          </div>
+          <div>
+            <button class="btn--primary">Button Primary</button>
+            <button class="btn">Button Default</button>
+          </div>
+        </section>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h2>Buttons</h2>
+          <div>
+            <button class="btn--primary">Primary</button>
+            <button class="btn">Default</button>
+          </div>
+          <div>
+            <button class="btn--primary btn--large">Primary Large</button>
+            <button class="btn">Default</button>
+            <button class="btn btn--small">Default Small</button>
+          </div>
+          <div>
+            <button class="btn--primary full-width">Primary Fit</button>
+            <button class="btn full-width">Default Fit</button>
+          </div>
+          <div>
+            <button class="btn--primary btn--small full-width">Primary Fit + Small</button>
+            <button class="btn--small full-width">Default Fit + Small</button>
+          </div>
+          <div>
+            <button class="btn--primary btn--icon">Primary Icon</button>
+            <button class="btn--icon">Default Icon</button>
+          </div>
+          <div>
+            <button class="btn--primary" disabled="disabled">Primary</button>
+            <button class="btn" disabled="disabled">Default</button>
+          </div>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h2>Form</h2>
+          <form action="elements.html" method="get">
+            <fieldset>
+              <legend>Personal data</legend>
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Name" />
     
-      </footer>
+              <label for="email">Name</label>
+              <input type="email" name="email" id="email" placeholder="Email" />
+            </fieldset>
+  
+            <label for="category">Category</label>
+            <select name="category" id="category">
+              <option disabled="disabled" selected="selected">-Category-</option>
+              <option value="baraki">Baraki</option>
+              <option value="deglingo">Déglingo</option>
+              <option value="groseille">Groseille</option>
+            </select>
+  
+            <fieldset>
+              <legend>Intensity</legend>
+              <input type="radio" name="intensity" id="low" value="low" checked="checked" />
+              <label for="low">Low</label>
+              
+              <input type="radio" name="intensity" id="normal" value="normal" />
+              <label for="normal">Normal</label>
+              
+              <input type="radio" name="intensity" id="high" value="high" />
+              <label for="high">High</label>
+            </fieldset>
+  
+            <div>
+              <input type="checkbox" name="mailCopy" id="mailCopy" />
+              <label for="mailCopy">Email me a copy</label>
+    
+              <input type="checkbox" name="humanNonRobot" id="humanNonRobot" />
+              <label for="humanNonRobot">I'm a human</label>
+            </div>
+  
+            <label for="message">Votre message</label>
+            <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+  
+            <input type="submit" value="Send Message" class="btn--primary"/>
+            <input type="reset" value="Reset" class="btn" />
+          </form>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h2>Image</h2>
+          <h3>Fit</h3>
+          <img src="https://picsum.photos/600" alt="Lorem Picsum">
+          <div>
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+            <img src="https://picsum.photos/100" alt="Lorem Picsum">
+          </div>
+  
+          <h3>Left & Right</h3>
+          <div>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum" class="float-left">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem temporibus a animi cumque consectetur dolore, ipsa, tempore numquam fugit est porro doloremque esse aut illum quam voluptas. Non vel dolores cumque veniam modi minus omnis sunt ad quis consequuntur aperiam expedita, officia nostrum, inventore obcaecati animi, fuga ducimus illo rerum mollitia provident assumenda quisquam! Id labore perspiciatis tempora libero. Tempore ea dignissimos dolorum! Soluta ducimus, assumenda, pariatur incidunt ratione eligendi optio repudiandae quia dolor minus nemo sed mollitia adipisci voluptate ullam doloribus laudantium ex voluptatem dolorum quis odio odit, amet aspernatur laboriosam? Repellat perferendis temporibus, rem placeat labore inventore! Natus!
+            </p>
+          </div>
+          <div>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum" class="float-right">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem temporibus a animi cumque consectetur dolore, ipsa, tempore numquam fugit est porro doloremque esse aut illum quam voluptas. Non vel dolores cumque veniam modi minus omnis sunt ad quis consequuntur aperiam expedita, officia nostrum, inventore obcaecati animi, fuga ducimus illo rerum mollitia provident assumenda quisquam! Id labore perspiciatis tempora libero. Tempore ea dignissimos dolorum! Soluta ducimus, assumenda, pariatur incidunt ratione eligendi optio repudiandae quia dolor minus nemo sed mollitia adipisci voluptate ullam doloribus laudantium ex voluptatem dolorum quis odio odit, amet aspernatur laboriosam? Repellat perferendis temporibus, rem placeat labore inventore! Natus!
+            </p>
+          </div>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h3>Box</h3>
+          <div class="box">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente possimus cum sed reiciendis sint quibusdam, recusandae iure, totam perspiciatis consectetur earum ullam sequi fugit nam maiores dolore maxime. Inventore neque id quis blanditiis quidem delectus fugit unde? Rem quos similique placeat in, obcaecati assumenda earum aspernatur eligendi magni? Consectetur vitae, nesciunt ex porro eos itaque blanditiis, officiis voluptas sit iste laborum sequi eum harum molestias minus. Vitae quod et facere. Dolor blanditiis repellat nam odit dolore maiores deserunt nostrum natus ipsam adipisci hic mollitia corporis consequuntur corrupti aspernatur similique, excepturi a nisi neque? Adipisci numquam magni cupiditate cumque architecto.
+            </p>
+          </div>
+        </section>
+  
+        <hr />
+  
+        <section>
+          <h2>Preformatted</h2>
+          <pre><code>
+              i = 0;
+  
+              while (!deck.isInOrder()) {
+                  print 'Iteration ' + i;
+                  deck.shuffle();
+                  i++;
+              }
+  
+              print 'It took ' + i + ' iterations to sort the deck.';
+          </code></pre>
+        </section>
+      </article>
 
     </main>
   </div>
 
   <footer>
+    <div class="container">
+      <div>
+        <form action="elements.html" method="get">
+          <label>Name
+            <input type="text" name="name" />
+          </label>
+  
+          <label>Email
+            <input type="email" name="email" />
+          </label>
+  
+          <label>Message
+            <textarea name="message" placeholder="Enter your message"></textarea>
+          </label>
+  
+          <input type="submit" value="Send Message" class="btn"/>
+        </form>
+      </div>
+  
+      <address>
+        <div>
+          Address 
+          <span>
+            9 rue Charles Deliège 4247 <br />
+            Fléron, TN 00000-0000
+          </span>
+        </div>
+    
+        <div>
+          Phone
+          <a href="tel:+0000000000">(000) 000-0000</a>
+        </div>
+    
+        <div>
+          Email
+          <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
+        </div>
+      </address>
+      <div>
+        <ul class="socialNav ">
+          <li class="socialNav__item"><a href="#">Twitter</a></li>
+          <li class="socialNav__item"><a href="#">Facebook</a></li>
+          <li class="socialNav__item"><a href="#">Instagram</a></li>
+          <li class="socialNav__item"><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div>&copy; SaBiNeXuaiTseP | Design: IEPS</div>
   </footer>
 

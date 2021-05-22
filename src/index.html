@@ -9,50 +9,63 @@
 </head>
 <body>
 
-  <header class="siteHeader">
-    <h1>This is Intensiv'</h1>
-    <h2>A fully responsive HTML5 + CSS3 design by <a href="https://github.com/sabine-xuaitsep">SaBiNeXuaiTseP</a> for <a href="https://www.promotion-sociale.be/">IEPS</a> and release for free under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license.</a></h2>
-    <nav class="mainNav">
-      <ul>
-        <li class="isActive mainNavItem"><a href="index.html">This is Intensiv'</a></li>
-        <li class="mainNavItem"><a href="generic.html">Generic Page</a></li>
-        <li class="mainNavItem"><a href="elements.html">Elements Reference</a></li>
+  <header class="appHeader">
+    <div class="appHeader">
+      <h1 class="appHeader__title">This is Intensiv'</h1>
+      <h2 class="appHeader__subtitle">A fully responsive HTML5 + CSS3 design by <a href="https://github.com/sabine-xuaitsep">SaBiNeXuaiTseP</a> for <a href="https://www.promotion-sociale.be/">IEPS</a> and release for free under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons license.</a></h2>
+      <div class="display-none appHeader__logo"><a href="./index.html">Intensiv'</a></div>
+    </div>
+    <div class="container">
+      <nav>
+        <ul class="mainNav">
+          <li class="isActive mainNav__item"><a href="./index.html">This is Intensiv'</a></li>
+          <li class="mainNav__item"><a href="./generic.html">Generic Page</a></li>
+          <li class="mainNav__item"><a href="./elements.html">Elements Reference</a></li>
+        </ul>
+      </nav>
+      <ul class="socialNav">
+        <li class="socialNav__item"><a href="#">Twitter</a></li>
+        <li class="socialNav__item"><a href="#">Facebook</a></li>
+        <li class="socialNav__item"><a href="#">Instagram</a></li>
+        <li class="socialNav__item"><a href="#">GitHub</a></li>
       </ul>
-    </nav>
-    <ul class="socialNav ">
-      <li class="socialItem"><a href="#">Twitter</a></li>
-      <li class="socialItem"><a href="#">Facebook</a></li>
-      <li class="socialItem"><a href="#">Instagram</a></li>
-      <li class="socialItem"><a href="#">GitHub</a></li>
-    </ul>
+    </div>
   </header>
 
   <div class="container">
     <main class="mainContent">
 
       <article>
-        <div>
-          <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-        </div>
-        <h1>
-          And this is an Intensiv' Headline
-        </h1>
-        <p class="subTitle">
+        <header>
+          <div>
+            <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+          </div>
+          <h1>
+            And this is an Intensiv' Headline
+          </h1>
+        </header>
+        <figure>
+          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+        </figure>
+        <p class="subtitle2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
         </p>
-        <img src="https://picsum.photos/600" alt="Lorem Picsum">
-        <button class="btn btnLarge">Full story</button>
+        <button class="btn--large">Full story</button>
       </article>
 
       <div>
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Lorem ipsum dolor sit
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Lorem ipsum dolor sit
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -60,13 +73,17 @@
         </article>
 
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Amet consectetur adipisicing elit
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Amet consectetur adipisicing elit
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -74,13 +91,17 @@
         </article>
 
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Earum cupiditate aliquid ducimus
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Earum cupiditate aliquid ducimus
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -88,13 +109,17 @@
         </article>
 
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Expedita dignissimos corrupti officiis
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Expedita dignissimos corrupti officiis
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -102,13 +127,17 @@
         </article>
 
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Voluptates laboriosam sit exercitationem
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Voluptates laboriosam sit exercitationem
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -116,13 +145,17 @@
         </article>
 
         <article>
-          <div>
-            <time datetime="2018-07-07">June 33, 2021</time> | Author: Sabine Xuaitsep
-          </div>
-          <h2>
-            Facere architecto magni aliquid
-          </h2>
-          <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          <header>
+            <div>
+              <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
+            </div>
+            <h1 class="h2">
+              Facere architecto magni aliquid
+            </h1>
+          </header>
+          <figure>
+            <img src="https://picsum.photos/200" alt="Lorem Picsum">
+          </figure>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum cupiditate aliquid ducimus sunt expedita dignissimos corrupti officiis magni animi. Voluptates laboriosam sit, exercitationem enim excepturi facere architecto magni aliquid veritatis.
           </p>
@@ -131,66 +164,68 @@
       </div>
 
       <ol class="pageNav">
-        <li class="pageNavItem">1</li>
-        <li class="pageNavItem">2</li>
-        <li class="pageNavItem">3</li>
-        <li class="pageNavItem">...</li>
-        <li class="pageNavItem">8</li>
-        <li class="pageNavItem">9</li>
-        <li class="pageNavItem">10</li>
-        <li class="pageNavItem">Next</li>
+        <li class="pageNav__item">1</li>
+        <li class="pageNav__item">2</li>
+        <li class="pageNav__item">3</li>
+        <li class="pageNav__item">...</li>
+        <li class="pageNav__item">8</li>
+        <li class="pageNav__item">9</li>
+        <li class="pageNav__item">10</li>
+        <li class="pageNav__item">Next</li>
       </ol>
-
-
-      <footer>
-
-        <div>
-          <form action="elements.html" method="get">
-            <label>Name
-              <input type="text" name="name" />
-            </label>
-    
-            <label>Email
-              <input type="email" name="email" />
-            </label>
-    
-            <label>Message
-              <textarea name="message" placeholder="Enter your message"></textarea>
-            </label>
-    
-            <input type="submit" value="Send Message" class="btn"/>
-          </form>
-        </div>
-    
-        <address>
-          <div>
-            9 rue Charles Deliège 4247 <br />
-            Fléron, TN 00000-0000
-          </div>
-      
-          <div>
-            <a href="tel:+0000000000">(000) 000-0000</a>
-          </div>
-      
-          <div>
-            <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
-          </div>
-        </address>
-        <div>
-          <ul class="socialNav ">
-            <li class="socialItem"><a href="#">Twitter</a></li>
-            <li class="socialItem"><a href="#">Facebook</a></li>
-            <li class="socialItem"><a href="#">Instagram</a></li>
-            <li class="socialItem"><a href="#">GitHub</a></li>
-          </ul>
-        </div>
-    
-      </footer>
 
     </main>
   </div>
 
   <footer>
+    <div class="container">
+      <div>
+        <form action="elements.html" method="get">
+          <label>Name
+            <input type="text" name="name" />
+          </label>
+  
+          <label>Email
+            <input type="email" name="email" />
+          </label>
+  
+          <label>Message
+            <textarea name="message" placeholder="Enter your message"></textarea>
+          </label>
+  
+          <input type="submit" value="Send Message" class="btn"/>
+        </form>
+      </div>
+  
+      <address>
+        <div>
+          Address 
+          <span>
+            9 rue Charles Deliège 4247 <br />
+            Fléron, TN 00000-0000
+          </span>
+        </div>
+    
+        <div>
+          Phone
+          <a href="tel:+0000000000">(000) 000-0000</a>
+        </div>
+    
+        <div>
+          Email
+          <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
+        </div>
+      </address>
+      <div>
+        <ul class="socialNav ">
+          <li class="socialNav__item"><a href="#">Twitter</a></li>
+          <li class="socialNav__item"><a href="#">Facebook</a></li>
+          <li class="socialNav__item"><a href="#">Instagram</a></li>
+          <li class="socialNav__item"><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div>&copy; SaBiNeXuaiTseP | Design: IEPS</div>
   </footer>
 
