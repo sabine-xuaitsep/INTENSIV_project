@@ -1,7 +1,7 @@
 // ./hectordenizeCSS/modules/_boxes.scss
 // BOXES MODULE
 
-
+@use "sass:map";
 
 // ---------------------------------
 // MODULE VARIABLES
@@ -12,3 +12,29 @@
 // ---------------------------------
 // MODULE SPECIFICATIONS
 // ---------------------------------
+
+* {
+  box-sizing: border-box;
+}
+
+// CONTAINER for XS screen (all), S screen, M screen, L screen, XL screen
+@each $size, $values in $breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    .container {
+      width: 100%; 
+      max-width: map.get($values, 'container-size');
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  }
+}
+
+// CONTAINER for XXL screen
+@media screen and (min-width: map.get($breakpointXXL, 'min-width')) {
+  .container {
+    width: 100%; 
+    max-width: map.get($breakpointXXL, 'container-size');
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
