@@ -57,3 +57,11 @@ ul, ol, figure, pre {
     }
   } 
 }
+
+// BOXES -------------
+.box {
+  &__thumb {
+    height: 100px;
+    width: 100px;
+  }
+}
