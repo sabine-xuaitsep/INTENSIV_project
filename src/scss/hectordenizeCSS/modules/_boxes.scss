@@ -17,24 +17,43 @@
   box-sizing: border-box;
 }
 
-// CONTAINER for XS screen (all), S screen, M screen, L screen, XL screen
+body {
+  margin: 0 auto;
+}
+
+// RESET -------------
+ul, ol, figure, pre {
+  margin: 0;
+  padding: 0;
+}
+
+// CONTAINER for XS screen (all), S screen, M screen, L screen, XL screen -------------
 @each $size, $values in $breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) {
     .container {
       width: 100%; 
       max-width: map.get($values, 'container-size');
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0;
     }
   }
 }
 
-// CONTAINER for XXL screen
+// CONTAINER for XXL screen -------------
 @media screen and (min-width: map.get($breakpointXXL, 'min-width')) {
   .container {
     width: 100%; 
     max-width: map.get($breakpointXXL, 'container-size');
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
   }
+}
+
+// PADDING -------------
+@each $size, $values in $breakpoints {
+  @media screen and (min-width: map-get($values, 'min-width')) {
+    .p-rspnsv {
+      padding: #{map-get($values, 'padding')};
+    }
+  } 
 }
