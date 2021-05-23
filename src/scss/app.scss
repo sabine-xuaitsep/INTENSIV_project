@@ -1,1 +1,55 @@
 @import './hectordenizeCSS/index.scss';
+
+.mainNav {
+  font-size: 0;
+  &__item {
+    display: inline-block;
+    list-style: none;
+    a {
+      // BOX
+      display: block;
+      border: none;
+      padding: 1rem 2rem;
+      // FONT
+      color: #fff;
+      font-family: $fontTitle;
+      font-size: .8rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        background: rgba(113, 121, 129, .3);
+      }
+    }
+    &.isActive a {
+      background: #fff;
+      color: $colorDark;
+      &:hover {
+        color: $colorAccent;
+      }
+    }
+  }
+}
+
+.socialNav {
+  padding-right: 1.5rem;
+  &__item {
+    display: inline-block;
+    list-style: none;
+    i {
+      // BOX
+      display: block;
+      border: none;
+      padding: 1rem;
+      //FONT
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      &:hover {
+        color: $colorAccent;
+      }
+    }
+    &__label {
+      display: none;
+    }
+  }
+}
