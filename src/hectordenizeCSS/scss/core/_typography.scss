@@ -8,10 +8,11 @@
 // --------- AVAILABLE TYPOGRAPHY HELPERS ---------
 // ------------------------------------------------------------------
 
-// .h1, .h2, .h3, .h4, .h5, .h6
+// .h1, .title1, .h2, .h3, .h4, .h5, .h6
 // .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
 // .link
 // .txt-center, .txt-left, .txt-right, .txt-justify
+// .txt-underlined, .txt-bold
 
 
 
@@ -32,6 +33,10 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 
 
+// ---------------------------------
+// DEFAULT TYPOGRAPHY
+// ---------------------------------
+
 // ------------- DEFAULT TYPOGRAPHY -------------
 @mixin typoDefault {
   color:            colors.$colorDark;
@@ -46,7 +51,7 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 
 // ------------- PARAGRAPH -------------
-@mixin paragraphDefault {
+@mixin paragraphTypo {
   // BOX
   margin:           0;
   padding-bottom:   2rem;
@@ -55,10 +60,55 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 
 
-// ------------- HEADERS values -------------
+// ------------- LINKS -------------
+@mixin linkTypo {
+  // BOX 
+  border-bottom:    colors.$colorDim 1px dotted;
+
+  // FONT
+  color:            colors.$colorDark;
+  text-decoration:  none;
+
+  &:hover {
+    // BOX
+    border-bottom:  colors.$colorAccent 1px dotted;
+
+    //FONT
+    color:          colors.$colorAccent;
+  }
+}
+// ------------- END LINKS -------------
+
+
+
+// ------------- CODE -------------
+@mixin codeTypo {
+  // BOX 
+  background:     colors.$colorLight;
+  box-shadow:     0 0 5px colors.$colorDim;
+  margin:         .3em;
+  padding:        .5em;
+
+  // FONT
+  font-size:      .9rem;
+}
+// ------------- END CODE -------------
+
+// ---------------------------------
+// END DEFAULT TYPOGRAPHY
+// ---------------------------------
+
+
+
+// ---------------------------------
+// HEADERS TYPOGRAPHY
+// ---------------------------------
+
+// ------------- HEADERS -------------
 @mixin headersValuesInCommon {
   // BOX
   margin:           0 0 1rem 0;
+  padding-top:      1rem;
 
   // FONT
   font-family:      $fontSecondary;
@@ -70,6 +120,11 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 @mixin h1Typo {
   font-size:        4rem;
+  @include headersValuesInCommon;
+}
+
+@mixin title1Typo {
+  font-size:        3rem;
   @include headersValuesInCommon;
 }
 
@@ -97,11 +152,11 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
   font-size:        .8rem;
   @include headersValuesInCommon;
 }
-// ------------- END HEADERS values -------------
+// ------------- END HEADERS -------------
 
 
 
-// ------------- SUBHEADERS values -------------
+// ------------- SUBHEADERS -------------
 @mixin subtitlesValuesInCommon {
   // BOX
   margin:           0;
@@ -145,28 +200,53 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
   font-size:        .6rem;
   @include subtitlesValuesInCommon;
 }
-// ------------- END SUBHEADERS values -------------
+// ------------- END SUBHEADERS -------------
+
+// ---------------------------------
+// END HEADERS TYPOGRAPHY
+// ---------------------------------
 
 
 
-// ------------- END LINKS values -------------
-@mixin linkTypoValues {
-  // BOX 
-  border-bottom:    colors.$colorDim 1px dotted;
-
-  // FONT
-  color:            colors.$colorDark;
-  text-decoration:  none;
-
-  &:hover {
-    // BOX
-    border-bottom:    colors.$colorAccent 1px dotted;
-
-    //FONT
-    color:          colors.$colorAccent;
+// ---------------------------------
+// LISTS TYPOGRAPHY
+// ---------------------------------
+@mixin uListTypo {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .5em;
+    list-style-type: initial;
   }
 }
-// ------------- END LINKS values -------------
+
+@mixin uListAltTypo {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .5em;
+    list-style-type: square;
+  }
+}
+
+@mixin oListTypo {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .2em;
+    list-style-type: decimal;
+  }
+}
+// ---------------------------------
+// END LISTS TYPOGRAPHY
+// ---------------------------------
+
+
+
+// ------------- BLOCKQUOTE -------------
+@mixin blockquote {
+  border-left: colors.$colorLight 5px solid;
+  margin: 2em 0;
+  padding: .5em 0 .5em 2em;
+}
+// ------------- END BLOCKQUOTE -------------
 
 
 
@@ -184,15 +264,35 @@ body {
 
 //  ------------- PARAGRAPH -------------
 p { 
-  @include paragraphDefault(); 
+  @include paragraphTypo; 
 }
 //  ------------- END PARAGRAPH -------------
+
+
+
+// ------------- LINKS -------------
+a, .link { 
+  @include linkTypo; 
+}
+// ------------- END LINKS -------------
+
+
+
+// ------------- CODE -------------
+code { 
+  @include codeTypo; 
+}
+// ------------- END CODE -------------
 
 
 
 //  ------------- HEADERS -------------
 h1, .h1 { 
   @include h1Typo; 
+}
+
+.title1 { 
+  @include title1Typo; 
 }
 
 h2, .h2 { 
@@ -246,11 +346,31 @@ h6, .h6 {
 
 
 
-// ------------- LINKS -------------
-a, .link { 
-  @include linkTypoValues; 
+// ---------------------------------
+// LISTS TYPOGRAPHY
+// ---------------------------------
+ul { 
+  @include uListTypo; 
 }
-// ------------- END LINKS -------------
+
+.uList--alt { 
+  @include uListAltTypo; 
+}
+
+ol { 
+  @include oListTypo; 
+}
+// ---------------------------------
+// END LISTS TYPOGRAPHY
+// ---------------------------------
+
+
+
+//  ------------- BLOCKQUOTE -------------
+blockquote {
+  @include blockquote;
+}
+//  ------------- END BLOCKQUOTE -------------
 
 
 
@@ -269,5 +389,13 @@ a, .link {
 
 .txt-justify {
   text-align: justify;
+}
+
+.txt-underlined {
+  text-decoration: underline;
+}
+
+.txt-bold {
+  font-weight: bold;
 }
 // -------------  END ALIGNMENTS HELPERS ------------- 

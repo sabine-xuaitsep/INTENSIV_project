@@ -19,7 +19,7 @@ $breakpoints: (
       'size': 100%, 
       'padding': 0
     ), 
-    'padding-responsive': 1rem
+    'padding-responsive': 2rem
   ),
   's': (
     'label': '-s',  
@@ -39,27 +39,27 @@ $breakpoints: (
       'size': 80vw, 
       'padding': 0
     ), 
-    'padding-responsive': 3rem
+    'padding-responsive': 2rem 4rem
   ), 
   'l': (
     'label': '-l',  
     'min-width': 1280px, 
     'max-width': 1819px, 
     'container': (
-      'size': 70vw, 
+      'size': 80vw, 
       'padding': 0
     ), 
-    'padding-responsive': 4rem
+    'padding-responsive': 2rem 6rem
   ), 
   'xl': (
     'label': '-xl', 
     'min-width': 1920px, 
     'max-width': 3839px, 
     'container': (
-      'size': 60vw, 
+      'size': 70vw, 
       'padding': 0
     ), 
-    'padding-responsive': 4rem
+    'padding-responsive': 2rem 6rem
   )
 );
 // END BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen
@@ -70,10 +70,10 @@ $breakpointXXL: (
   'label': '-xxl', 
   'min-width': 3840px, 
   'container': (
-    'size': 50vw, 
+    'size': 60vw, 
     'padding': 0
   ), 
-  'padding-responsive': 5rem
+  'padding-responsive': 2rem 8rem
 );
 // END BREAKPOINTS VALUE for XXL screen
 

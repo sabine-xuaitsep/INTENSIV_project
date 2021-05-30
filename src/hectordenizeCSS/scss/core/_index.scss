@@ -12,15 +12,21 @@
 // ------------------------------------------------------------------
 @forward 'typography';
 // available HELPERS
-// .bckgrnd-accent, .bckgrnd-white, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
-// .color-accent, .color-white, .color-light, .color-dim, .color-dusky, .color-dark
+// .h1, .title1, .h2, .h3, .h4, .h5, .h6
+// .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
+// .link
+// .txt-center, .txt-left, .txt-right, .txt-justify
+// .txt-underlined, .txt-bold
 // ------------------------------------------------------------------
 @forward 'breakpoints';
 // ------------------------------------------------------------------
 @forward 'utils';
 // available HELPERS
-// .h1, .h2, .h3, .h4, .h5, .h6
-// .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
-// .link
-// .txt-center, .txt-left, .txt-right, .txt-justify
+// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
+// .p-rspnsv
+// .p-{i}
+// .p-y-{i}
+// .p-x-{i}
+// .p-top-{i}
+// .p-bottom-{i}
 // ------------------------------------------------------------------

@@ -30,7 +30,7 @@ body {
 
 
 // ------------- RESET -------------
-ul, ol, figure, pre {
+ul, ol, blockquote, figure, pre {
   @include reset;
 }
 // ------------- END RESET -------------
