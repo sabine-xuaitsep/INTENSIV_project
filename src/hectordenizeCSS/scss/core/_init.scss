@@ -1,0 +1,36 @@
+// ./hectordenizeCSS/scss/core/_init.scss
+// INITIALIZATON CORE
+
+
+// ------------------------------------------------------------------
+// --------- INITIALIZATON VARIABLES & MIXINS ---------
+// ------------------------------------------------------------------
+
+$boxSizingDefault: border-box;
+$bodyMargin: 0 auto;
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+
+// ------------------------------------------------------------------
+// --------- INITIALIZATON SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+* {
+  box-sizing: $boxSizingDefault;
+}
+
+body {
+  margin: $bodyMargin;
+}
+
+
+
+// ------------- RESET -------------
+ul, ol, figure, pre {
+  @include reset;
+}
+// ------------- END RESET -------------

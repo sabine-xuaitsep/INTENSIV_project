@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elements Reference - Intensiv' Project</title>
-  <link rel="stylesheet" href="./scss/app.scss">
+  <link rel="stylesheet" href="./app.scss">
   <script src="https://kit.fontawesome.com/1f045fa5c4.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -33,35 +33,36 @@
     </div>
   </header>
 
-  <main class="container bckgrnd-white p-rspnsv">
+  <main class="container bckgrnd-white">
 
-    <article>
+    <div class="p-rspnsv">
       <header>
-        <h1 class="txt-center">Elements Reference</h1>
+        <h2 class="h1 txt-center">Elements Reference</h2>
       </header>
-
+  
       <section>
-        <h2>Colors</h2>
-        <div class="box__thumb inline-flex flex-center bckgrnd-accent color-light">#18bfff</div>
-        <div class="box__thumb inline-flex flex-center bckgrnd-light color-dark">#f6f6f6</div>
-        <div class="box__thumb inline-flex flex-center bckgrnd-dim color-light">#717981</div>
-        <div class="box__thumb inline-flex flex-center bckgrnd-dusky color-light">#4e403d</div>
-        <div class="box__thumb inline-flex flex-center bckgrnd-dark color-light">#212931</div>
+        <h3 class="h2">Colors</h3>
+        <div class="box__colorThumb bckgrnd-accent color-light"><span class="colorVariableName">$colorAccent</span><span>#18bfff</span></div>
+        <div class="box__colorThumb bckgrnd-whithe color-dark"><span class="colorVariableName">$colorWhite</span><span>#ffffff</span></div>
+        <div class="box__colorThumb bckgrnd-light color-dark"><span class="colorVariableName">$colorLight</span><span>#f6f6f6</span></div>
+        <div class="box__colorThumb bckgrnd-dim color-light"><span class="colorVariableName">$colorDim</span><span>#717981</span></div>
+        <div class="box__colorThumb bckgrnd-dusky color-light"><span class="colorVariableName">$colorDusky</span><span>#4e403d</span></div>
+        <div class="box__colorThumb bckgrnd-dark color-light"><span class="colorVariableName">$colorDark</span><span>#212931</span></div>
       </section>
   
       <hr />
   
       <section>
-        <h2>Text <span class="h6">- "Merriweather", Georgia, serif | #212931</span></h2>
+        <h3 class="h2">Text <span class="h6">- "Merriweather", Georgia, serif | #212931</span></h3>
         <p>
           This is <strong>strong</strong> and this is <em>emphasized</em>. This is <sup>superscript</sup> text and this is <sub>subscript</sub> text. This is <span class="txt-underlined">underlined</span> and this is code: <code>for (;;) { ... }</code>. Finally, this is a <a href="#">link</a>.
         </p>
       </section>
-
+  
       <hr />
   
       <section>
-        <h2>Headers <span class="h6">- "Source Sans Pro", Helvetica, sans-serif | #212931</span></h2>
+        <h3 class="h2">Headers <span class="h6">- "Source Sans Pro", Helvetica, sans-serif | #212931</span></h3>
         <h1 class="h1">HEADING LEVEL 1</h1>
         <h2 class="h2">HEADING LEVEL 2</h2>
         <h3 class="h3">HEADING LEVEL 3</h3>
@@ -69,60 +70,60 @@
         <h5 class="h5">HEADING LEVEL 5</h5>
         <h6 class="h6">HEADING LEVEL 6</h6>
       </section>
-
+  
       <hr />
   
       <section>
-        <h2>Heading with a subtitle</h2>
+        <h3 class="h2">Heading with a subtitle</h3>
         <p class="subtitle2">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
         <p>
           Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
         </p>
-
-        <h3>Heading with a subtitle</h3>
+  
+        <h3 class="h3">Heading with a subtitle</h3>
         <p class="subtitle3">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
         <p>
           Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
         </p>
-
-        <h4>Heading with a subtitle</h4>
+  
+        <h3 class="h4">Heading with a subtitle</h3>
         <p class="subtitle4">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
         <p>
           Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.
         </p>
       </section>
-
+  
       <hr />
-
+  
       <section>
-
-        <h2>Lists</h2>
-
-        <h3>Unordered - UL</h3>
+  
+        <h3 class="h2">Lists</h3>
+  
+        <h4 class="h3">Unordered - UL</h4>
         <ul class="uList">
           <li class="uList__item">Lorem ipsum dolor sit.</li>
           <li class="uList__item">Ipsam, magni? Reiciendis, distinctio.</li>
           <li class="uList__item">Alias incidunt obcaecati nesciunt.</li>
           <li class="uList__item">Libero impedit nesciunt reprehenderit.</li>
         </ul>
-
-        <h3>Alternate - UL.alernate</h3>
+  
+        <h4 class="h3">Alternate - UL.alernate</h4>
         <ul class="uList--alt">
           <li class="uList__item">Lorem ipsum dolor sit.</li>
           <li class="uList__item">Ipsam, magni? Reiciendis, distinctio.</li>
           <li class="uList__item">Alias incidunt obcaecati nesciunt.</li>
           <li class="uList__item">Libero impedit nesciunt reprehenderit.</li>
         </ul>
-
-        <h3>Ordered - OL</h3>
+  
+        <h4 class="h3">Ordered - OL</h4>
         <ol class="oList">
           <li class="oList__item">Lorem ipsum dolor sit.</li>
           <li class="oList__item">Non ipsa magni necessitatibus.</li>
           <li class="oList__item">Eius consequuntur cum aperiam?</li>
           <li class="oList__item">Deleniti odit quidem tempora!</li>
         </ol>
-
-        <h3>Icons</h3>
+  
+        <h4 class="h3">Icons</h4>
         <ul class="socialNav">
           <li class="socialNav__item"><a href="#"><i class="fab fa-twitter"></i><span class="socialNav__item__label">Twitter</span></a></li>
           <li class="socialNav__item"><a href="#"><i class="fab fa-facebook-f"></i><span class="socialNav__item__label">Facebook</span></a></li>
@@ -135,8 +136,8 @@
           <li class="socialNav__item"><a href="#"><i class="fab fa-instagram"></i><span class="socialNav__item__label">Instagram</span></a></li>
           <li class="socialNav__item"><a href="#"><i class="fab fa-github"></i><span class="socialNav__item__label">GitHub</span></a></li>
         </ul>
-
-        <h3>Description list</h3>
+  
+        <h4 class="h3">Description list</h4>
         <dl>
           <dt>Definition 1</dt>
           <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
@@ -149,19 +150,19 @@
           <dt>Definition 3</dt>
           <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
         </dl>
-
+  
       <hr />
-
+  
       <section>
-        <h2>Blockquote</h2>
+        <h3 class="h2">Blockquote</h3>
         <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate officia consectetur laudantium iure minus eligendi laboriosam itaque est beatae culpa magni incidunt consequuntur quaerat sapiente, quo enim dolor corporis!</blockquote>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h2>Table</h2>
-
+        <h3 class="h2">Table</h3>
+  
         <table class="table">
           <caption class="h3">Default</caption>
           <thead>
@@ -205,7 +206,7 @@
             </tr>
           </tfoot>
         </table>
-
+  
         <table class="table--alt">
           <caption class="h3">Alternate</caption>
           <thead>
@@ -250,11 +251,11 @@
           </tfoot>
         </table>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h3>CTAs</h3>
+        <h3 class="h2">CTAs</h3>
         <div>
           <input type="submit" value="inputSubmit Primary" class="btn--primary" />
           <input type="submit" value="inputSubmit Default" class="btn" />
@@ -275,13 +276,8 @@
           <button class="btn--primary">Button Primary</button>
           <button class="btn">Button Default</button>
         </div>
-      </section>
-      </section>
-
-      <hr />
-
-      <section>
-        <h2>Buttons</h2>
+  
+        <h4 class="h3">Buttons</h4>
         <div>
           <button class="btn--primary">Primary</button>
           <button class="btn">Default</button>
@@ -308,11 +304,11 @@
           <button class="btn" disabled="disabled">Default</button>
         </div>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h2>Form</h2>
+        <h3 class="h2">Form</h3>
         <form action="elements.html" method="get">
           <fieldset>
             <legend>Personal data</legend>
@@ -322,7 +318,7 @@
             <label for="email">Name</label>
             <input type="email" name="email" id="email" placeholder="Email" />
           </fieldset>
-
+  
           <label for="category">Category</label>
           <select name="category" id="category">
             <option disabled="disabled" selected="selected">-Category-</option>
@@ -330,7 +326,7 @@
             <option value="deglingo">Déglingo</option>
             <option value="groseille">Groseille</option>
           </select>
-
+  
           <fieldset>
             <legend>Intensity</legend>
             <input type="radio" name="intensity" id="low" value="low" checked="checked" />
@@ -342,7 +338,7 @@
             <input type="radio" name="intensity" id="high" value="high" />
             <label for="high">High</label>
           </fieldset>
-
+  
           <div>
             <input type="checkbox" name="mailCopy" id="mailCopy" />
             <label for="mailCopy">Email me a copy</label>
@@ -350,20 +346,20 @@
             <input type="checkbox" name="humanNonRobot" id="humanNonRobot" />
             <label for="humanNonRobot">I'm a human</label>
           </div>
-
+  
           <label for="message">Votre message</label>
           <textarea name="message" id="message" placeholder="Enter your message"></textarea>
-
+  
           <input type="submit" value="Send Message" class="btn--primary"/>
           <input type="reset" value="Reset" class="btn" />
         </form>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h2>Image</h2>
-        <h3>Fit</h3>
+        <h3 class="h2">Image</h3>
+        <h4 class="h3">Fit</h4>
         <img src="https://picsum.photos/600" alt="Lorem Picsum">
         <div>
           <img src="https://picsum.photos/100" alt="Lorem Picsum">
@@ -376,8 +372,8 @@
           <img src="https://picsum.photos/100" alt="Lorem Picsum">
           <img src="https://picsum.photos/100" alt="Lorem Picsum">
         </div>
-
-        <h3>Left & Right</h3>
+  
+        <h4 class="h3">Left & Right</h4>
         <div>
           <img src="https://picsum.photos/200" alt="Lorem Picsum" class="float-left">
           <p>
@@ -391,35 +387,35 @@
           </p>
         </div>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h3>Box</h3>
+        <h3 class="h2">Box</h3>
         <div class="box">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente possimus cum sed reiciendis sint quibusdam, recusandae iure, totam perspiciatis consectetur earum ullam sequi fugit nam maiores dolore maxime. Inventore neque id quis blanditiis quidem delectus fugit unde? Rem quos similique placeat in, obcaecati assumenda earum aspernatur eligendi magni? Consectetur vitae, nesciunt ex porro eos itaque blanditiis, officiis voluptas sit iste laborum sequi eum harum molestias minus. Vitae quod et facere. Dolor blanditiis repellat nam odit dolore maiores deserunt nostrum natus ipsam adipisci hic mollitia corporis consequuntur corrupti aspernatur similique, excepturi a nisi neque? Adipisci numquam magni cupiditate cumque architecto.
           </p>
         </div>
       </section>
-
+  
       <hr />
-
+  
       <section>
-        <h2>Preformatted</h2>
+        <h3 class="h2">Preformatted</h3>
         <pre><code>
-            i = 0;
-
-            while (!deck.isInOrder()) {
-                print 'Iteration ' + i;
-                deck.shuffle();
-                i++;
-            }
-
-            print 'It took ' + i + ' iterations to sort the deck.';
+  i = 0;
+  
+  while (!deck.isInOrder()) {
+      print 'Iteration ' + i;
+      deck.shuffle();
+      i++;
+  }
+  
+  print 'It took ' + i + ' iterations to sort the deck.';
         </code></pre>
       </section>
-    </article>
+    </div>
 
   </main>
 
@@ -477,7 +473,7 @@
 
 
 
-  <script src="./js/app.js"></script>
+  <script src="./hectordenizeCSS/js/index.js"></script>
 
 </body>
 </html>

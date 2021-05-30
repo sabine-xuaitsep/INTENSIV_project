@@ -1,0 +1,273 @@
+// ./hectordenizeCSS/scss/core/_typography.scss
+// TYPOGRAPHY CORE
+
+@use 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Source+Sans+Pro:wght@900&display=swap');
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE TYPOGRAPHY HELPERS ---------
+// ------------------------------------------------------------------
+
+// .h1, .h2, .h3, .h4, .h5, .h6
+// .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
+// .link
+// .txt-center, .txt-left, .txt-right, .txt-justify
+
+
+
+// ------------------------------------------------------------------
+// --------- TYPOGRAPHY VARIABLES & MIXINS ---------
+// ------------------------------------------------------------------
+
+// ------------- FONTS -------------
+$fontDefault: 'Merriweather', Georgia, serif;
+$fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
+// ------------- END FONTS -------------
+
+
+
+// @mixin typographyRules($property, $value) {
+//   #{$property}: $value;
+// }
+
+
+
+// ------------- DEFAULT TYPOGRAPHY -------------
+@mixin typoDefault {
+  color:            colors.$colorDark;
+  font-family:      $fontDefault;
+  font-size:        1rem;
+  font-weight:      300;
+  letter-spacing:   .025em;
+  line-height:      2.5;
+}
+// ------------- END DEFAULT TYPOGRAPHY -------------
+
+
+
+// ------------- PARAGRAPH -------------
+@mixin paragraphDefault {
+  // BOX
+  margin:           0;
+  padding-bottom:   2rem;
+}
+//  ------------- END PARAGRAPH -------------
+
+
+
+// ------------- HEADERS values -------------
+@mixin headersValuesInCommon {
+  // BOX
+  margin:           0 0 1rem 0;
+
+  // FONT
+  font-family:      $fontSecondary;
+  font-weight:      900;
+  letter-spacing:   .1rem;
+  line-height:      1.2;
+  text-transform:   uppercase;
+}
+
+@mixin h1Typo {
+  font-size:        4rem;
+  @include headersValuesInCommon;
+}
+
+@mixin h2Typo {
+  font-size:        2rem;
+  @include headersValuesInCommon;
+}
+
+@mixin h3Typo {
+  font-size:        1.5rem;
+  @include headersValuesInCommon;
+}
+
+@mixin h4Typo {
+  font-size:        1.2rem;
+  @include headersValuesInCommon;
+}
+
+@mixin h5Typo {
+  font-size:        1rem;
+  @include headersValuesInCommon;
+}
+
+@mixin h6Typo {
+  font-size:        .8rem;
+  @include headersValuesInCommon;
+}
+// ------------- END HEADERS values -------------
+
+
+
+// ------------- SUBHEADERS values -------------
+@mixin subtitlesValuesInCommon {
+  // BOX
+  margin:           0;
+  padding-bottom:   2rem;
+
+  // FONT
+  font-family:      $fontDefault;
+  font-style:       italic;
+  font-weight:      300;
+  letter-spacing:   0;
+  line-height:      2.5;
+  text-transform:   initial;
+}
+
+@mixin subtitle1Typo {
+  font-size:        1.1rem;
+  @include subtitlesValuesInCommon;
+}
+
+@mixin subtitle2Typo {
+  font-size:        1rem;
+  @include subtitlesValuesInCommon;
+}
+
+@mixin subtitle3Typo {
+  font-size:        .9rem;
+  @include subtitlesValuesInCommon;
+}
+
+@mixin subtitle4Typo {
+  font-size:        .8rem;
+  @include subtitlesValuesInCommon;
+}
+
+@mixin subtitle5Typo {
+  font-size:        .7rem;
+  @include subtitlesValuesInCommon;
+}
+
+@mixin subtitle6Typo {
+  font-size:        .6rem;
+  @include subtitlesValuesInCommon;
+}
+// ------------- END SUBHEADERS values -------------
+
+
+
+// ------------- END LINKS values -------------
+@mixin linkTypoValues {
+  // BOX 
+  border-bottom:    colors.$colorDim 1px dotted;
+
+  // FONT
+  color:            colors.$colorDark;
+  text-decoration:  none;
+
+  &:hover {
+    // BOX
+    border-bottom:    colors.$colorAccent 1px dotted;
+
+    //FONT
+    color:          colors.$colorAccent;
+  }
+}
+// ------------- END LINKS values -------------
+
+
+
+// ------------------------------------------------------------------
+// --------- TYPOGRAPHY SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+//  ------------- DEFAULT TYPOGRAPHY -------------
+body { 
+  @include typoDefault; 
+}
+//  ------------- END DEFAULT TYPOGRAPHY -------------
+
+
+
+//  ------------- PARAGRAPH -------------
+p { 
+  @include paragraphDefault(); 
+}
+//  ------------- END PARAGRAPH -------------
+
+
+
+//  ------------- HEADERS -------------
+h1, .h1 { 
+  @include h1Typo; 
+}
+
+h2, .h2 { 
+  @include h2Typo; 
+}
+
+h3, .h3 { 
+  @include h3Typo; 
+}
+
+h4, .h4 { 
+  @include h4Typo; 
+}
+
+h5, .h5 { 
+  @include h5Typo; 
+}
+
+h6, .h6 { 
+  @include h6Typo; 
+}
+//  ------------- END HEADERS -------------
+
+
+
+//  ------------- SUBHEADERS -------------
+.subtitle1 { 
+  @include subtitle1Typo; 
+}
+
+.subtitle2 { 
+  @include subtitle2Typo; 
+}
+
+.subtitle3 { 
+  @include subtitle3Typo; 
+}
+
+.subtitle4 { 
+  @include subtitle4Typo; 
+}
+
+.subtitle5 { 
+  @include subtitle5Typo; 
+}
+
+.subtitle6 { 
+  @include subtitle6Typo; 
+}
+//  ------------- END SUBHEADERS -------------
+
+
+
+// ------------- LINKS -------------
+a, .link { 
+  @include linkTypoValues; 
+}
+// ------------- END LINKS -------------
+
+
+
+// -------------  ALIGNMENTS HELPERS ------------- 
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+// -------------  END ALIGNMENTS HELPERS ------------- 

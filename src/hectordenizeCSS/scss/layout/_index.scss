@@ -1,0 +1,30 @@
+// ./hectordenizeCSS/scss/layout/_index.scss
+// LAYOUT DISPATCHER
+
+
+// ------------------------------------------------------------------
+@forward 'boxes';
+// available CSS classes
+// .container
+// ------------------------------------------------------------------
+@forward 'grid';
+// available CSS classes
+// .col-x      XS screen || ALL screens
+// .col-s-x    S screen
+// .col-m-x    M screen
+// .col-l-x    L screen
+// .col-xl-x   XL screen
+// .col-xxl-x   XXL screen
+  // .offset-x      XS screen || ALL screens
+  // .offset-s-x    S screen
+  // .offset-m-x    M screen
+  // .offset-l-x    L screen
+  // .offset-xl-x   XL screen
+  // .offset-xxl-x   XXL screen
+// .row-x      XS screen || ALL screens
+// .row-s-x    S screen
+// .row-m-x    M screen
+// .row-l-x    L screen
+// .row-xl-x   XL screen
+// .row-xxl-x   XXL screen
+// ------------------------------------------------------------------

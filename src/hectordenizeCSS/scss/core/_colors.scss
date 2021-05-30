@@ -1,0 +1,53 @@
+// ./hectordenizeCSS/scss/core/_colors.scss
+// COLORS CORE
+
+
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE HELPERS  ---------
+// ------------------------------------------------------------------
+
+// .bckgrnd-accent, .bckgrnd-white, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
+// .color-accent, .color-white, .color-light, .color-dim, .color-dusky, .color-dark
+
+
+
+// ------------------------------------------------------------------
+// --------- COLORS VARIABLES ---------
+// ------------------------------------------------------------------
+
+$colorAccent: #18bfff;
+$colorWhite: #ffffff;
+$colorLight: #f6f6f6;
+$colorDim: #717981;
+$colorDusky: #4e403d;
+$colorDark: #212931;
+
+// $colors: (label: color)
+$colors: (
+  'accent': $colorAccent, 
+  'white':  $colorWhite,
+  'light':  $colorLight, 
+  'dim':    $colorDim, 
+  'dusky':  $colorDusky, 
+  'dark':   $colorDark
+);
+
+
+
+// ------------------------------------------------------------------
+// --------- COLORS SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// ------------- COLORS HELPERS ------------- 
+@each $label, $color in $colors {
+  // .bckgrnd-colorLabel
+  .bckgrnd-#{$label} {
+    background: #{$color};
+  }
+  .color-#{$label} {
+    // .color-colorLabel
+    color: #{$color};
+  }
+}
+// -------------  END COLORS HELPERS ------------- 

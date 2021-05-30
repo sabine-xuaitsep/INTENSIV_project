@@ -1,0 +1,64 @@
+// ./hectordenizeCSS/scss/layout/_boxes.scss
+//  BOXES LAYOUT
+
+@use "sass:map";
+@use './../core/breakpoints' as brkpnts;
+
+// ------------------------------------------------------------------
+// --------- BOXES VARIABLES ---------
+// ------------------------------------------------------------------
+
+%box__colorThumb {
+  height: 100px;
+  width: 100px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+// ------------------------------------------------------------------
+// --------- BOXES SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// ------------- CONTAINER -------------
+
+// CONTAINER for XS screen (all), S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    .container {
+      width: 100%; 
+      max-width: map.get($values, 'container', 'size');
+      margin: 0 auto;
+      padding: map.get($values, 'container', 'padding');
+    }
+  }
+}
+
+// CONTAINER for XXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
+  .container {
+    width: 100%; 
+    max-width: map.get(brkpnts.$breakpointXXL, 'container', 'size');
+    margin: 0 auto;
+    padding: map.get(brkpnts.$breakpointXXL, 'container', 'padding');
+  }
+}
+
+// ------------- END CONTAINER -------------
+
+
+
+// ------------- BOXES -------------
+.box {
+  &__colorThumb {
+    @extend %box__colorThumb;
+    .colorVariableName {
+      font-size: .8rem;
+    }
+  }
+}
+// ------------- END BOXES -------------

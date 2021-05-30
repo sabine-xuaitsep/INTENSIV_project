@@ -1,0 +1,76 @@
+// ./hectordenizeCSS/scss/core/_utils.scss
+// UTILITIES / HELPERS CORE
+
+@use "sass:map";
+@use 'breakpoints' as brkpnts;
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE HELPERS ---------
+// ------------------------------------------------------------------
+
+// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
+// .p-rspnsv
+
+
+
+// ------------------------------------------------------------------
+// --------- HELPERS VARIABLES ---------
+// ------------------------------------------------------------------
+
+// -------------  DISPLAY MODES ------------- 
+// $displayModes: (value: label)
+$displayModes: (
+  'none':           'deny', 
+  'block':          'block', 
+  'inline-block':   'inline-block', 
+  'inline':         'inline',
+  'flex':           'flex',
+  'inline-flex':    'inline-flex', 
+  'table':          'table', 
+  'table-cell':     'table-cell'
+);
+// ------------- END DISPLAY MODES ------------- 
+
+
+
+// ------------------------------------------------------------------
+// --------- HELPERS SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// ------------- DISPLAY HELPERS ------------- 
+@each $value, $label in $displayModes {
+  // .displayLabel
+  .#{$label} {
+    display: #{$value};
+  }
+}
+// ------------- END DISPLAY HELPERS ------------- 
+
+
+
+.flex-space-between {
+  justify-content: space-between;
+  align-items: center; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+}
+
+
+
+// ------------- PADDING RESPONSIVE ------------- 
+
+// RESPONSIVE PADDING for XS screen (all), S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    .p-rspnsv {
+      padding: #{map.get($values, 'padding-responsive')};
+    }
+  } 
+}
+
+// RESPONSIVE PADDING for XXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
+  .p-rspnsv {
+    padding: #{map.get(brkpnts.$breakpointXXL, 'padding-responsive')};
+  }
+} 
+
+// ------------- END PADDING RESPONSIVE ------------- 
