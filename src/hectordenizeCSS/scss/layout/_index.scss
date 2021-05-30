@@ -28,3 +28,21 @@
 // .row-xl-x   XL screen
 // .row-xxl-x   XXL screen
 // ------------------------------------------------------------------
+@forward 'visibility';
+// DENY     === display: none;
+// VISIBLE  === display: block;
+// ---------
+// helpers from './../core/utils'
+// .deny                            DENY ON ALL
+// .block                           VISIBLE ON ALL
+// ---------
+// {$screenSize} = xs, s, m, l, xl
+// .deny-on-{$screenSize}-only      DENY ONLY ON $sreenSize
+// .deny-on-xxl-only                DENY ONLY ON xxl
+// .block-on-{$screenSize}-only     VISIBLE ONLY ON $screenSize
+// .block-on-xxl-only               VISIBLE ONLY ON xxl
+// .deny-from-{$screenSize}         DENY FROM $sreenSize
+// .block-from-{$screenSize}        VISIBLE FROM $sreenSize
+// .deny-until-{$screenSize}        DENY UNTIL $sreenSize
+// .block-until-{$screenSize}       VISIBLE UNTIL $sreenSize
+// ------------------------------------------------------------------

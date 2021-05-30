@@ -1,0 +1,111 @@
+// ./hectordenizeCSS/scss/layout/_visibility.scss
+//  VISIBILITY LAYOUT
+
+@use "sass:map";
+@use './../core/breakpoints' as brkpnts;
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE HELPERS ---------
+// ------------------------------------------------------------------
+
+// DENY     === display: none;
+// VISIBLE  === display: block;
+// ---------
+// helpers from './../core/utils'
+// .deny                            DENY ON ALL
+// .block                           VISIBLE ON ALL
+// ---------
+// helpers defined below
+// {$screenSize} = xs, s, m, l, xl
+// .deny-on-{$screenSize}-only      DENY ONLY ON $sreenSize
+// .deny-on-xxl-only                DENY ONLY ON xxl
+// .block-on-{$screenSize}-only     VISIBLE ONLY ON $screenSize
+// .block-on-xxl-only               VISIBLE ONLY ON xxl
+// .deny-from-{$screenSize}         DENY FROM $sreenSize
+// .block-from-{$screenSize}        VISIBLE FROM $sreenSize
+// .deny-until-{$screenSize}        DENY UNTIL $sreenSize
+// .block-until-{$screenSize}       VISIBLE UNTIL $sreenSize
+
+
+
+// ------------------------------------------------------------------
+// --------- VISIBILITY VARIABLES ---------
+// ------------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------------
+// --------- VISIBILITY SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// ------------- VISIBILITY RULES -------------
+
+// DISPLAY NONE ONLY ON XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) and (max-width: map.get($values, 'max-width')) {
+    .deny-on-#{$screenSizes}-only {
+      display: none;
+    }
+  }
+}
+
+// DISPLAY NONE ONLY ON XXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
+  .deny-on-xxl-only {
+    display: none;
+  }
+}
+
+// DISPLAY BLOCK ONLY ON XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) and (max-width: map.get($values, 'max-width')) {
+    .block-on-#{$screenSizes}-only {
+      display: block;
+    }
+  }
+}
+
+// DISPLAY BLOCK ONLY ON XXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
+  .block-on-xxl-only {
+    display: block;
+  }
+}
+
+// DISPLAY NONE FROM XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    .deny-from-#{$screenSizes} {
+      display: none;
+    }
+  }
+}
+
+// DISPLAY BLOCK FROM XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    .block-from-#{$screenSizes} {
+      display: block;
+    }
+  }
+}
+
+// DISPLAY NONE UNTIL XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (max-width: map.get($values, 'max-width')) {
+    .deny-until-#{$screenSizes} {
+      display: none;
+    }
+  }
+}
+
+// DISPLAY BLOCK UNTIL XS screen, S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (max-width: map.get($values, 'max-width')) {
+    .block-until-#{$screenSizes} {
+      display: block;
+    }
+  }
+}
+
+// ------------- END VISIBILITY RULES -------------
