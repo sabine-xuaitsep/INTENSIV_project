@@ -1,7 +1,7 @@
 // ./app.scss
 // APP STYLESHEET
 
-@use './hectordenizeCSS/scss/main.scss' as main;
+@use './hectordenize/scss/main.scss' as main;
 
 
 
@@ -23,9 +23,15 @@ hr, .splitLine {
 }
 
 // MAIN NAV -------------
+.mainNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mainNav {
   font-size: 0;
-  &__item {
+  .navItem {
     display: inline-block;
     list-style: none;
     a {
@@ -56,7 +62,7 @@ hr, .splitLine {
 // SOCIAL NAV -------------
 .socialNav {
   padding-right: 1.5rem;
-  &__item {
+  .socialItem {
     display: inline-block;
     list-style: none;
     i {
@@ -72,7 +78,7 @@ hr, .splitLine {
         color: main.$colorAccent;
       }
     }
-    &__label {
+    .socialLabel {
       display: none;
     }
   }

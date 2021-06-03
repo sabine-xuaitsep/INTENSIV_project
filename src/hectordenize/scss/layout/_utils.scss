@@ -1,14 +1,13 @@
-// ./hectordenizeCSS/scss/core/_utils.scss
-// UTILITIES / HELPERS CORE
+// ./hectordenize/scss/core/_utils.scss
+// UTILS CORE
 
 @use "sass:map";
-@use 'breakpoints' as brkpnts;
+@use '../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE HELPERS ---------
 // ------------------------------------------------------------------
 
-// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
 // .p-rspnsv === value from './../core/breakpoints'
 
 // {i} = from 0 trough 4
@@ -21,46 +20,14 @@
 
 
 // ------------------------------------------------------------------
-// --------- HELPERS VARIABLES ---------
+// --------- UTILS VARIABLES ---------
 // ------------------------------------------------------------------
-
-// -------------  DISPLAY MODES ------------- 
-// $displayModes: (value: label)
-$displayModes: (
-  'none':           'deny', 
-  'block':          'block', 
-  'inline-block':   'inline-block', 
-  'inline':         'inline',
-  'flex':           'flex',
-  'inline-flex':    'inline-flex', 
-  'table':          'table', 
-  'table-cell':     'table-cell'
-);
-// ------------- END DISPLAY MODES ------------- 
 
 
 
 // ------------------------------------------------------------------
-// --------- HELPERS SPECIFICATIONS ---------
+// --------- UTILS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
-
-// ------------- DISPLAY HELPERS ------------- 
-@each $value, $label in $displayModes {
-  // .displayLabel
-  .#{$label} {
-    display: #{$value};
-  }
-}
-// ------------- END DISPLAY HELPERS ------------- 
-
-
-
-.flex-space-between {
-  justify-content: space-between;
-  align-items: center; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-}
-
-
 
 // ------------- PADDING RESPONSIVE ------------- 
 

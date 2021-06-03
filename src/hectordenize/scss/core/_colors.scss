@@ -1,4 +1,4 @@
-// ./hectordenizeCSS/scss/core/_colors.scss
+// ./hectordenize/scss/core/_colors.scss
 // COLORS CORE
 
 
@@ -23,7 +23,7 @@ $colorDim: #717981;
 $colorDusky: #4e403d;
 $colorDark: #212931;
 
-// $colors: (label: color)
+// $colors: (label: $color)
 $colors: (
   'accent': $colorAccent, 
   'white':  $colorWhite,
@@ -41,12 +41,12 @@ $colors: (
 
 // ------------- COLORS HELPERS ------------- 
 @each $label, $color in $colors {
-  // .bckgrnd-colorLabel
+  // .bckgrnd-{label}
   .bckgrnd-#{$label} {
     background: #{$color};
   }
   .color-#{$label} {
-    // .color-colorLabel
+    // .color-{label}
     color: #{$color};
   }
 }

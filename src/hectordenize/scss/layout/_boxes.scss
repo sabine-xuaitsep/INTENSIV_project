@@ -1,14 +1,22 @@
-// ./hectordenizeCSS/scss/layout/_boxes.scss
+// ./hectordenize/scss/layout/_boxes.scss
 //  BOXES LAYOUT
 
 @use "sass:map";
 @use './../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
-// --------- BOXES VARIABLES ---------
+// --------- AVAILABLE BOXES HELPERS ---------
 // ------------------------------------------------------------------
 
-%box__colorThumb {
+// .container
+// .colorBox, .colorVariableName
+
+
+// ------------------------------------------------------------------
+// --------- BOXES VARIABLES & PLACEHOLDERS ---------
+// ------------------------------------------------------------------
+
+@mixin colorBox {
   height: 100px;
   width: 100px;
   display: inline-flex;
@@ -16,6 +24,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  .colorVariableName {
+    font-size: .8rem;
+  }
 }
 
 
@@ -53,12 +64,7 @@
 
 
 // ------------- BOXES -------------
-.box {
-  &__colorThumb {
-    @extend %box__colorThumb;
-    .colorVariableName {
-      font-size: .8rem;
-    }
-  }
+.colorBox {
+  @include colorBox;
 }
 // ------------- END BOXES -------------

@@ -1,0 +1,58 @@
+// ./hectordenize/scss/layout/_lists.scss
+// LISTS LAYOUT
+
+
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE LISTS HELPERS ---------
+// ------------------------------------------------------------------
+
+// .ul-alt
+
+
+
+// ------------------------------------------------------------------
+// --------- LISTS MIXINS ---------
+// ------------------------------------------------------------------
+
+@mixin ul {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .5em;
+    list-style-type: initial;
+  }
+}
+
+@mixin ul-alt {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .5em;
+    list-style-type: square;
+  }
+}
+
+@mixin ol {
+  margin: 1em 0 1em 1em;
+  li {
+    padding-left: .2em;
+    list-style-type: decimal;
+  }
+}
+
+
+
+// ------------------------------------------------------------------
+// --------- LISTS SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+ul { 
+  @include ul; 
+}
+
+.ul-alt { 
+  @include ul-alt; 
+}
+
+ol { 
+  @include ol; 
+}

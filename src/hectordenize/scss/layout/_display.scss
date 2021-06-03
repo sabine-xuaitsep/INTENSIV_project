@@ -1,36 +1,48 @@
-// ./hectordenizeCSS/scss/layout/_visibility.scss
-//  VISIBILITY LAYOUT
+// ./hectordenize/scss/layout/_display.scss
+//  DISPLAY LAYOUT
 
 @use "sass:map";
-@use './../core/breakpoints' as brkpnts;
+@use '../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE HELPERS ---------
 // ------------------------------------------------------------------
 
+// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
+
 // DENY     === display: none;
 // VISIBLE  === display: block;
-// ---------
-// helpers from './../core/utils'
-// .deny                            DENY ON ALL
-// .block                           VISIBLE ON ALL
-// ---------
-// helpers defined below
-// {$screenSize} = xs, s, m, l, xl
-// .deny-on-{$screenSize}-only      DENY ONLY ON $sreenSize
-// .deny-on-xxl-only                DENY ONLY ON xxl
-// .block-on-{$screenSize}-only     VISIBLE ONLY ON $screenSize
-// .block-on-xxl-only               VISIBLE ONLY ON xxl
-// .deny-from-{$screenSize}         DENY FROM $sreenSize
-// .block-from-{$screenSize}        VISIBLE FROM $sreenSize
-// .deny-until-{$screenSize}        DENY UNTIL $sreenSize
-// .block-until-{$screenSize}       VISIBLE UNTIL $sreenSize
+// {screenSize} = xs, s, m, l, xl
+// .deny                           DENY ON ALL
+// .block                          VISIBLE ON ALL
+// .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
+// .deny-on-xxl-only               DENY ONLY ON xxl
+// .block-on-{screenSize}-only     VISIBLE ONLY ON $screenSize
+// .block-on-xxl-only              VISIBLE ONLY ON xxl
+// .deny-from-{screenSize}         DENY FROM $sreenSize
+// .block-from-{screenSize}        VISIBLE FROM $sreenSize
+// .deny-until-{screenSize}        DENY UNTIL $sreenSize
+// .block-until-{screenSize}       VISIBLE UNTIL $sreenSize
 
 
 
 // ------------------------------------------------------------------
 // --------- VISIBILITY VARIABLES ---------
 // ------------------------------------------------------------------
+
+// -------------  DISPLAY MODES ------------- 
+// $displayModes: (value: label)
+$displayModes: (
+  'none':           'deny', 
+  'block':          'block', 
+  'inline-block':   'inline-block', 
+  'inline':         'inline',
+  'flex':           'flex',
+  'inline-flex':    'inline-flex', 
+  'table':          'table', 
+  'table-cell':     'table-cell'
+);
+// ------------- END DISPLAY MODES ------------- 
 
 
 
@@ -39,6 +51,17 @@
 // ------------------------------------------------------------------
 
 // ------------- VISIBILITY RULES -------------
+
+// ------------- DISPLAY HELPERS ------------- 
+@each $value, $label in $displayModes {
+  // .displayLabel
+  .#{$label} {
+    display: #{$value};
+  }
+}
+// ------------- END DISPLAY HELPERS ------------- 
+
+
 
 // DISPLAY NONE ONLY ON XS screen, S screen, M screen, L screen, XL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {

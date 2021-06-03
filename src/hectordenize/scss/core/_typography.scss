@@ -1,14 +1,15 @@
-// ./hectordenizeCSS/scss/core/_typography.scss
+// ./hectordenize/scss/core/_typography.scss
 // TYPOGRAPHY CORE
 
 @use 'colors';
+@use '../layout/texts' as txtbox;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Source+Sans+Pro:wght@900&display=swap');
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE TYPOGRAPHY HELPERS ---------
 // ------------------------------------------------------------------
 
-// .h1, .title1, .h2, .h3, .h4, .h5, .h6
+// .title0, .title1, .title2, .title3, .title4, .title5, .title6
 // .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
 // .link
 // .txt-center, .txt-left, .txt-right, .txt-justify
@@ -17,7 +18,7 @@
 
 
 // ------------------------------------------------------------------
-// --------- TYPOGRAPHY VARIABLES & MIXINS ---------
+// --------- TYPOGRAPHY VARIABLES, MIXINS & PLACEHOLDERS ---------
 // ------------------------------------------------------------------
 
 // ------------- FONTS -------------
@@ -38,7 +39,8 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ---------------------------------
 
 // ------------- DEFAULT TYPOGRAPHY -------------
-@mixin typoDefault {
+%typoDefault {
+  // FONT
   color:            colors.$colorDark;
   font-family:      $fontDefault;
   font-size:        1rem;
@@ -53,8 +55,9 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ------------- PARAGRAPH -------------
 @mixin paragraphTypo {
   // BOX
-  margin:           0;
-  padding-bottom:   2rem;
+  @include txtbox.paragraphBox;
+
+  // FONT
 }
 //  ------------- END PARAGRAPH -------------
 
@@ -63,7 +66,7 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ------------- LINKS -------------
 @mixin linkTypo {
   // BOX 
-  border-bottom:    colors.$colorDim 1px dotted;
+  @include txtbox.linkBox;
 
   // FONT
   color:            colors.$colorDark;
@@ -71,7 +74,7 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
   &:hover {
     // BOX
-    border-bottom:  colors.$colorAccent 1px dotted;
+    @include txtbox.linkBoxHover;
 
     //FONT
     color:          colors.$colorAccent;
@@ -84,15 +87,23 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ------------- CODE -------------
 @mixin codeTypo {
   // BOX 
-  background:     colors.$colorLight;
-  box-shadow:     0 0 5px colors.$colorDim;
-  margin:         .3em;
-  padding:        .5em;
+  @include txtbox.codeBox;
 
   // FONT
   font-size:      .9rem;
 }
 // ------------- END CODE -------------
+
+
+
+// ------------- BLOCKQUOTE -------------
+@mixin blockquoteTypo {
+  // BOX
+  @include txtbox.blockquoteBox;
+
+  // FONT
+}
+// ------------- END BLOCKQUOTE -------------
 
 // ---------------------------------
 // END DEFAULT TYPOGRAPHY
@@ -105,11 +116,7 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ---------------------------------
 
 // ------------- HEADERS -------------
-@mixin headersValuesInCommon {
-  // BOX
-  margin:           0 0 1rem 0;
-  padding-top:      1rem;
-
+%titleTypoCommonValues {
   // FONT
   font-family:      $fontSecondary;
   font-weight:      900;
@@ -118,51 +125,74 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
   text-transform:   uppercase;
 }
 
-@mixin h1Typo {
+%title0Typo { // h1
+  // BOX
+  @include txtbox.title0Box;
+
+  // FONT
   font-size:        4rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin title1Typo {
+%title1Typo {
+  // BOX
+  @include txtbox.title1Box;
+
+  // FONT
   font-size:        3rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin h2Typo {
+%title2Typo { // h2
+  // BOX
+  @include txtbox.title2Box;
+
+  // FONT
   font-size:        2rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin h3Typo {
+%title3Typo { // h3
+  // BOX
+  @include txtbox.title3Box;
+
+  // FONT
   font-size:        1.5rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin h4Typo {
+%title4Typo { // h4
+  // BOX
+  @include txtbox.title4Box;
+
+  // FONT
   font-size:        1.2rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin h5Typo {
+%title5Typo { // h5
+  // BOX
+  @include txtbox.title5Box;
+
+  // FONT
   font-size:        1rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 
-@mixin h6Typo {
+%title6Typo { // h6
+  // BOX
+  @include txtbox.title6Box;
+
+  // FONT
   font-size:        .8rem;
-  @include headersValuesInCommon;
+  @extend %titleTypoCommonValues;
 }
 // ------------- END HEADERS -------------
 
 
 
 // ------------- SUBHEADERS -------------
-@mixin subtitlesValuesInCommon {
-  // BOX
-  margin:           0;
-  padding-bottom:   2rem;
-
-  // FONT
+%subtitleTypoCommonValues {
   font-family:      $fontDefault;
   font-style:       italic;
   font-weight:      300;
@@ -172,33 +202,57 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 }
 
 @mixin subtitle1Typo {
+  // BOX
+  @include txtbox.subtitle1Box;
+
+  // FONT
   font-size:        1.1rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 
 @mixin subtitle2Typo {
+  // BOX
+  @include txtbox.subtitle2Box;
+
+  // FONT
   font-size:        1rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 
 @mixin subtitle3Typo {
+  // BOX
+  @include txtbox.subtitle3Box;
+
+  // FONT
   font-size:        .9rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 
 @mixin subtitle4Typo {
+  // BOX
+  @include txtbox.subtitle4Box;
+
+  // FONT
   font-size:        .8rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 
 @mixin subtitle5Typo {
+  // BOX
+  @include txtbox.subtitle5Box;
+
+  // FONT
   font-size:        .7rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 
 @mixin subtitle6Typo {
+  // BOX
+  @include txtbox.subtitle6Box;
+
+  // FONT
   font-size:        .6rem;
-  @include subtitlesValuesInCommon;
+  @extend %subtitleTypoCommonValues;
 }
 // ------------- END SUBHEADERS -------------
 
@@ -208,55 +262,13 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 
 
-// ---------------------------------
-// LISTS TYPOGRAPHY
-// ---------------------------------
-@mixin uListTypo {
-  margin: 1em 0 1em 1em;
-  li {
-    padding-left: .5em;
-    list-style-type: initial;
-  }
-}
-
-@mixin uListAltTypo {
-  margin: 1em 0 1em 1em;
-  li {
-    padding-left: .5em;
-    list-style-type: square;
-  }
-}
-
-@mixin oListTypo {
-  margin: 1em 0 1em 1em;
-  li {
-    padding-left: .2em;
-    list-style-type: decimal;
-  }
-}
-// ---------------------------------
-// END LISTS TYPOGRAPHY
-// ---------------------------------
-
-
-
-// ------------- BLOCKQUOTE -------------
-@mixin blockquote {
-  border-left: colors.$colorLight 5px solid;
-  margin: 2em 0;
-  padding: .5em 0 .5em 2em;
-}
-// ------------- END BLOCKQUOTE -------------
-
-
-
 // ------------------------------------------------------------------
 // --------- TYPOGRAPHY SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
 //  ------------- DEFAULT TYPOGRAPHY -------------
 body { 
-  @include typoDefault; 
+  @extend %typoDefault; 
 }
 //  ------------- END DEFAULT TYPOGRAPHY -------------
 
@@ -286,33 +298,65 @@ code {
 
 
 
+//  ------------- BLOCKQUOTE -------------
+blockquote {
+  @include blockquoteTypo;
+}
+//  ------------- END BLOCKQUOTE -------------
+
+
+
 //  ------------- HEADERS -------------
-h1, .h1 { 
-  @include h1Typo; 
+h1 { 
+  @extend %title0Typo;
+}
+
+h2 { 
+  @extend %title2Typo; 
+}
+
+h3 { 
+  @extend %title3Typo; 
+}
+
+h4 { 
+  @extend %title4Typo; 
+}
+
+h5 { 
+  @extend %title5Typo; 
+}
+
+h6 { 
+  @extend %title6Typo; 
+}
+
+.title0 { 
+  @extend %title0Typo; 
 }
 
 .title1 { 
-  @include title1Typo; 
+  @extend %title1Typo; 
 }
 
-h2, .h2 { 
-  @include h2Typo; 
+.title2 { 
+  @extend %title2Typo; 
 }
 
-h3, .h3 { 
-  @include h3Typo; 
+.title3 { 
+  @extend %title3Typo; 
 }
 
-h4, .h4 { 
-  @include h4Typo; 
+.title4 { 
+  @extend %title4Typo; 
 }
 
-h5, .h5 { 
-  @include h5Typo; 
+.title5 { 
+  @extend %title5Typo; 
 }
 
-h6, .h6 { 
-  @include h6Typo; 
+.title6 { 
+  @extend %title6Typo; 
 }
 //  ------------- END HEADERS -------------
 
@@ -343,34 +387,6 @@ h6, .h6 {
   @include subtitle6Typo; 
 }
 //  ------------- END SUBHEADERS -------------
-
-
-
-// ---------------------------------
-// LISTS TYPOGRAPHY
-// ---------------------------------
-ul { 
-  @include uListTypo; 
-}
-
-.uList--alt { 
-  @include uListAltTypo; 
-}
-
-ol { 
-  @include oListTypo; 
-}
-// ---------------------------------
-// END LISTS TYPOGRAPHY
-// ---------------------------------
-
-
-
-//  ------------- BLOCKQUOTE -------------
-blockquote {
-  @include blockquote;
-}
-//  ------------- END BLOCKQUOTE -------------
 
 
 

@@ -1,7 +1,34 @@
-// ./hectordenizeCSS/scss/layout/_grid.scss
+// ./hectordenize/scss/layout/_grid.scss
 // GRID LAYOUT
 
-@use './../core/breakpoints' as brkpnts;
+@use '../core/breakpoints' as brkpnts;
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE GRID HELPERS ---------
+// ------------------------------------------------------------------
+
+// .grid, .grid--no-gap
+
+// .col-{i}       XS screen || ALL screens
+// .col-s-{i}     S screen
+// .col-m-{i}     M screen
+// .col-l-{i}     L screen
+// .col-xl-{i}    XL screen
+// .col-xxl-{i}   XXL screen
+  // .offset-{i}        XS screen || ALL screens
+  // .offset-s-{i}      S screen
+  // .offset-m-{i}      M screen
+  // .offset-l-{i}      L screen
+  // .offset-xl-{i}     XL screen
+  // .offset-xxl-{i}    XXL screen
+// .row-{i}       XS screen || ALL screens
+// .row-s-{i}     S screen
+// .row-m-{i}     M screen
+// .row-l-{i}     L screen
+// .row-xl-{i}    XL screen
+// .row-xxl-{i}   XXL screen
+
+
 
 // ------------------------------------------------------------------
 // --------- GRID VARIABLES ---------
