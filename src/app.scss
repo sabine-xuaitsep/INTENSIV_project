@@ -62,24 +62,7 @@ hr, .splitLine {
 // SOCIAL NAV -------------
 .socialNav {
   padding-right: 1.5rem;
-  .socialItem {
-    display: inline-block;
-    list-style: none;
     i {
-      // BOX
-      display: block;
-      border: none;
-      padding: 1rem;
-      //FONT
       color: #fff;
-      font-size: 1.2rem;
-      text-decoration: none;
-      &:hover {
-        color: main.$colorAccent;
-      }
     }
-    .socialLabel {
-      display: none;
-    }
-  }
 }

@@ -1,0 +1,79 @@
+// ./hectordenize/scss/components/_buttons.scss
+// SOCIALS COMPONENTS
+
+@use '../core/colors';
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE HELPERS ---------
+// ------------------------------------------------------------------
+
+// .social, .icon, .icon--alt, .label
+
+
+
+// ------------------------------------------------------------------
+// --------- SOCIALS VARIABLES ---------
+// ------------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------------
+// --------- SOCIALS SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// acts identically if: 
+//  icon is IN a link
+//    => in a <i> tag or <span class="icon">
+//  iconClass (e.g.: fab fa-xxx) is ON a link 
+//    => add .icon class (e.g.: <a class="icon fab fa-xxx">)
+
+.social {
+  margin: 1em 0;
+  padding: 0;
+
+  i, .icon {
+    padding: .2rem;
+    &::before {
+      display: inline-block;
+      padding: .3rem;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+  
+  .icon--alt {
+    @extend .icon;
+    &::before {
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid colors.$colorDim;
+      border-radius: 50%;
+      font-size: 1rem;
+    }
+  }
+
+  li {
+    display: inline-block;
+    padding: 0;
+    width: 3rem;
+    list-style: none;
+
+    a {
+      border: none;
+      line-height: 1;
+      text-decoration: none;
+
+      &.icon:hover, i:hover, .icon:hover {
+        color: colors.$colorAccent;
+      }
+      
+      &.icon--alt:hover.icon--alt::before, .icon--alt:hover.icon--alt::before {
+        border: 2px solid colors.$colorAccent;
+      }
+    }
+
+    .label {
+      display: none;
+    }
+  }
+}
