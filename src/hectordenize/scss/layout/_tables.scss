@@ -1,0 +1,99 @@
+// ./hectordenize/scss/layout/_tables.scss
+// TABLES LAYOUT
+
+@use '../core/typography' as typo;
+@use '../core/colors';
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE TABLES HELPERS ---------
+// ------------------------------------------------------------------
+
+// .table--alt
+
+
+
+// ------------------------------------------------------------------
+// --------- TABLES VARIABLES, MIXINS & PLACEHOLDERS ---------
+// ------------------------------------------------------------------
+
+// ------------- TABLE VARIABLES -------------
+$tableWidth: 100%;
+$borderCollapse: collapse;
+
+$captionTypo: typo.$fontSecondary;
+$captionSize: 1.5rem;
+$captionTextTransform: uppercase;
+$captionAlign: left;
+
+$theadTypo: typo.$fontSecondary;
+$theadSize: 0.8rem;
+$theadTextTransform: uppercase;
+$theadAlign: left;
+
+$cellPadding: .5rem;
+// ------------- END TABLE VARIABLES -------------
+
+
+
+// ------------- TBODY LAYOUT -------------
+@mixin tbody {
+  tbody {
+    tr:nth-child(odd) {
+      background: colors.$colorLight;
+      border-top: 2px solid #f0f0f0;
+      border-bottom: 2px solid #f0f0f0;
+    }
+  }
+}
+
+@mixin tbodyAlt {
+  tbody {
+    td {
+      border: 2px solid #f0f0f0;
+    }
+  }
+}
+// ------------- END TBODY LAYOUT -------------
+
+
+
+// ------------- TABLE LAYOUT -------------
+%table {
+  border-collapse: $borderCollapse;
+  width: $tableWidth;
+
+  caption {
+    font-family: $captionTypo;
+    font-size: $captionSize;
+    text-align: $captionAlign;
+    text-transform: $captionTextTransform;
+  }
+
+  thead {
+    font-family: $theadTypo;
+    font-size: $theadSize;
+    text-align: $theadAlign;
+    text-transform: $theadTextTransform;
+  }
+
+  th, td {
+    padding: $cellPadding;
+  }
+}
+// ------------- END TABLE LAYOUT -------------
+
+
+
+// ------------------------------------------------------------------
+// --------- TABLES SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+table {
+  @extend %table;
+  @include tbody;
+}
+
+.table--alt {
+  @extend %table;
+  @include tbodyAlt;
+}
