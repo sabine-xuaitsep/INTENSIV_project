@@ -7,37 +7,46 @@
 // --------- AVAILABLE LISTS HELPERS ---------
 // ------------------------------------------------------------------
 
-// .ul-alt
+// .ul--alt
 
 
 
 // ------------------------------------------------------------------
-// --------- LISTS MIXINS ---------
+// --------- LISTS VARIABLES & PLACEHOLDERS ---------
 // ------------------------------------------------------------------
 
-@mixin ul {
+// ------------- UL & OL LAYOUT -------------
+%lists {
   margin: 1em 0 1em 1em;
-  li {
-    padding-left: .5em;
-    list-style-type: initial;
-  }
+  padding-bottom: 1em;
 }
+// ------------- END UL & OL LAYOUT -------------
 
-@mixin ul-alt {
-  margin: 1em 0 1em 1em;
-  li {
-    padding-left: .5em;
-    list-style-type: square;
-  }
-}
 
-@mixin ol {
-  margin: 1em 0 1em 1em;
-  li {
-    padding-left: .2em;
-    list-style-type: decimal;
-  }
-}
+
+// ------------- UL ITEM -------------
+$uListItemPaddingLeft: .5em;
+$uListStyleType: initial;
+// ------------- END UL ITEM -------------
+
+
+
+// ------------- ALTERNATIVE UL ITEM -------------
+$uListAltStyleType: square;
+// ------------- END ALTERNATIVE UL ITEM -------------
+
+
+
+// ------------- OL ITEM -------------
+$oListItemPaddingLeft: .2em;
+$oListStyleType: decimal;
+// ------------- END OL ITEM -------------
+
+
+
+// ------------- DL LIST -------------
+$descriptionTitleWeight: bold;
+// ------------- END DL LIST -------------
 
 
 
@@ -45,14 +54,46 @@
 // --------- LISTS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
+// ------------- UL LIST -------------
 ul { 
-  @include ul; 
+  @extend %lists; 
+  li {
+    padding-left: $uListItemPaddingLeft;
+    list-style-type: $uListStyleType;
+  }
 }
+// ------------- END UL LIST -------------
 
-.ul-alt { 
-  @include ul-alt; 
+
+
+// ------------- ALTERNATIVE UL LIST -------------
+.ul--alt { 
+  @extend %lists; 
+  li {
+    padding-left: $uListItemPaddingLeft;
+    list-style-type: $uListAltStyleType;
+  }
 }
+// ------------- END ALTERNATIVE UL LIST -------------
 
+
+
+// ------------- OL LIST -------------
 ol { 
-  @include ol; 
+  @extend %lists; 
+  li {
+    padding-left: $oListItemPaddingLeft;
+    list-style-type: $oListStyleType;
+  } 
 }
+// ------------- END OL LIST -------------
+
+
+
+// ------------- DL LIST -------------
+dl {
+  dt {
+    font-weight: bold;
+  }
+}
+// ------------- END DL LIST -------------

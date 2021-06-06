@@ -1,11 +1,11 @@
-// ./hectordenize/scss/core/_utils.scss
-// UTILS CORE
+// ./hectordenize/scss/layout/_utils.scss
+// UTILS for LAYOUT
 
 @use "sass:map";
 @use '../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
-// --------- AVAILABLE HELPERS ---------
+// --------- AVAILABLE UTILS HELPERS ---------
 // ------------------------------------------------------------------
 
 // .p-rspnsv === value from './../core/breakpoints'
@@ -55,25 +55,25 @@
 @for $i from 0 through 4 {
   // .p-{i}
   .p-#{$i} {
-    padding: #{$i}em;
+    padding: #{$i}rem;
   }
   // .p-y-{i}
   .p-y-#{$i} {
-    padding-top: #{$i}em;
-    padding-bottom: #{$i}em;
+    padding-top: #{$i}rem;
+    padding-bottom: #{$i}rem;
   }
   // .p-x-{i}
   .p-x-#{$i} {
-    padding-left: #{$i}em;
-    padding-right: #{$i}em;
+    padding-left: #{$i}rem;
+    padding-right: #{$i}rem;
   }
   // .p-top-{i}
   .p-top-#{$i} {
-    padding-top: #{$i}em;
+    padding-top: #{$i}rem;
   }
   // .p-bottom-{i}
   .p-btm-#{$i} {
-    padding-bottom: #{$i}em;
+    padding-bottom: #{$i}rem;
   }
 }
 // ------------- END PADDING HELPERS ------------- 

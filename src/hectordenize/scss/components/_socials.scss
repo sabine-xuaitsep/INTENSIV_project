@@ -1,10 +1,10 @@
-// ./hectordenize/scss/components/_buttons.scss
+// ./hectordenize/scss/components/_socials.scss
 // SOCIALS COMPONENTS
 
 @use '../core/colors';
 
 // ------------------------------------------------------------------
-// --------- AVAILABLE HELPERS ---------
+// --------- AVAILABLE SOCIALS HELPERS ---------
 // ------------------------------------------------------------------
 
 // .social, .icon, .icon--alt, .label
@@ -46,7 +46,7 @@
     &::before {
       width: 1rem;
       height: 1rem;
-      border: 2px solid colors.$colorDim;
+      border: 2px solid colors.$colorLight;
       border-radius: 50%;
       font-size: 1rem;
     }
@@ -69,6 +69,7 @@
       
       &.icon--alt:hover.icon--alt::before, .icon--alt:hover.icon--alt::before {
         border: 2px solid colors.$colorAccent;
+        transition: color .1s ease-in-out;
       }
     }
 
