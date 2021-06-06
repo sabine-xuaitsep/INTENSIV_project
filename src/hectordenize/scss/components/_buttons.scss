@@ -1,14 +1,130 @@
 // ./hectordenize/scss/components/_buttons.scss
-// BUTTONS COMPONENTS
+// BUTTONS COMPONENT
+
+@use '../core/typography' as typo;
+@use '../core/colors';
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE BUTTONS HELPERS ---------
+// ------------------------------------------------------------------
+
+// .btn, .btn--primary, .btn--large, .btn--small, .btn--fit
+// .icon, .disabled
 
 
 
 // ------------------------------------------------------------------
-// --------- BUTTONS VARIABLES ---------
+// --------- BUTTONS VARIABLES & PLACEHOLDERS ---------
 // ------------------------------------------------------------------
+
+// ------------- BUTTON LAYOUT ------------- 
+%btn {
+  // BOX
+  cursor: pointer;
+  background-color: colors.$colorWhite;
+  border: 2px solid colors.$colorDark;
+  display: inline-block;
+  margin: 1rem .5rem;
+  padding: 1rem 2rem;
+  // FONT
+  color: colors.$colorDark;
+  font-family: typo.$fontSecondary;
+  font-size: .8rem;
+  letter-spacing: 0.025em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+  vertical-align: top;
+  
+  &:disabled,
+  &.disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &:hover:not(:disabled) {
+    border: 2px solid colors.$colorAccent;
+    color: colors.$colorAccent;
+  }
+
+  .icon {
+    padding-right: .5rem;
+  }
+}
+// ------------- END BUTTON LAYOUT ------------- 
+
+
+
+// ---------------------------------
+// BUTTONS MODIFIERS
+// ---------------------------------
+
+// ------------- PRIMARY BUTTON ------------- 
+$btnPrimaryBckgrndColor: colors.$colorDark;
+$btnPrimaryColor: colors.$colorWhite;
+$hoverBtnPrimaryBckgrndColor: colors.$colorAccent;
+$hoverBtnPrimaryColor: colors.$colorWhite;
+// ------------- END PRIMARY BUTTON ------------- 
+
+
+
+// ------------- LARGE BUTTON ------------- 
+$btnLargeSize: .9rem;
+$btnLargePadding: 1.1rem 2rem;
+// ------------- END LARGE BUTTON ------------- 
+
+
+
+// ------------- SMALL BUTTON ------------- 
+$btnSmallSize: .7rem;
+$btnSmallPadding: .9rem 2rem;
+// ------------- END SMALL BUTTON ------------- 
+
+
+
+// ------------- FIT BUTTON ------------- 
+$btnFitWidth: 100%;
+// ------------- END FIT BUTTON ------------- 
+
+// ---------------------------------
+// END BUTTONS MODIFIERS
+// ---------------------------------
 
 
 
 // ------------------------------------------------------------------
 // --------- BUTTONS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
+
+.btn {
+  @extend %btn;
+}
+
+.btn--primary {
+  @extend %btn;
+  background-color: $btnPrimaryBckgrndColor;
+  color: $btnPrimaryColor;
+
+  &:hover:not(:disabled) {
+    background-color: $hoverBtnPrimaryBckgrndColor;
+    color: $hoverBtnPrimaryColor;
+  }
+}
+
+.btn--large {
+  @extend %btn;
+  font-size: $btnLargeSize;
+  padding: $btnLargePadding;
+}
+
+.btn--small {
+  @extend %btn;
+  font-size: $btnSmallSize;
+  padding: $btnSmallPadding;
+}
+
+.btn--fit {
+  @extend %btn;
+  width: $btnFitWidth;
+}
