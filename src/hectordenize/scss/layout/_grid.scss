@@ -9,6 +9,9 @@
 
 // .grid, .grid--no-gap
 
+// {i} = from 1 trough 4
+// .gapX-{i}, .gapY-{i}
+
 // .col-{i}       XS screen || ALL screens
 // .col-s-{i}     S screen
 // .col-m-{i}     M screen
@@ -31,13 +34,21 @@
 
 
 // ------------------------------------------------------------------
-// --------- GRID VARIABLES ---------
+// --------- GRID VARIABLES & MIXINS ---------
 // ------------------------------------------------------------------
 
-$gapX: 2em; // horizontal gutter
-$gapY: 1em; // vertical gutter
+$gapX: 1rem; // horizontal gutter
+$gapY: 1rem; // vertical gutter
 
-
+// GRID 12 columns
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  > * {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+}
 
 // ------------------------------------------------------------------
 // --------- GRID SPECIFICATIONS ---------
@@ -45,18 +56,23 @@ $gapY: 1em; // vertical gutter
 
 // ------------- GRID -------------
 
-// GRID SYSTEM 12 columns
+// GRID SYSTEM
 .grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  @include grid;
   gap: $gapY $gapX;
+
   &--no-gap {
-    @extend .grid;
+    @include grid;
     gap: 0 0;
   }
-  > * {
-    grid-column: span 12;
-    grid-row: span 1;
+
+  @for $i from 1 through 4 {
+    &.gapX-#{$i} {
+      column-gap: #{$i}rem;
+    }
+    &.gapY-#{$i} {
+      row-gap: #{$i}rem;
+    }
   }
 }
 
