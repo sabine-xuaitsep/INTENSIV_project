@@ -99,7 +99,7 @@
   
         <h3 class="title2">Lists</h3>
   
-        <div class="grid">
+        <div class="grid gapX-2">
 
           <div class="col-m-6">
             <h4 class="title3">Unordered - UL</h4>
@@ -312,49 +312,66 @@
   
       <section>
         <h3 class="title2">Form</h3>
-        <form action="elements.html" method="get">
-          <fieldset>
-            <legend>Personal data</legend>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" placeholder="Name" />
+        <form action="elements.html" method="get" class="grid">
+          <fieldset class="grid">
+            <legend class="deny">Personal data</legend>
+
+            <label for="name" class="deny">Name</label>
+            <input type="text" class="col-6" name="name" id="name" placeholder="Name" />
   
-            <label for="email">Name</label>
-            <input type="email" name="email" id="email" placeholder="Email" />
+            <label for="email" class="deny">Email</label>
+            <input type="email" class="col-6" name="email" id="email" placeholder="Email" />
           </fieldset>
   
-          <label for="category">Category</label>
-          <select name="category" id="category">
-            <option disabled="disabled" selected="selected">-Category-</option>
+          <label for="category" class="deny">Category</label>
+          <select name="category" id="category" class="full-width">
+            <option disabled="disabled" selected="selected">
+              <span class="arrow">-Category-</span>
+            </option>
             <option value="baraki">Baraki</option>
             <option value="deglingo">Déglingo</option>
             <option value="groseille">Groseille</option>
           </select>
   
-          <fieldset>
-            <legend>Intensity</legend>
-            <input type="radio" name="intensity" id="low" value="low" checked="checked" />
-            <label for="low">Low</label>
-            
-            <input type="radio" name="intensity" id="normal" value="normal" />
-            <label for="normal">Normal</label>
-            
-            <input type="radio" name="intensity" id="high" value="high" />
-            <label for="high">High</label>
+          <fieldset class="grid">
+            <legend class="deny">Intensity</legend>
+
+            <div class="col-m-4">
+              <input type="radio" name="intensity" id="low" value="low" checked="checked" />
+              <label for="low">Low</label> 
+            </div>
+
+            <div class="col-m-4">
+              <input type="radio" name="intensity" id="normal" value="normal" />
+              <label for="normal">Normal</label> 
+            </div>
+
+            <div class="col-m-4">
+              <input type="radio" name="intensity" id="high" value="high" />
+              <label for="high">High</label> 
+            </div>
+
           </fieldset>
   
-          <div>
-            <input type="checkbox" name="mailCopy" id="mailCopy" />
-            <label for="mailCopy">Email me a copy</label>
-  
-            <input type="checkbox" name="humanNonRobot" id="humanNonRobot" />
-            <label for="humanNonRobot">I'm a human</label>
+          <div class="grid">
+            <div class="col-m-6">
+              <input type="checkbox" name="mailCopy" id="mailCopy" />
+              <label for="mailCopy">Email me a copy</label>
+            </div>
+
+            <div class="col-m-6">
+              <input type="checkbox" name="humanNonRobot" id="humanNonRobot" checked="checked" />
+              <label for="humanNonRobot" class="col-m-6">I'm a human</label>
+            </div>
           </div>
   
-          <label for="message">Votre message</label>
-          <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+          <label for="message" class="deny">Votre message</label>
+          <textarea name="message" class="full-width" id="message" placeholder="Enter your message"></textarea>
   
-          <input type="submit" value="Send Message" class="btn--primary"/>
-          <input type="reset" value="Reset" class="btn" />
+          <div>
+            <input type="submit" value="Send Message" class="btn--primary"/>
+            <input type="reset" value="Reset" class="btn" />
+          </div>
         </form>
       </section>
   

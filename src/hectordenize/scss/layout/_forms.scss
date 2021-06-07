@@ -1,0 +1,116 @@
+// ./hectordenize/scss/layout/_forms.scss
+// FORMS LAYOUT
+
+@use '../core/typography' as typo;
+@use '../core/colors';
+@use '../core/init';
+
+// ------------------------------------------------------------------
+// --------- FORMS VARIABLES ---------
+// ------------------------------------------------------------------
+
+// ------------- FORM COLORS -------------
+$input-borderColor:               colors.$colorDim;
+
+$checkbox_radio-borderColor:      colors.$colorDark;
+$checkbox_radio-backgroundColor:  colors.$colorDark;
+$checkbox_radio-check-color:      colors.$colorWhite;
+
+$focusColor:                      colors.$colorAccent;
+// ------------- END FORM COLORS -------------
+
+
+
+// ------------------------------------------------------------------
+// --------- FORMS SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// ------------- RESET -------------
+fieldset {
+  @include init.reset;
+}
+// ------------- END RESET -------------
+
+form {
+  fieldset {
+    border: none;
+  }
+  
+  input[type=text], 
+  input[type=email],
+  select,
+  textarea {
+    @include typo.typoDefault;
+    padding: 0 1rem;
+    border: 1px solid $input-borderColor;
+    &:focus {
+      border: 1px solid $focusColor;
+      outline: 1px solid $focusColor; 
+    }
+  }
+
+  select {
+    appearance: none;
+    background: 98% / 1em url('img/arrow-down.png') no-repeat; 
+  }
+
+  textarea {
+    height: 13em;
+  }
+
+  input[type=radio],
+  input[type=checkbox] {
+    appearance: none;
+  
+    + label {
+      cursor: pointer;
+      display: inline-block;
+      padding-left: 2.7rem;
+      position: relative;
+  
+        &::before {
+          // BOX
+          height: 1.4rem;
+          width: 1.4rem;
+          border: solid 2px $checkbox_radio-borderColor;
+          content: '';
+          left: 0;
+          position: absolute;
+          top: .4rem;
+          // FONT
+          font-family: "Font Awesome 5 Free"; 
+          font-size: .7rem;
+          font-weight: 900;
+          line-height: 1.4rem;
+          text-align: center;
+          
+        }
+    }
+  
+    &:checked + label::before {
+      content: '\f00c';
+      background-color: $checkbox_radio-backgroundColor;
+      color: $checkbox_radio-check-color;
+    }
+
+    &:focus + label::before {
+      border-color: $focusColor;
+    }
+  }
+
+  input[type=radio] {
+    margin-right: -.5rem;
+    + label::before {
+      border-radius: 50%;
+    } 
+  }
+  
+  input[type=checkbox] {
+    margin-right: -.4rem;
+  }
+
+  input[type=submit], 
+  input[type=reset] {
+    margin: 0 1rem 0 0;
+  }
+}
