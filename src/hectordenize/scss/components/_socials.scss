@@ -1,5 +1,5 @@
 // ./hectordenize/scss/components/_socials.scss
-// SOCIALS COMPONENTS
+// SOCIALS COMPONENT
 
 @use '../core/colors';
 
@@ -15,17 +15,24 @@
 // --------- SOCIALS VARIABLES ---------
 // ------------------------------------------------------------------
 
+// ------------- SOCIALS COLORS ------------- 
+$icon-color: colors.$colorDark;
+$icon--alt-borderColor: colors.$colorLight;
+
+$link-color: colors.$colorDark;
+
+$hover-icon-color: colors.$colorAccent;
+$hover-icon--alt-borderColor: colors.$colorAccent;
+// ------------- END SOCIALS COLORS ------------- 
+
 
 
 // ------------------------------------------------------------------
 // --------- SOCIALS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
-// acts identically if: 
-//  icon is IN a link
-//    => in a <i> tag or <span class="icon">
-//  iconClass (e.g.: fab fa-xxx) is ON a link 
-//    => add .icon class (e.g.: <a class="icon fab fa-xxx">)
+//  icon with <i> tag in a link
+//  or icon <span class="icon"> in a link
 
 .social {
   margin: 1em 0;
@@ -33,6 +40,7 @@
 
   i, .icon {
     padding: .2rem;
+    color: $icon-color;
     &::before {
       display: inline-block;
       padding: .3rem;
@@ -46,7 +54,7 @@
     &::before {
       width: 1rem;
       height: 1rem;
-      border: 2px solid colors.$colorLight;
+      border: 2px solid $icon--alt-borderColor;
       border-radius: 50%;
       font-size: 1rem;
     }
@@ -59,16 +67,17 @@
     list-style: none;
 
     a {
+      color: $link-color;
       border: none;
       line-height: 1;
       text-decoration: none;
 
       &.icon:hover, i:hover, .icon:hover {
-        color: colors.$colorAccent;
+        color: $hover-icon-color;
       }
       
       &.icon--alt:hover.icon--alt::before, .icon--alt:hover.icon--alt::before {
-        border: 2px solid colors.$colorAccent;
+        border: 2px solid $hover-icon--alt-borderColor;
         transition: color .1s ease-in-out;
       }
     }
