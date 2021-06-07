@@ -31,7 +31,7 @@ body {
 
 
 // ------------- RESET -------------
-ul, ol, blockquote, figure, pre {
+figure {
   @include reset;
 }
 // ------------- END RESET -------------

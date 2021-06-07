@@ -2,11 +2,13 @@
 // BREAKPOINTS CORE
 
 
+
 // ------------------------------------------------------------------
 // --------- BREAKPOINTS VARIABLES ---------
 // ------------------------------------------------------------------
 
 // experimentation on breakpoints values ... :-)
+
 
 // BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen
 // $breakpoints: (screenSize: (label, min-width, max-width, container: (size, padding), padding-responsive))
@@ -64,6 +66,8 @@ $breakpoints: (
 );
 // END BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen
 
+
+
 // BREAKPOINTS VALUE for XXL screen
 // $breakpointXXl: (label, min-width, container: (size, padding), padding-responsive)
 $breakpointXXL: (
@@ -76,9 +80,3 @@ $breakpointXXL: (
   'padding-responsive': 2rem 8rem
 );
 // END BREAKPOINTS VALUE for XXL screen
-
-
-
-// ------------------------------------------------------------------
-// --------- BREAKPOINTS SPECIFICATIONS ---------
-// ------------------------------------------------------------------

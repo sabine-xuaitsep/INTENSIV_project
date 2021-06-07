@@ -3,14 +3,6 @@
 
 
 // ------------------------------------------------------------------
-@forward 'texts';
-
-// ------------------------------------------------------------------
-@forward 'boxes';
-// .container
-// .colorBox, .colorVariableName
-
-// ------------------------------------------------------------------
 @forward 'lists';
 // .ul--alt
 
@@ -22,22 +14,10 @@
 @forward 'forms';
 
 // ------------------------------------------------------------------
-@forward 'display';
-// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
-
-// DENY     === display: none;
-// VISIBLE  === display: block;
-// {screenSize} = xs, s, m, l, xl
-// .deny                           DENY ON ALL
-// .block                          VISIBLE ON ALL
-// .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
-// .deny-on-xxl-only               DENY ONLY ON xxl
-// .block-on-{$creenSize}-only     VISIBLE ONLY ON $screenSize
-// .block-on-xxl-only              VISIBLE ONLY ON xxl
-// .deny-from-{screenSize}         DENY FROM $sreenSize
-// .block-from-{screenSize}        VISIBLE FROM $sreenSize
-// .deny-until-{screenSize}        DENY UNTIL $sreenSize
-// .block-until-{screenSize}       VISIBLE UNTIL $sreenSize
+@forward 'boxes';
+// .container
+// .box
+// .colorBox, .colorVariableName
 
 // ------------------------------------------------------------------
 @forward 'grid';
@@ -63,7 +43,29 @@
 // .row-xxl-{i}   XXL screen
 
 // ------------------------------------------------------------------
+@forward 'display';
+// .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
+
+// DENY === display: none;
+// SHOW === display: block;
+// {screenSize} = xs, s, m, l, xl
+// .deny                           DENY ON ALL
+// .block                          SHOW ON ALL
+// .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
+// .deny-on-xxl-only               DENY ONLY ON xxl
+// .block-on-{$creenSize}-only     SHOW ONLY ON $screenSize
+// .block-on-xxl-only              SHOW ONLY ON xxl
+// .deny-from-{screenSize}         DENY FROM $sreenSize
+// .block-from-{screenSize}        SHOW FROM $sreenSize
+// .deny-until-{screenSize}        DENY UNTIL $sreenSize
+// .block-until-{screenSize}       SHOW UNTIL $sreenSize
+
+// ------------------------------------------------------------------
 @forward 'utils';
+// .bckgrnd-accent, .bckgrnd-white, bckgrnd-pale, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
+// .color-accent, .color-white, .color-pale, .color-light, .color-dim, .color-dusky, .color-dark
+// .txt-center, .txt-left, .txt-right, .txt-justify
+// .txt-underlined, .txt-bold
 // .full-width
 // .float-left, .float-right
 // .p-rspnsv

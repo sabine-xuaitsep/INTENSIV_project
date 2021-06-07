@@ -7,8 +7,6 @@
 
 // ------------------------------------------------------------------
 @forward 'colors';
-// .bckgrnd-accent, .bckgrnd-white, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
-// .color-accent, .color-white, .color-light, .color-dim, .color-dusky, .color-dark
 
 // ------------------------------------------------------------------
 @forward 'typography';
@@ -17,6 +15,8 @@
 // .link
 // .txt-center, .txt-left, .txt-right, .txt-justify
 // .txt-underlined, .txt-bold
+
+@forward 'colors';
 
 // ------------------------------------------------------------------
 @forward 'breakpoints';

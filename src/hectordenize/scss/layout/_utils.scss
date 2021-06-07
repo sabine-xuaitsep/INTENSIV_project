@@ -3,10 +3,17 @@
 
 @use "sass:map";
 @use '../core/breakpoints' as brkpnts;
+@use '../core/colors';
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE UTILS HELPERS ---------
 // ------------------------------------------------------------------
+
+// .bckgrnd-accent, .bckgrnd-white, bckgrnd-pale, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
+// .color-accent, .color-white, .color-pale, .color-light, .color-dim, .color-dusky, .color-dark
+
+// .txt-center, .txt-left, .txt-right, .txt-justify
+// .txt-underlined, .txt-bold
 
 // .full-width
 // .float-left, .float-right
@@ -26,20 +33,63 @@
 // .m-bottom-{i}    margin-bottom: {i}em;
 
 
-// ------------------------------------------------------------------
-// --------- UTILS VARIABLES ---------
-// ------------------------------------------------------------------
-
-
 
 // ------------------------------------------------------------------
 // --------- UTILS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
+// ------------- COLORS HELPERS ------------- 
+@each $label, $color in colors.$colors {
+  // .bckgrnd-{label}
+  .bckgrnd-#{$label} {
+    background: #{$color};
+  }
+  .color-#{$label} {
+    // .color-{label}
+    color: #{$color};
+  }
+}
+// ------------- END COLORS HELPERS ------------- 
+
+
+
+// -------------  ALIGNMENTS HELPERS ------------- 
+.txt-center {
+  text-align: center;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+.txt-underlined {
+  text-decoration: underline;
+}
+
+.txt-bold {
+  font-weight: bold;
+}
+// -------------  END ALIGNMENTS HELPERS ------------- 
+
+
+
+// -------------  SIZE HELPERS ------------- 
 .full-width {
   width: 100%;
 }
+// -------------  END SIZE HELPERS ------------- 
 
+
+
+// -------------  FLOAT HELPERS ------------- 
 .float-left {
   float: left;
   margin: 1rem 2rem 1rem 0;
@@ -49,6 +99,9 @@
   float: right;
   margin: 1rem 0 1rem 2rem;
 }
+// -------------  END FLOAT HELPERS ------------- 
+
+
 
 // ------------- PADDING RESPONSIVE ------------- 
 

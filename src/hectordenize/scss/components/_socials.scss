@@ -19,11 +19,10 @@
 $icon-color: colors.$colorDark;
 $icon--alt-borderColor: colors.$colorLight;
 
-$link-color: colors.$colorDark;
+$link-textColor: colors.$colorDark;
 
 $hover-icon-color: colors.$colorAccent;
 $hover-icon--alt-borderColor: colors.$colorAccent;
-// ------------- END SOCIALS COLORS ------------- 
 
 
 
@@ -67,7 +66,7 @@ $hover-icon--alt-borderColor: colors.$colorAccent;
     list-style: none;
 
     a {
-      color: $link-color;
+      color: $link-textColor;
       border: none;
       line-height: 1;
       text-decoration: none;

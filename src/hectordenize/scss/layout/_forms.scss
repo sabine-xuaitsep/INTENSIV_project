@@ -10,14 +10,13 @@
 // ------------------------------------------------------------------
 
 // ------------- FORM COLORS -------------
-$input-borderColor:               colors.$colorDim;
+$input-borderColor:               colors.$colorLight;
 
 $checkbox_radio-borderColor:      colors.$colorDark;
 $checkbox_radio-backgroundColor:  colors.$colorDark;
 $checkbox_radio-check-color:      colors.$colorWhite;
 
 $focusColor:                      colors.$colorAccent;
-// ------------- END FORM COLORS -------------
 
 
 
@@ -30,6 +29,8 @@ fieldset {
   @include init.reset;
 }
 // ------------- END RESET -------------
+
+
 
 form {
   fieldset {

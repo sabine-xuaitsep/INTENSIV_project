@@ -4,21 +4,13 @@
 
 
 // ------------------------------------------------------------------
-// --------- AVAILABLE COLORS HELPERS  ---------
-// ------------------------------------------------------------------
-
-// .bckgrnd-accent, .bckgrnd-white, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
-// .color-accent, .color-white, .color-light, .color-dim, .color-dusky, .color-dark
-
-
-
-// ------------------------------------------------------------------
 // --------- COLORS VARIABLES ---------
 // ------------------------------------------------------------------
 
 $colorAccent: #18bfff;
 $colorWhite: #ffffff;
-$colorLight: #f6f6f6;
+$colorPale: #f6f6f6;
+$colorLight: #e6e6e6;
 $colorDim: #717981;
 $colorDusky: #4e403d;
 $colorDark: #212931;
@@ -27,27 +19,9 @@ $colorDark: #212931;
 $colors: (
   'accent': $colorAccent, 
   'white':  $colorWhite,
+  'pale':   $colorPale,
   'light':  $colorLight, 
   'dim':    $colorDim, 
   'dusky':  $colorDusky, 
   'dark':   $colorDark
 );
-
-
-
-// ------------------------------------------------------------------
-// --------- COLORS SPECIFICATIONS ---------
-// ------------------------------------------------------------------
-
-// ------------- COLORS HELPERS ------------- 
-@each $label, $color in $colors {
-  // .bckgrnd-{label}
-  .bckgrnd-#{$label} {
-    background: #{$color};
-  }
-  .color-#{$label} {
-    // .color-{label}
-    color: #{$color};
-  }
-}
-// -------------  END COLORS HELPERS ------------- 

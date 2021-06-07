@@ -18,35 +18,31 @@
 // ------------- UL & OL LAYOUT -------------
 %lists {
   margin: 1em 0 1em 1em;
-  padding-bottom: 1em;
+  padding: 0 0 1em 0;
 }
-// ------------- END UL & OL LAYOUT -------------
 
 
 
 // ------------- UL ITEM -------------
-$uListItemPaddingLeft: .5em;
-$uListStyleType: initial;
-// ------------- END UL ITEM -------------
+$ul-listItem-paddingLeft:  .5em;
+$ul-listStyleType:         initial;
 
 
 
 // ------------- ALTERNATIVE UL ITEM -------------
-$uListAltStyleType: square;
-// ------------- END ALTERNATIVE UL ITEM -------------
+$ul--alt-listItem-paddingLeft:  $ul-listItem-paddingLeft;
+$ul--alt-listStyleType:         square;
 
 
 
 // ------------- OL ITEM -------------
-$oListItemPaddingLeft: .2em;
-$oListStyleType: decimal;
-// ------------- END OL ITEM -------------
+$ol-listItem-paddingLeft:   .2em;
+$ol-listStyleType:          decimal;
 
 
 
-// ------------- DL LIST -------------
-$descriptionTitleWeight: bold;
-// ------------- END DL LIST -------------
+// ------------- DLIST -------------
+$descriptionList-titleWeight:    bold;
 
 
 
@@ -54,46 +50,42 @@ $descriptionTitleWeight: bold;
 // --------- LISTS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
-// ------------- UL LIST -------------
+// ------------- ULIST -------------
 ul { 
   @extend %lists; 
   li {
-    padding-left: $uListItemPaddingLeft;
-    list-style-type: $uListStyleType;
+    padding-left: $ul-listItem-paddingLeft;
+    list-style-type: $ul-listStyleType;
   }
 }
-// ------------- END UL LIST -------------
 
 
 
-// ------------- ALTERNATIVE UL LIST -------------
+// ------------- ALTERNATIVE ULIST -------------
 .ul--alt { 
   @extend %lists; 
   li {
-    padding-left: $uListItemPaddingLeft;
-    list-style-type: $uListAltStyleType;
+    padding-left: $ul--alt-listItem-paddingLeft;
+    list-style-type: $ul--alt-listStyleType;
   }
 }
-// ------------- END ALTERNATIVE UL LIST -------------
 
 
 
-// ------------- OL LIST -------------
+// ------------- OLIST -------------
 ol { 
   @extend %lists; 
   li {
-    padding-left: $oListItemPaddingLeft;
-    list-style-type: $oListStyleType;
+    padding-left: $ol-listItem-paddingLeft;
+    list-style-type: $ol-listStyleType;
   } 
 }
-// ------------- END OL LIST -------------
 
 
 
-// ------------- DL LIST -------------
+// ------------- DLIST -------------
 dl {
   dt {
-    font-weight: bold;
+    font-weight: $descriptionList-titleWeight;
   }
 }
-// ------------- END DL LIST -------------

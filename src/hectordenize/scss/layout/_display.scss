@@ -10,19 +10,19 @@
 
 // .deny, .block, .inline-block, .inline, .flex, .inline-flex, .table, .table-cell
 
-// DENY     === display: none;
-// VISIBLE  === display: block;
+// DENY === display: none;
+// SHOW === display: block;
 // {screenSize} = xs, s, m, l, xl
 // .deny                           DENY ON ALL
-// .block                          VISIBLE ON ALL
+// .block                          SHOW ON ALL
 // .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
 // .deny-on-xxl-only               DENY ONLY ON xxl
-// .block-on-{screenSize}-only     VISIBLE ONLY ON $screenSize
-// .block-on-xxl-only              VISIBLE ONLY ON xxl
+// .block-on-{screenSize}-only     SHOW ONLY ON $screenSize
+// .block-on-xxl-only              SHOW ONLY ON xxl
 // .deny-from-{screenSize}         DENY FROM $sreenSize
-// .block-from-{screenSize}        VISIBLE FROM $sreenSize
+// .block-from-{screenSize}        SHOW FROM $sreenSize
 // .deny-until-{screenSize}        DENY UNTIL $sreenSize
-// .block-until-{screenSize}       VISIBLE UNTIL $sreenSize
+// .block-until-{screenSize}       SHOW UNTIL $sreenSize
 
 
 
@@ -33,16 +33,15 @@
 // -------------  DISPLAY MODES ------------- 
 // $displayModes: (value: label)
 $displayModes: (
-  'none':           'deny', 
-  'block':          'block', 
-  'inline-block':   'inline-block', 
-  'inline':         'inline',
-  'flex':           'flex',
-  'inline-flex':    'inline-flex', 
-  'table':          'table', 
-  'table-cell':     'table-cell'
+  none:           'deny', 
+  block:          'block', 
+  inline-block:   'inline-block', 
+  inline:         'inline',
+  flex:           'flex',
+  inline-flex:    'inline-flex', 
+  table:          'table', 
+  table-cell:     'table-cell'
 );
-// ------------- END DISPLAY MODES ------------- 
 
 
 
@@ -50,18 +49,19 @@ $displayModes: (
 // --------- DISPLAY SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
-// ------------- DISPLAY RULES -------------
-
 // ------------- DISPLAY HELPERS ------------- 
 @each $value, $label in $displayModes {
-  // .displayLabel
+  // .{displayLabel}
   .#{$label} {
     display: #{$value};
   }
 }
-// ------------- END DISPLAY HELPERS ------------- 
 
 
+
+// ---------------------------------
+// RESPONSIVE DISPLAY HELPERS
+// ---------------------------------
 
 // DISPLAY NONE ONLY ON XS screen, S screen, M screen, L screen, XL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
@@ -131,4 +131,6 @@ $displayModes: (
   }
 }
 
-// ------------- END DISPLAY RULES -------------
+// ---------------------------------
+// END RESPONSIVE DISPLAY HELPERS
+// ---------------------------------

@@ -3,31 +3,26 @@
 
 @use "sass:map";
 @use './../core/breakpoints' as brkpnts;
+@use '../core/colors';
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE BOXES HELPERS ---------
 // ------------------------------------------------------------------
 
 // .container
+// .box
 // .colorBox, .colorVariableName
+
 
 
 // ------------------------------------------------------------------
 // --------- BOXES VARIABLES ---------
 // ------------------------------------------------------------------
 
-@mixin colorBox {
-  height: 100px;
-  width: 100px;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  .colorVariableName {
-    font-size: .8rem;
-  }
-}
+// ------------- .BOX -------------
+$box-border:    2px solid colors.$colorLight;
+$box-padding:   1.5rem;
+$box-textAlign: justify;
 
 
 
@@ -35,7 +30,7 @@
 // --------- BOXES SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
-// ------------- CONTAINER -------------
+// ------------- .CONTAINER -------------
 
 // CONTAINER for XS screen (all), S screen, M screen, L screen, XL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
@@ -63,8 +58,26 @@
 
 
 
-// ------------- BOXES -------------
-.colorBox {
-  @include colorBox;
+// ------------- .BOX -------------
+.box {
+  border: $box-border;
+  padding: $box-padding;
+  text-align: $box-textAlign;
 }
-// ------------- END BOXES -------------
+
+
+
+// ------------- .COLORBOX -------------
+.colorBox {
+  margin-bottom: 4px;
+  height: 100px;
+  width: 100px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .colorVariableName {
+    font-size: .8rem;
+  }
+}

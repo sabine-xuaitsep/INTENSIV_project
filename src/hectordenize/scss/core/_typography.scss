@@ -2,7 +2,6 @@
 // TYPOGRAPHY CORE
 
 @use 'colors';
-@use '../layout/texts' as txtbox;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Source+Sans+Pro:wght@900&display=swap');
 
 // ------------------------------------------------------------------
@@ -12,8 +11,6 @@
 // .title0, .title1, .title2, .title3, .title4, .title5, .title6
 // .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
 // .link
-// .txt-center, .txt-left, .txt-right, .txt-justify
-// .txt-underlined, .txt-bold
 
 
 
@@ -22,15 +19,41 @@
 // ------------------------------------------------------------------
 
 // ------------- FONTS -------------
-$fontDefault: 'Merriweather', Georgia, serif;
+$fontDefault:   'Merriweather', Georgia, serif;
 $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
-// ------------- END FONTS -------------
 
 
 
-// @mixin typographyRules($property, $value) {
-//   #{$property}: $value;
-// }
+// ------------- COLORS -------------
+$colorDefault:            colors.$colorDark;
+
+$link-color:              colors.$colorDark;
+$link-borderColor:        colors.$colorDim;
+$hover-link-color:        colors.$colorAccent; 
+$hover-link-borderColor:  colors.$colorAccent;
+
+$code-bckgrndColor:       colors.$colorPale;
+$code-boxShadowColor:     colors.$colorDim;
+
+$blockquote-borderColor:  colors.$colorLight;
+// ------------- END COLORS -------------
+
+
+
+// ------------- LINK STYLE -------------
+$link-borderBottom:         $link-borderColor 1px dotted;           
+$link-decoration:           none;
+$hover-link-borderBottom:   $hover-link-borderColor 1px dotted;
+// ------------- END LINK STYLE -------------
+
+
+
+// ------------- TYPORULES MIXIN -------------
+// NOT USED BUT CAN BE HELPFULL
+@mixin typoRules($property, $value) {
+  #{$property}: #{$value};
+}
+// ------------- END TYPORULES MIXIN -------------
 
 
 
@@ -39,71 +62,53 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ---------------------------------
 
 // ------------- DEFAULT TYPOGRAPHY -------------
-%typoDefault {
-  // FONT
-  color:            colors.$colorDark;
+@mixin typoDefault {
+  color:            $colorDefault;
   font-family:      $fontDefault;
   font-size:        1rem;
   font-weight:      300;
   letter-spacing:   .025em;
   line-height:      2.5;
 }
-// ------------- END DEFAULT TYPOGRAPHY -------------
 
 
 
 // ------------- PARAGRAPH -------------
-@mixin paragraphTypo {
-  // BOX
-  @include txtbox.paragraphBox;
-
-  // FONT
+@mixin paragraph {
+  margin:           0;
+  padding-bottom:   2rem;
 }
-//  ------------- END PARAGRAPH -------------
-
-
-
-// ------------- LINKS -------------
-@mixin linkTypo {
-  // BOX 
-  @include txtbox.linkBox;
-
-  // FONT
-  color:            colors.$colorDark;
-  text-decoration:  none;
-
-  &:hover {
-    // BOX
-    @include txtbox.linkBoxHover;
-
-    //FONT
-    color:          colors.$colorAccent;
-  }
-}
-// ------------- END LINKS -------------
 
 
 
 // ------------- CODE -------------
 @mixin codeTypo {
-  // BOX 
-  @include txtbox.codeBox;
-
-  // FONT
+  background:     $code-bckgrndColor;
+  box-shadow:     0 0 5px $code-boxShadowColor;
+  margin:         .3em;
+  padding:        .5em;
   font-size:      .9rem;
 }
-// ------------- END CODE -------------
 
 
 
 // ------------- BLOCKQUOTE -------------
 @mixin blockquoteTypo {
-  // BOX
-  @include txtbox.blockquoteBox;
-
-  // FONT
+  border-left: $blockquote-borderColor 5px solid; 
+  margin: 2em 0;
+  padding: .5em 0 .5em 2em;
 }
-// ------------- END BLOCKQUOTE -------------
+
+
+
+//  ------------- PREFORMATED -------------
+@mixin preformatedTypo {
+  background-color: colors.$colorPale;
+  border: 2px solid colors.$colorLight;
+  margin: 0;
+  padding: 1rem;
+  line-height: 1.5;
+}
 
 // ---------------------------------
 // END DEFAULT TYPOGRAPHY
@@ -116,7 +121,18 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 // ---------------------------------
 
 // ------------- HEADERS -------------
+$title0-fontSize: 4rem; // h1
+$title1-fontSize: 3rem;
+$title2-fontSize: 2rem; // h2
+$title3-fontSize: 1.5rem; // h3
+$title4-fontSize: 1.2rem; // h4
+$title5-fontSize: 1rem; // h5
+$title6-fontSize: .8rem; // h6
+
 %titleTypoCommonValues {
+  // BOX
+  margin:           0 0 1rem 0;
+  padding-top:      1rem;
   // FONT
   font-family:      $fontSecondary;
   font-weight:      900;
@@ -124,135 +140,29 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
   line-height:      1.2;
   text-transform:   uppercase;
 }
-
-%title0Typo { // h1
-  // BOX
-  @include txtbox.title0Box;
-
-  // FONT
-  font-size:        4rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title1Typo {
-  // BOX
-  @include txtbox.title1Box;
-
-  // FONT
-  font-size:        3rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title2Typo { // h2
-  // BOX
-  @include txtbox.title2Box;
-
-  // FONT
-  font-size:        2rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title3Typo { // h3
-  // BOX
-  @include txtbox.title3Box;
-
-  // FONT
-  font-size:        1.5rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title4Typo { // h4
-  // BOX
-  @include txtbox.title4Box;
-
-  // FONT
-  font-size:        1.2rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title5Typo { // h5
-  // BOX
-  @include txtbox.title5Box;
-
-  // FONT
-  font-size:        1rem;
-  @extend %titleTypoCommonValues;
-}
-
-%title6Typo { // h6
-  // BOX
-  @include txtbox.title6Box;
-
-  // FONT
-  font-size:        .8rem;
-  @extend %titleTypoCommonValues;
-}
 // ------------- END HEADERS -------------
 
 
 
 // ------------- SUBHEADERS -------------
+$subtitle1-fontSize: 1.1rem;
+$subtitle2-fontSize: 1rem; 
+$subtitle3-fontSize: .9rem; 
+$subtitle4-fontSize: .8rem; 
+$subtitle5-fontSize: .7rem; 
+$subtitle6-fontSize: .6rem; 
+
 %subtitleTypoCommonValues {
+  // BOX
+  margin:   0;
+  padding:  0 0 2rem 0;
+  // FONT 
   font-family:      $fontDefault;
   font-style:       italic;
   font-weight:      300;
   letter-spacing:   0;
   line-height:      2.5;
   text-transform:   initial;
-}
-
-@mixin subtitle1Typo {
-  // BOX
-  @include txtbox.subtitle1Box;
-
-  // FONT
-  font-size:        1.1rem;
-  @extend %subtitleTypoCommonValues;
-}
-
-@mixin subtitle2Typo {
-  // BOX
-  @include txtbox.subtitle2Box;
-
-  // FONT
-  font-size:        1rem;
-  @extend %subtitleTypoCommonValues;
-}
-
-@mixin subtitle3Typo {
-  // BOX
-  @include txtbox.subtitle3Box;
-
-  // FONT
-  font-size:        .9rem;
-  @extend %subtitleTypoCommonValues;
-}
-
-@mixin subtitle4Typo {
-  // BOX
-  @include txtbox.subtitle4Box;
-
-  // FONT
-  font-size:        .8rem;
-  @extend %subtitleTypoCommonValues;
-}
-
-@mixin subtitle5Typo {
-  // BOX
-  @include txtbox.subtitle5Box;
-
-  // FONT
-  font-size:        .7rem;
-  @extend %subtitleTypoCommonValues;
-}
-
-@mixin subtitle6Typo {
-  // BOX
-  @include txtbox.subtitle6Box;
-
-  // FONT
-  font-size:        .6rem;
-  @extend %subtitleTypoCommonValues;
 }
 // ------------- END SUBHEADERS -------------
 
@@ -268,25 +178,29 @@ $fontSecondary: 'Source Sans Pro', Helvetica, sans-serif;
 
 //  ------------- DEFAULT TYPOGRAPHY -------------
 body { 
-  @extend %typoDefault; 
+  @include typoDefault; 
 }
-//  ------------- END DEFAULT TYPOGRAPHY -------------
 
 
 
 //  ------------- PARAGRAPH -------------
 p { 
-  @include paragraphTypo; 
+  @include paragraph
 }
-//  ------------- END PARAGRAPH -------------
 
 
 
 // ------------- LINKS -------------
 a, .link { 
-  @include linkTypo; 
+  border-bottom:    $link-borderBottom;
+  color:            $link-color;
+  text-decoration:  $link-decoration;
+  
+  &:hover {
+    border-bottom:  $hover-link-borderBottom;
+    color:          $hover-link-color;
+  }
 }
-// ------------- END LINKS -------------
 
 
 
@@ -294,7 +208,6 @@ a, .link {
 code { 
   @include codeTypo; 
 }
-// ------------- END CODE -------------
 
 
 
@@ -302,116 +215,81 @@ code {
 blockquote {
   @include blockquoteTypo;
 }
-//  ------------- END BLOCKQUOTE -------------
+
+
+
+//  ------------- PREFORMATED -------------
+pre {
+  @include preformatedTypo;
+}
 
 
 
 //  ------------- HEADERS -------------
-h1 { 
-  @extend %title0Typo;
+h1, h2, h3, h4, h5, h6, 
+.title0, .title1, .title2, 
+.title3, .title4, .title5, .title6 {
+  @extend %titleTypoCommonValues;
 }
 
-h2 { 
-  @extend %title2Typo; 
-}
-
-h3 { 
-  @extend %title3Typo; 
-}
-
-h4 { 
-  @extend %title4Typo; 
-}
-
-h5 { 
-  @extend %title5Typo; 
-}
-
-h6 { 
-  @extend %title6Typo; 
-}
-
-.title0 { 
-  @extend %title0Typo; 
+h1, .title0 { 
+  font-size: $title0-fontSize;
 }
 
 .title1 { 
-  @extend %title1Typo; 
+  font-size: $title1-fontSize;
 }
 
-.title2 { 
-  @extend %title2Typo; 
+h2, .title2 { 
+  font-size: $title2-fontSize;
 }
 
-.title3 { 
-  @extend %title3Typo; 
+h3, .title3 { 
+  font-size: $title3-fontSize;
 }
 
-.title4 { 
-  @extend %title4Typo; 
+h4, .title4 { 
+  font-size: $title4-fontSize;
 }
 
-.title5 { 
-  @extend %title5Typo; 
+h5, .title5 { 
+  font-size: $title5-fontSize;
 }
 
-.title6 { 
-  @extend %title6Typo; 
+h6, .title6 { 
+  font-size: $title6-fontSize;
 }
 //  ------------- END HEADERS -------------
 
 
 
 //  ------------- SUBHEADERS -------------
+.subtitle1, .subtitle2, .subtitle3, 
+.subtitle4, .subtitle5, .subtitle6 {
+  @extend %subtitleTypoCommonValues;
+}
+
 .subtitle1 { 
-  @include subtitle1Typo; 
+  font-size: $subtitle1-fontSize;
 }
 
 .subtitle2 { 
-  @include subtitle2Typo; 
+  font-size: $subtitle2-fontSize;
 }
 
 .subtitle3 { 
-  @include subtitle3Typo; 
+  font-size: $subtitle3-fontSize;
 }
 
 .subtitle4 { 
-  @include subtitle4Typo; 
+  font-size: $subtitle4-fontSize;
 }
 
 .subtitle5 { 
-  @include subtitle5Typo; 
+  font-size: $subtitle5-fontSize;
 }
 
 .subtitle6 { 
-  @include subtitle6Typo; 
+  font-size: $subtitle6-fontSize;
 }
 //  ------------- END SUBHEADERS -------------
-
-
-
-// -------------  ALIGNMENTS HELPERS ------------- 
-.txt-center {
-  text-align: center;
-}
-
-.txt-left {
-  text-align: left;
-}
-
-.txt-right {
-  text-align: right;
-}
-
-.txt-justify {
-  text-align: justify;
-}
-
-.txt-underlined {
-  text-decoration: underline;
-}
-
-.txt-bold {
-  font-weight: bold;
-}
-// -------------  END ALIGNMENTS HELPERS ------------- 

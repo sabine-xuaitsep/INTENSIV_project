@@ -17,20 +17,20 @@
 // ------------------------------------------------------------------
 
 // ------------- TABLE VARIABLES -------------
-$tableWidth: 100%;
-$borderCollapse: collapse;
+$tableWidth:            100%;
+$borderCollapse:        collapse;
 
-$captionTypo: typo.$fontSecondary;
-$captionSize: 1.5rem;
-$captionTextTransform: uppercase;
-$captionAlign: left;
+$captionTypo:           typo.$fontSecondary;
+$captionSize:           1.5rem;
+$captionTextTransform:  uppercase;
+$captionAlign:          left;
 
-$theadTypo: typo.$fontSecondary;
-$theadSize: 0.8rem;
-$theadTextTransform: uppercase;
-$theadAlign: left;
+$theadTypo:             typo.$fontSecondary;
+$theadSize:             0.8rem;
+$theadTextTransform:    uppercase;
+$theadAlign:            left;
 
-$cellPadding: .5rem;
+$cellPadding:           .5rem;
 // ------------- END TABLE VARIABLES -------------
 
 
@@ -39,9 +39,9 @@ $cellPadding: .5rem;
 @mixin tbody {
   tbody {
     tr:nth-child(odd) {
-      background: colors.$colorLight;
-      border-top: 2px solid #f0f0f0;
-      border-bottom: 2px solid #f0f0f0;
+      background: colors.$colorPale;
+      border-top: 2px solid colors.$colorLight;
+      border-bottom: 2px solid colors.$colorLight;
     }
   }
 }
@@ -49,7 +49,7 @@ $cellPadding: .5rem;
 @mixin tbodyAlt {
   tbody {
     td {
-      border: 2px solid #f0f0f0;
+      border: 2px solid colors.$colorLight;
     }
   }
 }
