@@ -8,6 +8,8 @@
 // --------- AVAILABLE UTILS HELPERS ---------
 // ------------------------------------------------------------------
 
+// .full-width
+
 // .p-rspnsv === value from './../core/breakpoints'
 
 // {i} = from 0 trough 4
@@ -16,7 +18,11 @@
 // .p-x-{i}         padding-left: {i}em; padding-right: {i}em;
 // .p-top-{i}       padding-top: {i}em;
 // .p-bottom-{i}    padding-bottom: {i}em;
-
+// .m-{i}           margin: {i}em;
+// .m-y-{i}         margin-top: {i}em; margin-bottom: {i}em;
+// .m-x-{i}         margin-left: {i}em; margin-right: {i}em;
+// .m-top-{i}       margin-top: {i}em;
+// .m-bottom-{i}    margin-bottom: {i}em;
 
 
 // ------------------------------------------------------------------
@@ -28,6 +34,10 @@
 // ------------------------------------------------------------------
 // --------- UTILS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
+
+.full-width {
+  width: 100%;
+}
 
 // ------------- PADDING RESPONSIVE ------------- 
 
@@ -77,3 +87,32 @@
   }
 }
 // ------------- END PADDING HELPERS ------------- 
+
+
+
+// ------------- MARGIN HELPERS ------------- 
+@for $i from 0 through 4 {
+  // .m-{i}
+  .m-#{$i} {
+    margin: #{$i}rem;
+  }
+  // .m-y-{i}
+  .m-y-#{$i} {
+    margin-top: #{$i}rem;
+    margin-bottom: #{$i}rem;
+  }
+  // .m-x-{i}
+  .m-x-#{$i} {
+    margin-left: #{$i}rem;
+    margin-right: #{$i}rem;
+  }
+  // .m-top-{i}
+  .m-top-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  // .m-bottom-{i}
+  .m-btm-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+}
+// ------------- END MARGIN HELPERS ------------- 
