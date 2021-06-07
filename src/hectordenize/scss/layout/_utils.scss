@@ -9,6 +9,7 @@
 // ------------------------------------------------------------------
 
 // .full-width
+// .float-left, .float-right
 
 // .p-rspnsv === value from './../core/breakpoints'
 
@@ -37,6 +38,16 @@
 
 .full-width {
   width: 100%;
+}
+
+.float-left {
+  float: left;
+  margin: 1rem 2rem 1rem 0;
+}
+
+.float-right {
+  float: right;
+  margin: 1rem 0 1rem 2rem;
 }
 
 // ------------- PADDING RESPONSIVE ------------- 
