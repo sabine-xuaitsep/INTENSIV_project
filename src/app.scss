@@ -69,12 +69,6 @@ hr, .splitLine {
 
 // FOOTER -------------
 footer {
-  .addressContainer {
-    .title6 {
-      display: inline-block;
-      width: 90px;
-    }
-  }
   textarea {
     height: 7em;
   }
@@ -82,11 +76,19 @@ footer {
     border-color: main.$colorDim;
     color: main.$colorDim;
   }
-
-  address {
-    font-size: 0.8rem;
+  .addressContainer {
+    .title6 {
+      display: inline-block;
+      width: 90px;
+    }
+    address {
+      font-size: 0.8rem;
+    }
+    .postalAddress {
+      vertical-align: top;
+      padding-top: .4rem;
+    }
   }
-
   .social {
     .icon--alt {
       color: main.$colorDim;

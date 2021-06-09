@@ -18,7 +18,7 @@
 
 // .txt-center, .txt-left, .txt-right, .txt-justify
 // .txt-underlined, .txt-bold
-// .vAlign-top 
+// .vAlign-top, .vAlign-middle
 // .full-width
 // .float-left, .float-right
 
@@ -98,6 +98,10 @@
 // ------------- VERTICAL ALIGN HELPERS ------------- 
 .vAlign-top {
   vertical-align: top;
+}
+
+.vAlign-middle {
+  vertical-align: middle;
 }
 // ------------- END VERTICAL ALIGN HELPERS ------------- 
 
