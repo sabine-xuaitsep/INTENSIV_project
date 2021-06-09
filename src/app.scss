@@ -19,6 +19,23 @@ body {
 
 
 
+.appLogo {
+  display: inline-block;
+  border: 4px solid main.$colorWhite;
+  margin: 5rem 0;
+  padding: 0;
+
+  a {
+    display: block;
+    border: none;
+    padding: 1rem 1.5rem;
+  }
+
+  &:hover {
+    border: 4px solid main.$colorAccent;
+  }
+}
+
 // MAIN NAV -------------
 .mainNavContainer {
   display: flex;
