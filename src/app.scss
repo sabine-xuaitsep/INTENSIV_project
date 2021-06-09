@@ -60,9 +60,36 @@ hr, .splitLine {
 }
 
 // SOCIAL NAV -------------
-.socialNav {
+.socialNav.social {
   padding-right: 1.5rem;
     i {
       color: #fff;
     }
+}
+
+// FOOTER -------------
+footer {
+  .addressContainer {
+    .title6 {
+      display: inline-block;
+      width: 90px;
+    }
+  }
+  textarea {
+    height: 7em;
+  }
+  .btn {
+    border-color: main.$colorDim;
+    color: main.$colorDim;
+  }
+
+  address {
+    font-size: 0.8rem;
+  }
+
+  .social {
+    .icon--alt {
+      color: main.$colorDim;
+    }    
+  }
 }

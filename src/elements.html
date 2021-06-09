@@ -36,7 +36,7 @@
   <main class="container bckgrnd-white">
 
     <div class="p-rspnsv">
-      <header class="p-top-3 p-btm-2">
+      <header class="pTop-3 pBtm-2">
         <h2 class="title1 txt-center"><span class="block-from-l">Elements</span> Reference</h2>
       </header>
   
@@ -130,8 +130,8 @@
               <li>Felis enim et tempus.</li>
             </ol>
 
-            <h4 class="title3 p-btm-1">Social icons</h4>
-            <div class="p-btm-1">
+            <h4 class="title3 pBtm-1">Social icons</h4>
+            <div class="pBtm-1">
               <ul class="social">
                 <li><a href="#"><i class="fab fa-twitter"></i><span class="label">Twitter</span></a></li>
                 <li><a href="#"><i class="fab fa-facebook-f"></i><span class="label">Facebook</span></a></li>
@@ -149,7 +149,7 @@
 
         </div>
   
-        <h4 class="title3 p-top-1">Description list</h4>
+        <h4 class="title3 pTop-1">Description list</h4>
         <dl>
           <dt>Definition 1</dt>
           <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</dd>
@@ -167,7 +167,7 @@
   
       <section>
         <h3 class="title2">Blockquote</h3>
-        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate officia consectetur laudantium iure minus eligendi laboriosam itaque est beatae culpa magni incidunt consequuntur quaerat sapiente, quo enim dolor corporis!</blockquote>
+        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cupiditate officia consectetur laudantium iure minus eligendi laboriosam itaque est beatae culpa magni incidunt consequuntur quaerat sapiente, quo enim dolor corporis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque enim libero distinctio qui ut fugiat, dolorem ea magni? Nostrum maxime possimus reiciendis sit optio molestiae magni totam, repellat a iusto.</blockquote>
       </section>
   
       <hr />
@@ -281,7 +281,7 @@
           <input type="button" value="inputButton Default" class="btn" />
         </div>
   
-        <h4 class="title3 p-top-3">Buttons</h4>
+        <h4 class="title3 pTop-3">Buttons</h4>
         <div>
           <button class="btn--primary">Primary</button>
           <button class="btn">Default</button>
@@ -382,7 +382,7 @@
         <h3 class="title2">Image</h3>
         <h4 class="title3">Fit</h4>
         <img src="https://picsum.photos/800" alt="Lorem Picsum" class="full-width">
-        <div class="grid p-top-2">
+        <div class="grid pTop-2">
           <img src="https://picsum.photos/400" class="col-4 full-width" alt="Lorem Picsum">
           <img src="https://picsum.photos/400" class="col-4 full-width" alt="Lorem Picsum">
           <img src="https://picsum.photos/400" class="col-4 full-width" alt="Lorem Picsum">
@@ -394,7 +394,7 @@
           <img src="https://picsum.photos/400" class="col-4 full-width" alt="Lorem Picsum">
         </div>
   
-        <h4 class="title3 p-top-3">Left & Right</h4>
+        <h4 class="title3 pTop-4">Left & Right</h4>
         <div>
           <img src="https://picsum.photos/200" alt="Lorem Picsum" class="float-left">
           <p>
@@ -413,9 +413,11 @@
   
       <section>
         <h3 class="title2">Box</h3>
-        <p class="box">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente possimus cum sed reiciendis sint quibusdam, recusandae iure, totam perspiciatis consectetur earum ullam sequi fugit nam maiores dolore maxime. Inventore neque id quis blanditiis quidem delectus fugit unde? Rem quos similique placeat in, obcaecati assumenda earum aspernatur eligendi magni? Consectetur vitae, nesciunt ex porro eos itaque blanditiis, officiis voluptas sit iste laborum sequi eum harum molestias minus. Vitae quod et facere. Dolor blanditiis repellat nam odit dolore maiores deserunt nostrum natus ipsam adipisci hic mollitia corporis consequuntur corrupti aspernatur similique, excepturi a nisi neque? Adipisci numquam magni cupiditate cumque architecto.
-        </p>
+        <div class="box">
+          <p class="p-0">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus sapiente possimus cum sed reiciendis sint quibusdam, recusandae iure, totam perspiciatis consectetur earum ullam sequi fugit nam maiores dolore maxime. Inventore neque id quis blanditiis quidem delectus fugit unde? Rem quos similique placeat in, obcaecati assumenda earum aspernatur eligendi magni? Consectetur vitae, nesciunt ex porro eos itaque blanditiis, officiis voluptas sit iste laborum sequi eum harum molestias minus. Vitae quod et facere. Dolor blanditiis repellat nam odit dolore maiores deserunt nostrum natus ipsam adipisci hic mollitia corporis consequuntur corrupti aspernatur similique, excepturi a nisi neque? Adipisci numquam magni cupiditate cumque architecto.
+          </p>
+        </div>
       </section>
   
       <hr />
@@ -438,55 +440,60 @@
   </main>
 
   <footer>
-    <div class="container bckgrnd-pale">
-      <div>
+    <div class="container grid gap-2px bckgrnd-light">
+      <div class="col-l-6 bckgrnd-pale p-2 pX-m-4">
         <form action="elements.html" method="get">
-          <label>Name
-            <input type="text" name="name" />
+          <label for="name" class="title6 color-dim">Name
+            <input type="text" id="name" class="bckgrnd-pale full-width mBtm-1" name="name" />
           </label>
   
-          <label>Email
-            <input type="email" name="email" />
+          <label for="email" class="title6 color-dim">Email
+            <input type="email" id="email" class="bckgrnd-pale full-width mBtm-1" name="email" />
           </label>
   
-          <label>Message
-            <textarea name="message" placeholder="Enter your message"></textarea>
+          <label for="message" class="title6 color-dim">Message
+            <textarea name="message" id="message" class="bckgrnd-pale full-width mBtm-1"></textarea>
           </label>
   
-          <input type="submit" value="Send Message" class="btn"/>
+          <input type="submit" value="Send Message" class="btn bckgrnd-pale"/>
         </form>
       </div>
-  
-      <address>
-        <div>
-          Address 
-          <span>
+
+      <div class="grid gap-2px col-l-6 addressContainer">
+        <div class="row-1 bckgrnd-pale p-2 pX-m-4">
+          <span class="title6 color-dim">Address</span>  
+          <address class="inline-block vAlign-top color-dim">
             9 rue Charles Deliège 4247 <br />
             Fléron, TN 00000-0000
-          </span>
+          </address>
         </div>
     
-        <div>
-          Phone
-          <a href="tel:+0000000000">(000) 000-0000</a>
+        <div class="row-1 bckgrnd-pale p-2 pX-m-4">
+          <span class="title6 color-dim">Phone</span> 
+          <address class="inline-block">
+            <a href="tel:+0000000000" class="color-dim">(000) 000-0000</a>
+          </address>
         </div>
     
-        <div>
-          Email
-          <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
+        <div class="row-1 bckgrnd-pale p-2 pX-m-4">
+          <span class="title6 color-dim">Email</span> 
+          <address class="inline-block color-dim">
+            <a href="mailto:info@untitled.tld" class="color-dim">info@untitled.tld</a>
+          </address>
         </div>
-      </address>
-      <div>
-        <ul class="social">
-          <li><a href="#"><i class="icon--alt fab fa-twitter"></i><span class="label">Twitter</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-facebook-f"></i><span class="label">Facebook</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-instagram"></i><span class="label">Instagram</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-github"></i><span class="label">GitHub</span></a></li>
-        </ul>
+        <div class="row-1 bckgrnd-pale p-2 pX-m-4">
+          <span class="title6 color-dim">Social</span> 
+          <ul class="social inline-block">
+            <li><a href="#"><i class="icon--alt fab fa-twitter"></i><span class="label">Twitter</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-facebook-f"></i><span class="label">Facebook</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-instagram"></i><span class="label">Instagram</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-github"></i><span class="label">GitHub</span></a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="title6 color-dim txt-center">&copy; SaBiNeXuaiTseP | Design: IEPS</div>
+    <div class="title6 color-dim txt-center pY-4">&copy; SaBiNeXuaiTseP | Design: <a href="https://www.promotion-sociale.be/" class="color-dim ">IEPS</a></div>
   </footer>
 
 
