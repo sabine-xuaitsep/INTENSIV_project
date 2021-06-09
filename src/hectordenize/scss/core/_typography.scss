@@ -76,7 +76,8 @@ $hover-link-borderBottom:   $hover-link-borderColor 1px dotted;
 // ------------- PARAGRAPH -------------
 @mixin paragraph {
   margin:           0;
-  padding-bottom:   2rem;
+  margin-bottom:   2rem;
+  // padding-bottom:   2rem;
 }
 
 
@@ -121,11 +122,11 @@ $hover-link-borderBottom:   $hover-link-borderColor 1px dotted;
 // ---------------------------------
 
 // ------------- HEADERS -------------
-$title0-fontSize: 4rem; // h1
-$title1-fontSize: 3rem;
+$title0-fontSize: 4.5rem; // h1
+$title1-fontSize: 3.5rem;
 $title2-fontSize: 2rem; // h2
 $title3-fontSize: 1.5rem; // h3
-$title4-fontSize: 1.2rem; // h4
+$title4-fontSize: 1.1rem; // h4
 $title5-fontSize: 1rem; // h5
 $title6-fontSize: .8rem; // h6
 

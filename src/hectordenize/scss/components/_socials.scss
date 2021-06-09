@@ -19,7 +19,8 @@
 $icon-color: colors.$colorDark;
 $icon--alt-borderColor: colors.$colorLight;
 
-$link-textColor: colors.$colorDark;
+$link-txtColor: colors.$colorDark;
+$hover-link-txtColor: colors.$colorAccent;
 
 $hover-icon-color: colors.$colorAccent;
 $hover-icon--alt-borderColor: colors.$colorAccent;
@@ -34,55 +35,66 @@ $hover-icon--alt-borderColor: colors.$colorAccent;
 //  or icon <span class="icon"> in a link
 
 .social {
-  margin: 1em 0;
+  margin: 1.5em 0;
   padding: 0;
-
-  i, .icon {
-    padding: .2rem;
-    color: $icon-color;
-    &::before {
-      display: inline-block;
-      padding: .3rem;
-      font-size: 1.3rem;
-      text-align: center;
-    }
-  }
-  
-  .icon--alt {
-    @extend .icon;
-    &::before {
-      width: 1rem;
-      height: 1rem;
-      border: 2px solid $icon--alt-borderColor;
-      border-radius: 50%;
-      font-size: 1rem;
-    }
-  }
+  letter-spacing: 0;
+  line-height: 1;
 
   li {
     display: inline-block;
     padding: 0;
-    width: 3rem;
+    margin: .5rem .5rem .5rem 0;
     list-style: none;
 
     a {
-      color: $link-textColor;
+      color: $link-txtColor;
       border: none;
-      line-height: 1;
       text-decoration: none;
 
-      &.icon:hover, i:hover, .icon:hover {
-        color: $hover-icon-color;
+      &:hover {
+        color: $hover-link-txtColor;
+
+        i, .icon, .icon--alt {
+          color: $hover-icon-color;
+        }
+
+        .icon--alt::before {
+          border: 2px solid $hover-icon--alt-borderColor;
+          transition: color .1s ease-in-out;
+        }
       }
-      
-      &.icon--alt:hover.icon--alt::before, .icon--alt:hover.icon--alt::before {
-        border: 2px solid $hover-icon--alt-borderColor;
-        transition: color .1s ease-in-out;
-      }
+    }
+
+    i:not(.icon--alt), .icon {
+      margin-right: .5rem;
+    }
+
+    i, .icon, .icon--alt {
+      color: $icon-color;
+    } 
+
+    i::before, .icon::before, .icon--alt::before {
+      display: block;
+      padding: .3rem;
+      text-align: center;
+    } 
+    
+    i:not(.icon--alt)::before, .icon::before {
+      font-size: 1.3rem;
+    }
+    
+    .icon--alt::before {
+      width: 1.3rem;
+      height: 1.3rem;
+      line-height: 1.3rem;
+      border: 2px solid $icon--alt-borderColor;
+      border-radius: 50%;
+      font-size: 1rem;
     }
 
     .label {
       display: none;
+      margin: 0 .5rem;
     }
   }
 }
