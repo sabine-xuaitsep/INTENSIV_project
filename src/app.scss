@@ -10,17 +10,14 @@ body {
   background: radial-gradient(50% 13% at 50% 7%, main.$colorDusky, main.$colorDark);
 }
 
+
+
 // NAV BACKGROUND -------------
 .bckgrnd-nav {
   background: radial-gradient(#6a605a, #494e53);
 }
 
-// HR -------------
-hr, .splitLine {
-  border: none;
-  border-top: main.$colorLight 2px solid;
-  margin: 3rem 0;
-}
+
 
 // MAIN NAV -------------
 .mainNavContainer {
@@ -31,7 +28,7 @@ hr, .splitLine {
 
 .mainNav {
   font-size: 0;
-  .navItem {
+  li {
     display: inline-block;
     list-style: none;
     a {
@@ -59,13 +56,39 @@ hr, .splitLine {
   }
 }
 
+
+
 // SOCIAL NAV -------------
 .socialNav.social {
+  margin: 0;
   padding-right: 1.5rem;
     i {
       color: #fff;
     }
 }
+
+
+
+// META DATA -------------
+.metaContainer {
+  width: 100%;
+  height: 2px;
+  background-color: main.$colorLight;
+  .metaData {
+    display: inline-block;
+    background-color: main.$colorWhite;
+    padding: 0 1rem;
+    position: relative;
+    top: -20px;
+    font-size: .9rem;
+  }
+}
+
+.metaData {
+  font-size: .8rem;
+}
+
+
 
 // FOOTER -------------
 footer {

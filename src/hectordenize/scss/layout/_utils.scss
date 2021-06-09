@@ -9,6 +9,8 @@
 // --------- AVAILABLE UTILS HELPERS ---------
 // ------------------------------------------------------------------
 
+// .splitLine
+
 // ------------- info ------------- 
 // .bckgrnd-{label}, .color-{label}
 // {label} === from '../core/colors'
@@ -51,6 +53,16 @@
 // ------------------------------------------------------------------
 // --------- UTILS SPECIFICATIONS ---------
 // ------------------------------------------------------------------
+
+// ------------- SPLITLINE | HR -------------
+hr, .splitLine {
+  border: none;
+  border-top: colors.$colorLight 2px solid;
+  margin: 3rem 0;
+}
+// ------------- SPLITLINE | HR -------------
+
+
 
 // ------------- COLORS HELPERS ------------- 
 @each $label, $color in colors.$colors {

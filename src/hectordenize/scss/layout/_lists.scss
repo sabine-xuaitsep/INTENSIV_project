@@ -43,6 +43,7 @@ $ol-listStyleType:          decimal;
 
 // ------------- DLIST -------------
 $descriptionList-titleWeight:    bold;
+$descriptionList-margin:         2rem 0 1rem 0;
 
 
 
@@ -87,5 +88,6 @@ ol {
 dl {
   dt {
     font-weight: $descriptionList-titleWeight;
+    margin: $descriptionList-margin;
   }
 }
