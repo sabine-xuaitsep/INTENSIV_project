@@ -177,55 +177,60 @@
   </main>
 
   <footer>
-    <div class="container bckgrnd-pale">
-      <div>
+    <div class="container grid gap-2px bckgrnd-light">
+      <div class="col-l-6 bckgrnd-pale pTop-2 pBtm-3 pX-2 pX-m-4">
         <form action="elements.html" method="get">
-          <label>Name
-            <input type="text" name="name" />
+          <label for="name" class="title6 color-dim">Name
+            <input type="text" id="name" class="bckgrnd-pale full-width mBtm-1" name="name" />
           </label>
   
-          <label>Email
-            <input type="email" name="email" />
+          <label for="email" class="title6 color-dim">Email
+            <input type="email" id="email" class="bckgrnd-pale full-width mBtm-1" name="email" />
           </label>
   
-          <label>Message
-            <textarea name="message" placeholder="Enter your message"></textarea>
+          <label for="message" class="title6 color-dim">Message
+            <textarea name="message" id="message" class="bckgrnd-pale full-width mBtm-1"></textarea>
           </label>
   
-          <input type="submit" value="Send Message" class="btn"/>
+          <input type="submit" value="Send Message" class="btn bckgrnd-pale"/>
         </form>
       </div>
-  
-      <address>
-        <div>
-          Address 
-          <span>
+
+      <div class="grid gap-2px col-l-6 addressContainer">
+        <div class="row-1 bckgrnd-pale pY-3 pX-2 pX-m-4">
+          <span class="title6 color-dim">Address</span>  
+          <address class="inline-block color-dim postalAddress">
             9 rue Charles Deliège 4247 <br />
             Fléron, TN 00000-0000
-          </span>
+          </address>
         </div>
     
-        <div>
-          Phone
-          <a href="tel:+0000000000">(000) 000-0000</a>
+        <div class="row-1 bckgrnd-pale pY-3 pX-2 pX-m-4">
+          <span class="title6 color-dim">Phone</span> 
+          <address class="inline-block">
+            <a href="tel:+0000000000" class="color-dim">(000) 000-0000</a>
+          </address>
         </div>
     
-        <div>
-          Email
-          <a href="mailto:info@untitled.tld">info@untitled.tld</a><br>
+        <div class="row-1 bckgrnd-pale pY-3 pX-2 pX-m-4">
+          <span class="title6 color-dim">Email</span> 
+          <address class="inline-block color-dim">
+            <a href="mailto:info@untitled.tld" class="color-dim">info@untitled.tld</a>
+          </address>
         </div>
-      </address>
-      <div>
-        <ul class="social">
-          <li><a href="#"><i class="icon--alt fab fa-twitter"></i><span class="label">Twitter</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-facebook-f"></i><span class="label">Facebook</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-instagram"></i><span class="label">Instagram</span></a></li>
-          <li><a href="#"><i class="icon--alt fab fa-github"></i><span class="label">GitHub</span></a></li>
-        </ul>
+        <div class="row-1 bckgrnd-pale pY-3 pX-2 pX-m-4">
+          <span class="title6 color-dim">Social</span> 
+          <ul class="social inline-block m-0">
+            <li><a href="#"><i class="icon--alt fab fa-twitter"></i><span class="label">Twitter</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-facebook-f"></i><span class="label">Facebook</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-instagram"></i><span class="label">Instagram</span></a></li>
+            <li><a href="#"><i class="icon--alt fab fa-github"></i><span class="label">GitHub</span></a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="title6 color-dim txt-center">&copy; SaBiNeXuaiTseP | Design: IEPS</div>
+    <div class="title6 color-dim txt-center pY-4">&copy; SaBiNeXuaiTseP | Design: <a href="https://www.promotion-sociale.be/" class="color-dim ">IEPS</a></div>
   </footer>
 
 
