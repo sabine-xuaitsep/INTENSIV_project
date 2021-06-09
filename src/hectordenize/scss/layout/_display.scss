@@ -12,15 +12,19 @@
 
 // DENY === display: none;
 // SHOW === display: block;
-// {screenSize} = xs, s, m, l, xl
 // .deny                           DENY ON ALL
 // .block                          SHOW ON ALL
+
+// ------------- info ------------- 
+// {screenSize} = xs, s, m, l, xl, xxl
+// === from '../core/breakpoints'
+// ------------- END info ------------- 
 // .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
-// .deny-on-xxl-only               DENY ONLY ON xxl
-// .block-on-{screenSize}-only     SHOW ONLY ON $screenSize
-// .block-on-xxl-only              SHOW ONLY ON xxl
+// .block-on-{$creenSize}-only     SHOW ONLY ON $screenSize
 // .deny-from-{screenSize}         DENY FROM $sreenSize
+// .deny-from-xxxl                 DENY FROM xxxl
 // .block-from-{screenSize}        SHOW FROM $sreenSize
+// .block-from-xxxl                SHOW FROM xxxl
 // .deny-until-{screenSize}        DENY UNTIL $sreenSize
 // .block-until-{screenSize}       SHOW UNTIL $sreenSize
 
@@ -63,7 +67,7 @@ $displayModes: (
 // RESPONSIVE DISPLAY HELPERS
 // ---------------------------------
 
-// DISPLAY NONE ONLY ON XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY NONE ONLY ON XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) and (max-width: map.get($values, 'max-width')) {
     .deny-on-#{$screenSizes}-only {
@@ -72,14 +76,7 @@ $displayModes: (
   }
 }
 
-// DISPLAY NONE ONLY ON XXL screen
-@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
-  .deny-on-xxl-only {
-    display: none;
-  }
-}
-
-// DISPLAY BLOCK ONLY ON XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY BLOCK ONLY ON XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) and (max-width: map.get($values, 'max-width')) {
     .block-on-#{$screenSizes}-only {
@@ -88,14 +85,7 @@ $displayModes: (
   }
 }
 
-// DISPLAY BLOCK ONLY ON XXL screen
-@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
-  .block-on-xxl-only {
-    display: block;
-  }
-}
-
-// DISPLAY NONE FROM XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY NONE FROM XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) {
     .deny-from-#{$screenSizes} {
@@ -104,7 +94,14 @@ $displayModes: (
   }
 }
 
-// DISPLAY BLOCK FROM XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY NONE FROM XXXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
+  .deny-from-xxxl {
+    display: none;
+  }
+}
+
+// DISPLAY BLOCK FROM XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) {
     .block-from-#{$screenSizes} {
@@ -113,7 +110,14 @@ $displayModes: (
   }
 }
 
-// DISPLAY NONE UNTIL XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY BLOCK FROM XXXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
+  .block-from-xxxl {
+    display: block;
+  }
+}
+
+// DISPLAY NONE UNTIL XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (max-width: map.get($values, 'max-width')) {
     .deny-until-#{$screenSizes} {
@@ -122,7 +126,7 @@ $displayModes: (
   }
 }
 
-// DISPLAY BLOCK UNTIL XS screen, S screen, M screen, L screen, XL screen
+// DISPLAY BLOCK UNTIL XS screen, S screen, M screen, L screen, XL screen, XXL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (max-width: map.get($values, 'max-width')) {
     .block-until-#{$screenSizes} {

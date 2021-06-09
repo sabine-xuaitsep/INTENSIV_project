@@ -22,25 +22,45 @@
 // ------------------------------------------------------------------
 @forward 'grid';
 // .grid, .grid--no-gap
-// .gapX-{i}, .gapY-{i}
+
+// {i} === from 1 trough 4 [{i}rem]
+// .gap-{i}, .gapX-{i}, .gapY-{i}
+
+// {i} === from 1 trough 10 [{i}px]
+// .gap-{i}px, .gapX-{i}px, .gapY-{i}px
+
+
+// ------------- info ------------- 
+// .col{label}, .row{label}, .offset{label} 
+// {label} === from '../core/breakpoints'
+// ------------- END info ------------- 
+
+// {i} = from 1 trough 12
 // .col-{i}       XS screen || ALL screens
 // .col-s-{i}     S screen
 // .col-m-{i}     M screen
 // .col-l-{i}     L screen
 // .col-xl-{i}    XL screen
 // .col-xxl-{i}   XXL screen
+// .col-xxxl-{i}  XXXL screen
+
+  // {i} = from 0 trough 11
   // .offset-{i}        XS screen || ALL screens
   // .offset-s-{i}      S screen
   // .offset-m-{i}      M screen
   // .offset-l-{i}      L screen
   // .offset-xl-{i}     XL screen
   // .offset-xxl-{i}    XXL screen
+  // .offset-xxxl-{i}   XXXL screen
+
+// {i} = from 1 trough 12
 // .row-{i}       XS screen || ALL screens
 // .row-s-{i}     S screen
 // .row-m-{i}     M screen
 // .row-l-{i}     L screen
 // .row-xl-{i}    XL screen
 // .row-xxl-{i}   XXL screen
+// .row-xxxl-{i}  XXXL screen
 
 // ------------------------------------------------------------------
 @forward 'display';
@@ -48,36 +68,59 @@
 
 // DENY === display: none;
 // SHOW === display: block;
-// {screenSize} = xs, s, m, l, xl
 // .deny                           DENY ON ALL
 // .block                          SHOW ON ALL
+
+// ------------- info ------------- 
+// {screenSize} = xs, s, m, l, xl, xxl
+// === from '../core/breakpoints'
+// ------------- END info ------------- 
 // .deny-on-{screenSize}-only      DENY ONLY ON $sreenSize
-// .deny-on-xxl-only               DENY ONLY ON xxl
 // .block-on-{$creenSize}-only     SHOW ONLY ON $screenSize
-// .block-on-xxl-only              SHOW ONLY ON xxl
 // .deny-from-{screenSize}         DENY FROM $sreenSize
+// .deny-from-xxxl                 DENY FROM xxxl
 // .block-from-{screenSize}        SHOW FROM $sreenSize
+// .block-from-xxxl                SHOW FROM xxxl
 // .deny-until-{screenSize}        DENY UNTIL $sreenSize
 // .block-until-{screenSize}       SHOW UNTIL $sreenSize
 
 // ------------------------------------------------------------------
 @forward 'utils';
+// ------------- info ------------- 
+// .bckgrnd-{label}, .color-{label}
+// {label} === from '../core/colors'
+// ------------- END info ------------- 
 // .bckgrnd-accent, .bckgrnd-white, bckgrnd-pale, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
 // .color-accent, .color-white, .color-pale, .color-light, .color-dim, .color-dusky, .color-dark
+
 // .txt-center, .txt-left, .txt-right, .txt-justify
 // .txt-underlined, .txt-bold
+// .vAlign-top 
 // .full-width
 // .float-left, .float-right
-// .p-rspnsv
-// .p-{i}
-// .p-y-{i}
-// .p-x-{i}
-// .p-top-{i}
-// .p-bottom-{i}
-// .m-{i}
-// .m-y-{i}
-// .m-x-{i}
-// .m-top-{i}
-// .m-bottom-{i}
+
+// .p-rspnsv === value from '../core/breakpoints'
+
+// ------------- info ------------- 
+// .p{label}, .pY{label}, .pX{label} 
+// {label} === from '../core/breakpoints'
+// ------------- END info ------------- 
+// {i} = from 0 trough 4
+// .p{label}-{i}    padding: {i}em; 
+//    e.g.: p-1     === padding: 1rem from XS screen || ALL screens
+//    e.g.: p-l-3   === padding: 3rem from L screen
+// .pY{label}-{i}   padding-top: {i}em; padding-bottom: {i}em;
+// .pX{label}-{i}   padding-left: {i}em; padding-right: {i}em;
+
+// {i} = from 0 trough 4
+// .pTop-{i}        padding-top: {i}em;
+// .pBtm-{i}        padding-bottom: {i}em;
+
+// {i} = from 0 trough 4
+// .m-{i}           margin: {i}em;
+// .mY-{i}          margin-top: {i}em; margin-bottom: {i}em;
+// .mX-{i}          margin-left: {i}em; margin-right: {i}em;
+// .mTop-{i}        margin-top: {i}em;
+// .mBtm-{i}        margin-bottom: {i}em;
 
 // ------------------------------------------------------------------

@@ -10,7 +10,7 @@
 // experimentation on breakpoints values ... :-)
 
 
-// BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen
+// BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen, XXL screen
 // $breakpoints: (screenSize: (label, min-width, max-width, container: (size, padding), padding-responsive))
 $breakpoints: (
   'xs': (
@@ -18,7 +18,7 @@ $breakpoints: (
     'min-width': 0,      
     'max-width': 575px,  
     'container': (
-      'size': 100%, 
+      'size': 90vw, 
       'padding': 0
     ), 
     'padding-responsive': 2rem
@@ -26,7 +26,7 @@ $breakpoints: (
   's': (
     'label': '-s',  
     'min-width': 576px,  
-    'max-width': 991px,  
+    'max-width': 767px,  
     'container': (
       'size': 90vw, 
       'padding': 0
@@ -35,6 +35,16 @@ $breakpoints: (
   ), 
   'm': (
     'label': '-m',  
+    'min-width': 768px,  
+    'max-width': 991px,  
+    'container': (
+      'size': 90vw, 
+      'padding': 0
+    ), 
+    'padding-responsive': 2rem 4rem
+  ), 
+  'l': (
+    'label': '-l',  
     'min-width': 992px,  
     'max-width': 1279px, 
     'container': (
@@ -43,8 +53,8 @@ $breakpoints: (
     ), 
     'padding-responsive': 2rem 4rem
   ), 
-  'l': (
-    'label': '-l',  
+  'xl': (
+    'label': '-xl',  
     'min-width': 1280px, 
     'max-width': 1819px, 
     'container': (
@@ -53,8 +63,8 @@ $breakpoints: (
     ), 
     'padding-responsive': 2rem 6rem
   ), 
-  'xl': (
-    'label': '-xl', 
+  'xxl': (
+    'label': '-xxl', 
     'min-width': 1920px, 
     'max-width': 3839px, 
     'container': (
@@ -64,14 +74,14 @@ $breakpoints: (
     'padding-responsive': 2rem 6rem
   )
 );
-// END BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen
+// END BREAKPOINTS VALUES for XS screen (all), S screen, M screen, L screen, XL screen, XXL screen
 
 
 
-// BREAKPOINTS VALUE for XXL screen
-// $breakpointXXl: (label, min-width, container: (size, padding), padding-responsive)
-$breakpointXXL: (
-  'label': '-xxl', 
+// BREAKPOINTS VALUE for XXXL screen
+// $breakpointXXXl: (label, min-width, container: (size, padding), padding-responsive)
+$breakpointXXXL: (
+  'label': '-xxxl', 
   'min-width': 3840px, 
   'container': (
     'size': 60vw, 
@@ -79,4 +89,4 @@ $breakpointXXL: (
   ), 
   'padding-responsive': 2rem 8rem
 );
-// END BREAKPOINTS VALUE for XXL screen
+// END BREAKPOINTS VALUE for XXXL screen

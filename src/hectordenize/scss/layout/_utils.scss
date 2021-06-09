@@ -9,28 +9,42 @@
 // --------- AVAILABLE UTILS HELPERS ---------
 // ------------------------------------------------------------------
 
+// ------------- info ------------- 
+// .bckgrnd-{label}, .color-{label}
+// {label} === from '../core/colors'
+// ------------- END info ------------- 
 // .bckgrnd-accent, .bckgrnd-white, bckgrnd-pale, .bckgrnd-light, .bckgrnd-dim, .bckgrnd-dusky, .bckgrnd-dark
 // .color-accent, .color-white, .color-pale, .color-light, .color-dim, .color-dusky, .color-dark
 
 // .txt-center, .txt-left, .txt-right, .txt-justify
 // .txt-underlined, .txt-bold
-
+// .vAlign-top 
 // .full-width
 // .float-left, .float-right
 
-// .p-rspnsv === value from './../core/breakpoints'
+// .p-rspnsv === value from '../core/breakpoints'
+
+// ------------- info ------------- 
+// .p{label}, .pY{label}, .pX{label} 
+// {label} === from '../core/breakpoints'
+// ------------- END info ------------- 
+// {i} = from 0 trough 4
+// .p{label}-{i}    padding: {i}em; 
+//    e.g.: p-1     === padding: 1rem from XS screen || ALL screens
+//    e.g.: p-l-3   === padding: 3rem from L screen
+// .pY{label}-{i}   padding-top: {i}em; padding-bottom: {i}em;
+// .pX{label}-{i}   padding-left: {i}em; padding-right: {i}em;
 
 // {i} = from 0 trough 4
-// .p-{i}           padding: {i}em;
-// .p-y-{i}         padding-top: {i}em; padding-bottom: {i}em;
-// .p-x-{i}         padding-left: {i}em; padding-right: {i}em;
-// .p-top-{i}       padding-top: {i}em;
-// .p-bottom-{i}    padding-bottom: {i}em;
+// .pTop-{i}        padding-top: {i}em;
+// .pBtm-{i}        padding-bottom: {i}em;
+
+// {i} = from 0 trough 4
 // .m-{i}           margin: {i}em;
-// .m-y-{i}         margin-top: {i}em; margin-bottom: {i}em;
-// .m-x-{i}         margin-left: {i}em; margin-right: {i}em;
-// .m-top-{i}       margin-top: {i}em;
-// .m-bottom-{i}    margin-bottom: {i}em;
+// .mY-{i}          margin-top: {i}em; margin-bottom: {i}em;
+// .mX-{i}          margin-left: {i}em; margin-right: {i}em;
+// .mTop-{i}        margin-top: {i}em;
+// .mBtm-{i}        margin-bottom: {i}em;
 
 
 
@@ -53,7 +67,7 @@
 
 
 
-// -------------  ALIGNMENTS HELPERS ------------- 
+// ------------- ALIGNMENTS HELPERS ------------- 
 .txt-center {
   text-align: center;
 }
@@ -77,7 +91,15 @@
 .txt-bold {
   font-weight: bold;
 }
-// -------------  END ALIGNMENTS HELPERS ------------- 
+// ------------- END ALIGNMENTS HELPERS ------------- 
+
+
+
+// ------------- VERTICAL ALIGN HELPERS ------------- 
+.vAlign-top {
+  vertical-align: top;
+}
+// ------------- END VERTICAL ALIGN HELPERS ------------- 
 
 
 
@@ -103,7 +125,14 @@
 
 
 
-// ------------- PADDING RESPONSIVE ------------- 
+// ---------------------------------
+// PADDING HELPERS
+// ---------------------------------
+
+// ------------- PADDING RESPONSIVE HELPERS ------------- 
+
+// {'padding-responsive'} defined in breakpoints
+// === from '../core/breakpoints'
 
 // RESPONSIVE PADDING for XS screen (all), S screen, M screen, L screen, XL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
@@ -114,43 +143,81 @@
   } 
 }
 
-// RESPONSIVE PADDING for XXL screen
-@media screen and (min-width: map.get(brkpnts.$breakpointXXL, 'min-width')) {
+// RESPONSIVE PADDING for XXXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
   .p-rspnsv {
-    padding: #{map.get(brkpnts.$breakpointXXL, 'padding-responsive')};
+    padding: #{map.get(brkpnts.$breakpointXXXL, 'padding-responsive')};
   }
 } 
 
-// ------------- END PADDING RESPONSIVE ------------- 
+
+
+$brkpntsFromS: map.deep-remove(brkpnts.$breakpoints, "xs");
+
+// FIXED padding depending of breakpoints
+
+// PADDING for XS screen (all), S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    @for $i from 1 through 4 {
+      // .p{label}-{i}
+      .p#{map-get($values, 'label')}-#{$i} {
+        padding: #{$i}rem;
+      }
+      // .pY{label}-{i}
+      .pY#{map-get($values, 'label')}-#{$i} {
+        padding-top: #{$i}rem;
+        padding-bottom: #{$i}rem;
+      }
+      // .pX{label}-{i}
+      .pX#{map-get($values, 'label')}-#{$i} {
+        padding-left: #{$i}rem;
+        padding-right: #{$i}rem;
+      }
+    }
+  } 
+}
+
+// PADDING for XXXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
+  @for $i from 1 through 4 {
+    // .p-{label}-{i}
+    .p-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      padding: #{$i}rem;
+    }
+    // .pY-{label}-{i}
+    .pY-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      padding-top: #{$i}rem;
+      padding-bottom: #{$i}rem;
+    }
+    // .pX-{label}-{i}
+    .pX-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      padding-left: #{$i}rem;
+      padding-right: #{$i}rem;
+    }
+  }
+} 
+
+// ------------- END PADDING RESPONSIVE HELPERS ------------- 
 
 
 
-// ------------- PADDING HELPERS ------------- 
+// ------------- SIMPLE PADDING HELPERS ------------- 
 @for $i from 0 through 4 {
-  // .p-{i}
-  .p-#{$i} {
-    padding: #{$i}rem;
-  }
-  // .p-y-{i}
-  .p-y-#{$i} {
-    padding-top: #{$i}rem;
-    padding-bottom: #{$i}rem;
-  }
-  // .p-x-{i}
-  .p-x-#{$i} {
-    padding-left: #{$i}rem;
-    padding-right: #{$i}rem;
-  }
-  // .p-top-{i}
-  .p-top-#{$i} {
+  // .pTop-{i}
+  .pTop-#{$i} {
     padding-top: #{$i}rem;
   }
-  // .p-bottom-{i}
-  .p-btm-#{$i} {
+  // .pBtm-{i}
+  .pBtm-#{$i} {
     padding-bottom: #{$i}rem;
   }
 }
-// ------------- END PADDING HELPERS ------------- 
+// ------------- END SIMPLE PADDING HELPERS ------------- 
+
+// ---------------------------------
+// END PADDING HELPERS
+// ---------------------------------
 
 
 
@@ -160,22 +227,22 @@
   .m-#{$i} {
     margin: #{$i}rem;
   }
-  // .m-y-{i}
-  .m-y-#{$i} {
+  // .mY-{i}
+  .mY-#{$i} {
     margin-top: #{$i}rem;
     margin-bottom: #{$i}rem;
   }
-  // .m-x-{i}
-  .m-x-#{$i} {
+  // .mX-{i}
+  .mX-#{$i} {
     margin-left: #{$i}rem;
     margin-right: #{$i}rem;
   }
-  // .m-top-{i}
-  .m-top-#{$i} {
+  // .mTop-{i}
+  .mTop-#{$i} {
     margin-top: #{$i}rem;
   }
-  // .m-bottom-{i}
-  .m-btm-#{$i} {
+  // .mBtm-{i}
+  .mBtm-#{$i} {
     margin-bottom: #{$i}rem;
   }
 }
