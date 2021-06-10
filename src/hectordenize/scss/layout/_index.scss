@@ -104,25 +104,20 @@
 // .p-rspnsv === value from '../core/breakpoints'
 
 // ------------- info ------------- 
-// .p{label}, .pY{label}, .pX{label} 
 // {label} === from '../core/breakpoints'
+// {i} = from 0 trough 7
 // ------------- END info ------------- 
-// {i} = from 0 trough 4
 // .p{label}-{i}    padding: {i}em; 
 //    e.g.: p-1     === padding: 1rem from XS screen || ALL screens
 //    e.g.: p-l-3   === padding: 3rem from L screen
 // .pY{label}-{i}   padding-top: {i}em; padding-bottom: {i}em;
 // .pX{label}-{i}   padding-left: {i}em; padding-right: {i}em;
-
-// {i} = from 0 trough 4
-// .pTop-{i}        padding-top: {i}em;
-// .pBtm-{i}        padding-bottom: {i}em;
-
-// {i} = from 0 trough 4
-// .m-{i}           margin: {i}em;
-// .mY-{i}          margin-top: {i}em; margin-bottom: {i}em;
-// .mX-{i}          margin-left: {i}em; margin-right: {i}em;
-// .mTop-{i}        margin-top: {i}em;
-// .mBtm-{i}        margin-bottom: {i}em;
+// .pTop{label}-{i}        padding-top: {i}em;
+// .pBtm{label}-{i}        padding-bottom: {i}em;
+// .m{label}-{i}           margin: {i}em;
+// .mY{label}-{i}          margin-top: {i}em; margin-bottom: {i}em;
+// .mX{label}-{i}          margin-left: {i}em; margin-right: {i}em;
+// .mTop{label}-{i}        margin-top: {i}em;
+// .mBtm{label}-{i}        margin-bottom: {i}em;
 
 // ------------------------------------------------------------------

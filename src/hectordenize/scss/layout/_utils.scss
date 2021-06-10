@@ -27,26 +27,21 @@
 // .p-rspnsv === value from '../core/breakpoints'
 
 // ------------- info ------------- 
-// .p{label}, .pY{label}, .pX{label} 
 // {label} === from '../core/breakpoints'
+// {i} = from 0 trough 7
 // ------------- END info ------------- 
-// {i} = from 0 trough 4
 // .p{label}-{i}    padding: {i}em; 
 //    e.g.: p-1     === padding: 1rem from XS screen || ALL screens
 //    e.g.: p-l-3   === padding: 3rem from L screen
 // .pY{label}-{i}   padding-top: {i}em; padding-bottom: {i}em;
 // .pX{label}-{i}   padding-left: {i}em; padding-right: {i}em;
-
-// {i} = from 0 trough 4
-// .pTop-{i}        padding-top: {i}em;
-// .pBtm-{i}        padding-bottom: {i}em;
-
-// {i} = from 0 trough 4
-// .m-{i}           margin: {i}em;
-// .mY-{i}          margin-top: {i}em; margin-bottom: {i}em;
-// .mX-{i}          margin-left: {i}em; margin-right: {i}em;
-// .mTop-{i}        margin-top: {i}em;
-// .mBtm-{i}        margin-bottom: {i}em;
+// .pTop{label}-{i}        padding-top: {i}em;
+// .pBtm{label}-{i}        padding-bottom: {i}em;
+// .m{label}-{i}           margin: {i}em;
+// .mY{label}-{i}          margin-top: {i}em; margin-bottom: {i}em;
+// .mX{label}-{i}          margin-left: {i}em; margin-right: {i}em;
+// .mTop{label}-{i}        margin-top: {i}em;
+// .mBtm{label}-{i}        margin-bottom: {i}em;
 
 
 
@@ -175,7 +170,7 @@ $brkpntsFromS: map.deep-remove(brkpnts.$breakpoints, "xs");
 // PADDING for XS screen (all), S screen, M screen, L screen, XL screen
 @each $screenSizes, $values in brkpnts.$breakpoints {
   @media screen and (min-width: map.get($values, 'min-width')) {
-    @for $i from 1 through 4 {
+    @for $i from 0 through 7 {
       // .p{label}-{i}
       .p#{map-get($values, 'label')}-#{$i} {
         padding: #{$i}rem;
@@ -190,13 +185,21 @@ $brkpntsFromS: map.deep-remove(brkpnts.$breakpoints, "xs");
         padding-left: #{$i}rem;
         padding-right: #{$i}rem;
       }
+      // .pTop{label}-{i}
+      .pTop#{map-get($values, 'label')}-#{$i} {
+        padding-top: #{$i}rem;
+      }
+      // .pBtm{label}-{i}
+      .pBtm#{map-get($values, 'label')}-#{$i} {
+        padding-bottom: #{$i}rem;
+      }
     }
   } 
 }
 
 // PADDING for XXXL screen
 @media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
-  @for $i from 1 through 4 {
+  @for $i from 0 through 7 {
     // .p-{label}-{i}
     .p-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
       padding: #{$i}rem;
@@ -211,25 +214,18 @@ $brkpntsFromS: map.deep-remove(brkpnts.$breakpoints, "xs");
       padding-left: #{$i}rem;
       padding-right: #{$i}rem;
     }
+    // .pTop-{i}
+    .pTop#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      padding-top: #{$i}rem;
+    }
+    // .pBtm-{i}
+    .pBtm#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      padding-bottom: #{$i}rem;
+    }
   }
 } 
 
 // ------------- END PADDING RESPONSIVE HELPERS ------------- 
-
-
-
-// ------------- SIMPLE PADDING HELPERS ------------- 
-@for $i from 0 through 4 {
-  // .pTop-{i}
-  .pTop-#{$i} {
-    padding-top: #{$i}rem;
-  }
-  // .pBtm-{i}
-  .pBtm-#{$i} {
-    padding-bottom: #{$i}rem;
-  }
-}
-// ------------- END SIMPLE PADDING HELPERS ------------- 
 
 // ---------------------------------
 // END PADDING HELPERS
@@ -237,29 +233,70 @@ $brkpntsFromS: map.deep-remove(brkpnts.$breakpoints, "xs");
 
 
 
-// ------------- MARGIN HELPERS ------------- 
-@for $i from 0 through 4 {
-  // .m-{i}
-  .m-#{$i} {
-    margin: #{$i}rem;
-  }
-  // .mY-{i}
-  .mY-#{$i} {
-    margin-top: #{$i}rem;
-    margin-bottom: #{$i}rem;
-  }
-  // .mX-{i}
-  .mX-#{$i} {
-    margin-left: #{$i}rem;
-    margin-right: #{$i}rem;
-  }
-  // .mTop-{i}
-  .mTop-#{$i} {
-    margin-top: #{$i}rem;
-  }
-  // .mBtm-{i}
-  .mBtm-#{$i} {
-    margin-bottom: #{$i}rem;
-  }
+// ---------------------------------
+// MARGIN HELPERS
+// ---------------------------------
+
+// ------------- MARGIN RESPONSIVE HELPERS ------------- 
+// MARGIN for XS screen (all), S screen, M screen, L screen, XL screen
+@each $screenSizes, $values in brkpnts.$breakpoints {
+  @media screen and (min-width: map.get($values, 'min-width')) {
+    @for $i from 0 through 7 {
+      // .m{label}-{i}
+      .m#{map-get($values, 'label')}-#{$i} {
+        margin: #{$i}rem;
+      }
+      // .mY{label}-{i}
+      .mY#{map-get($values, 'label')}-#{$i} {
+        margin-top: #{$i}rem;
+        margin-bottom: #{$i}rem;
+      }
+      // .mX{label}-{i}
+      .mX#{map-get($values, 'label')}-#{$i} {
+        margin-left: #{$i}rem;
+        margin-right: #{$i}rem;
+      }
+      // .mTop-{i}
+      .mTop#{map-get($values, 'label')}-#{$i} {
+        margin-top: #{$i}rem;
+      }
+      // .mBtm-{i}
+      .mBtm#{map-get($values, 'label')}-#{$i} {
+        margin-bottom: #{$i}rem;
+      }
+    }
+  } 
 }
-// ------------- END MARGIN HELPERS ------------- 
+
+// MARGIN for XXXL screen
+@media screen and (min-width: map.get(brkpnts.$breakpointXXXL, 'min-width')) {
+  @for $i from 0 through 7 {
+    // .m-{label}-{i}
+    .m-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      margin: #{$i}rem;
+    }
+    // .mY-{label}-{i}
+    .mY-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      margin-top: #{$i}rem;
+      margin-bottom: #{$i}rem;
+    }
+    // .mX-{label}-{i}
+    .mX-#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      margin-left: #{$i}rem;
+      margin-right: #{$i}rem;
+    }
+    // .mTop-{i}
+    .mTop#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      margin-top: #{$i}rem;
+    }
+    // .mBtm-{i}
+    .mBtm#{map-get(brkpnts.$breakpointXXXL, 'label')}-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+  }
+} 
+// ------------- END MARGIN RESPONSIVE HELPERS ------------- 
+
+// ---------------------------------
+// END MARGIN HELPERS
+// ---------------------------------
