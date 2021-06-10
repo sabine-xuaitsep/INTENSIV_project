@@ -1,0 +1,79 @@
+// ./hectordenize/scss/components/_pagenav.scss
+// PAGENAV COMPONENT
+
+@use '../core/typography' as typo;
+@use '../core/colors';
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE PAGENAV HELPERS ---------
+// ------------------------------------------------------------------
+
+// .pageNavContainer, .pageNav, .isActive, .inactive
+
+
+
+// ------------------------------------------------------------------
+// --------- PAGENAV VARIABLES ---------
+// ------------------------------------------------------------------
+
+$pageNav-font:                      typo.$fontSecondary;
+$pageNavItem-borderColor:           colors.$colorLight;
+$isActive-pageNavItem-bckgrndColor: colors.$colorLight;
+$hover-pageNavItem-borderColor:     colors.$colorAccent;
+
+
+
+// ------------------------------------------------------------------
+// --------- PAGENAV SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+
+// PAGE NAV -------------
+.pageNavContainer {
+  padding: 1rem 0 5rem 0;
+  text-align: center;
+  .pageNav {
+    margin: 0;
+    padding: 0;
+    font-family: $pageNav-font;
+    font-size: 0;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  
+    li {
+      display: inline-block;
+      height: 3rem;
+      width: 3rem;
+      border: 2px solid $pageNavItem-borderColor;
+      margin-left: -2px;
+      padding: 0;
+      font-size: .8rem;
+      line-height: 2.7rem;
+      list-style: none;   
+  
+      a {
+        display: block;
+        border: none;
+        text-decoration: none;
+        color: unset;
+      }
+    }
+    
+    li:last-of-type {
+      width: 7rem;
+        i {
+          padding-left: 1rem;
+        }
+    }
+  
+    li.isActive {
+      background-color: $isActive-pageNavItem-bckgrndColor;
+    }
+  
+    li:hover:not(.inactive) {
+      border: 2px solid $hover-pageNavItem-borderColor;
+      + li {
+        border-left: 2px solid $hover-pageNavItem-borderColor;
+      }
+    }
+  }
+}
