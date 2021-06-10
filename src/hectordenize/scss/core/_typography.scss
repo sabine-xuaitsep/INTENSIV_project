@@ -10,7 +10,7 @@
 
 // .title0, .title1, .title2, .title3, .title4, .title5, .title6
 // .subtitle1, .subtitle2, .subtitle3, .subtitle4, .subtitle5, .subtitle6
-// .link
+// .link, .noLink
 
 
 
@@ -199,6 +199,14 @@ a, .link {
   &:hover {
     border-bottom:  $hover-link-borderBottom;
     color:          $hover-link-color;
+  }
+}
+
+.noLink { 
+  border-bottom:    none;
+  text-decoration:  none;
+  &:hover {
+    border-bottom:  none;
   }
 }
 
