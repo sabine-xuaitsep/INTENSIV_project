@@ -1,5 +1,5 @@
-// ./hectordenize/scss/components/_socials.scss
-// SOCIALS COMPONENT
+// ./hectordenize/scss/modules/_socials.scss
+// SOCIALS MODULE
 
 @use '../core/colors';
 
@@ -16,14 +16,16 @@
 // ------------------------------------------------------------------
 
 // ------------- SOCIALS COLORS ------------- 
-$icon-color: colors.$colorDark;
-$icon--alt-borderColor: colors.$colorLight;
+$icon-color:                  colors.$colorDark;
+$icon--alt-borderColor:       colors.$colorLight;
 
-$link-txtColor: colors.$colorDark;
-$hover-link-txtColor: colors.$colorAccent;
+$link-txtColor:               colors.$colorDark;
+$hover-link-txtColor:         colors.$colorAccent;
 
-$hover-icon-color: colors.$colorAccent;
+$hover-icon-color:            colors.$colorAccent;
 $hover-icon--alt-borderColor: colors.$colorAccent;
+
+$label-display:               none;
 
 
 
@@ -93,7 +95,7 @@ $hover-icon--alt-borderColor: colors.$colorAccent;
     }
 
     .label {
-      display: none;
+      display: $label-display;
       margin: 0 .5rem;
     }
   }
