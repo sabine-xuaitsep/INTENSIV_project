@@ -1,0 +1,117 @@
+// ./hectordenize/scss/components/_nav_trigger.scss
+// NAV TRIGGER COMPONENT
+
+@use '../core/typography' as typo;
+@use '../core/colors';
+
+// ------------------------------------------------------------------
+// --------- AVAILABLE NAV TRIGGER ID & CLASS ---------
+// ------------------------------------------------------------------
+
+// #navTrigger, #menu
+// .menuBtn, menuIcon, .closeMenu
+
+// --- HTML CORE ---
+/*
+<button id="navTrigger" data-target="menu" class="menuBtn" type="button">
+  <i class="menuIcon"></i>
+</button>
+<div id="menu"><nav> ... </nav></div>
+*/
+// --- END HTML CORE ---
+
+
+
+// ------------------------------------------------------------------
+// --------- NAV TRIGGER VARIABLES ---------
+// ------------------------------------------------------------------
+
+$btn-typo: typo.$fontSecondary;
+$btn-color: colors.$colorWhite;
+$hover-btn-color: colors.$colorAccent;
+
+$close-btn-color: colors.$colorDark;
+
+$menu-bckgrndColor: colors.$colorWhite;
+$menu-width: 18rem;
+$menu-side: right;
+
+
+
+// ------------------------------------------------------------------
+// --------- NAV TRIGGER SPECIFICATIONS ---------
+// ------------------------------------------------------------------
+#navTrigger {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  padding: .3rem 1rem;
+  position: fixed;
+  #{$menu-side}: 1rem;
+  top: 1rem;
+
+  &.menuBtn {
+    // BOX
+    position: fixed;
+    z-index: 1;
+    // FONT
+    color: $btn-color;
+    font-family: $btn-typo;
+    letter-spacing: 0.1em;
+    line-height: 2.5;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $hover-btn-color;
+    }
+
+    .menuIcon {
+      font-size: .8rem;
+      font-style: normal;
+      &::before {
+        content: "\f0c9";
+        padding-right: .3rem;
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900; 
+      }
+      &::after {
+        content: 'Menu';
+      }
+    }
+  }
+
+  &.closeMenu {
+    z-index: 2;
+    color: $close-btn-color;
+
+    .menuIcon {
+      font-size: 1.1rem;
+      &::before {
+        content: "\f00d";
+        padding: 0;
+      }
+      &::after {
+        content: '';
+      }
+    }
+  }
+}
+
+#menu {
+  background-color: $menu-bckgrndColor;
+  display: block;
+  height: 100%;
+  width: #{$menu-width};
+  position: fixed;
+  top: 0;
+  #{$menu-side}: -#{$menu-width};
+  transition: $menu-side 1s ease-in-out;
+  z-index: 1;
+
+  &.navMobileOn {
+    #{$menu-side}: 0;
+  }
+}
+

@@ -10,13 +10,16 @@
 </head>
 <body>
 
-  <header class="color-white">
-    <div class="container appHeader txt-center">
+  <header>
+    <div class="container appHeader txt-center color-white">
       <h1 class="appTitle"><span class="block">This is</span> Intensiv'</h1>
-      <h2 class="appSubtitle subtitle1">A fully responsive HTML5 + CSS3 designed by <a href="https://github.com/sabine-xuaitsep" class="color-white">SaBiNeXuaiTseP</a> for <a href="https://www.promotion-sociale.be/" class="color-white">IEPS</a> and release for free under the <a href="https://creativecommons.org/licenses/by/4.0/" class="color-white">Creative Commons license.</a></h2>
+      <h2 class="appSubtitle subtitle1">A fully responsive HTML5 + CSS3 designed by <a href="https://github.com/sabine-xuaitsep" class="color-white">SaBiNeXuaiTseP</a> for <a href="https://www.promotion-sociale.be/" class="color-white">IEPS Fléron</a> and release for free under the <a href="https://creativecommons.org/licenses/by/4.0/" class="color-white">Creative Commons license.</a></h2>
       <div class="title2 appLogo"><a href="./index.html" class="color-white">Intensiv'</a></div>
     </div>
-    <div class="container mainNavContainer bckgrnd-nav">
+
+    <button id="navTrigger" data-target="menu" class="menuBtn" type="button"><i class="menuIcon"></i></button>
+
+    <div class="container" id="menu">
       <nav>
         <ul class="mainNav">
           <li class="isActive"><a href="./index.html">This is Intensiv'</a></li>
@@ -37,10 +40,9 @@
 
     <article class="p-rspnsv">
       <header class="pTop-5 txt-center">
-        <div class="metaContainer">
-          <div class="metaData">
-            <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
-          </div>
+        <div class="lineMeta"></div>
+        <div class="metaData--lined">
+          <time datetime="1983-10-27">October 27, 1983</time> | Author: Sabine Xuaitsep
         </div>
         <h1 class="title1 pTop-4 pBtm-1">
           <a href="./generic.html" class="noLink">

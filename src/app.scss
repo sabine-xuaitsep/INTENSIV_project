@@ -12,22 +12,16 @@ body {
 
 
 
-// NAV BACKGROUND -------------
-.bckgrnd-nav {
-  background: radial-gradient(#6a605a, #494e53);
-}
-
-
-
+// APP LOGO -------------
 .appLogo {
-  display: inline-block;
   border: 4px solid main.$colorWhite;
+  display: inline-block;
   margin: 5rem 0;
   padding: 0;
 
   a {
-    display: block;
     border: none;
+    display: block;
     padding: 1rem 1.5rem;
   }
 
@@ -37,76 +31,77 @@ body {
 }
 
 
+@media screen and (min-width: 0) and (max-width: 991px) {
 
-// MAIN NAV -------------
-.mainNavContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mainNav {
-  font-size: 0;
-  li {
-    display: inline-block;
-    list-style: none;
-    a {
-      // BOX
+  // MAIN NAV -------------
+  .mainNav {
+    font-size: .8rem;
+    margin: 0;
+    padding: 4rem 2rem 2rem 2rem;
+    li {
       display: block;
-      border: none;
-      padding: 1rem 2rem;
-      // FONT
-      color: #fff;
-      font-family: main.$fontSecondary;
-      font-size: .8rem;
-      text-transform: uppercase;
-      text-decoration: none;
-      &:hover {
-        background: rgba(113, 121, 129, .3);
+      padding: 0;
+      list-style: none;
+      a {
+        // BOX
+        display: block;
+        border-bottom: 2px solid main.$colorLight;
+        padding: 1rem .5rem;
+        // FONT
+        font-family: main.$fontSecondary;
+        text-transform: uppercase;
+        text-decoration: none;
       }
-    }
-    &.isActive a {
-      background: #fff;
-      color: main.$colorDark;
-      &:hover {
-        color: main.$colorAccent;
+      &:last-of-type a {
+        border: none;
       }
     }
   }
-}
 
-
-
-// SOCIAL NAV -------------
-.socialNav.social {
-  margin: 0;
-  padding-right: 1.5rem;
-    i {
-      color: #fff;
+  // SOCIAL NAV -------------
+  .socialNav {
+    margin: 0;
+    padding: 0 0 0 2rem;
+    li {
+      a:hover i::before {
+        border: 2px solid main.$colorAccent;
+        transition: color .1s ease-in-out;
+      }
+      i {
+        margin-right: 0;
+        &::before {
+          border: 2px solid main.$colorLight;
+          border-radius: 50%;
+          height: 1.3rem;
+          width: 1.3rem;
+          font-size: 1rem;
+          line-height: 1.3rem;
+        }
+      }
     }
+  }
 }
 
 
 
 // META DATA -------------
-.metaContainer {
-  width: 100%;
-  height: 2px;
-  background-color: main.$colorLight;
-  .metaData {
-    display: inline-block;
-    background-color: main.$colorWhite;
-    padding: 0 1rem;
-    position: relative;
-    top: -20px;
-    font-size: .9rem;
-  }
-}
-
 .metaData {
   font-size: .8rem;
 }
 
+.lineMeta {
+  background-color: main.$colorLight;
+  height: 2px;
+  width: 100%;
+}
+.metaData--lined {
+  background-color: main.$colorWhite;
+  display: inline-block;
+  padding: 0 1rem;
+  position: relative;
+  top: -22px;
+  font-size: .9rem;
+}
 
 
 // FOOTER -------------
@@ -127,8 +122,8 @@ footer {
       font-size: 0.8rem;
     }
     .postalAddress {
-      vertical-align: top;
       padding-top: .4rem;
+      vertical-align: top;
     }
   }
   .social {
@@ -137,3 +132,76 @@ footer {
     }    
   }
 }
+
+
+
+// ---------------------------------
+// FROM L SCREEN 
+// ---------------------------------
+
+@media screen and (min-width: 992px) {
+
+  #navTrigger {
+    display: none;
+  }
+
+  #menu {
+    background: radial-gradient(#6a605a, #494e53);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // --- RESET RELATED TO NAV TRIGGER COMPONENT ---
+    height: initial;
+    width: initial;
+    position: initial;
+    top: initial;
+    right: initial;
+    transition: none;
+    z-index: initial;
+    // --- END RESET RELATED TO NAV TRIGGER COMPONENT ---
+
+    // MAIN NAV -------------
+    .mainNav {
+      font-size: 0;
+      li {
+        display: inline-block;
+        list-style: none;
+        a {
+          // BOX
+          border: none;
+          display: block;
+          padding: 1rem 2rem;
+          // FONT
+          color: #fff;
+          font-family: main.$fontSecondary;
+          font-size: .8rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          &:hover {
+            background: rgba(113, 121, 129, .3);
+          }
+        }
+        &.isActive a {
+          background: #fff;
+          color: main.$colorDark;
+          &:hover {
+            color: main.$colorAccent;
+          }
+        }
+      }
+    }
+  
+    // SOCIAL NAV -------------
+    .socialNav {
+      margin: 0;
+      padding-right: 1.5rem;
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// ---------------------------------
+// END FROM L SCREEN 
+// ---------------------------------
