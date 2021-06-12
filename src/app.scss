@@ -33,6 +33,19 @@ body {
 
 @media screen and (min-width: 0) and (max-width: 991px) {
 
+  // --- NAV SCROLL SPY JS COMPONENT ---
+  #navTrigger.navScrollSpyTarget:not(.closeMenu) {
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 10px rgba(113, 121, 129, .5);
+    color: main.$colorDark;
+    transition: background-color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out;
+    &:hover {
+      color: main.$colorAccent;
+    }
+  }
+  // --- END NAV SCROLL SPY JS COMPONENT ---
+
   // MAIN NAV -------------
   .mainNav {
     font-size: .8rem;
