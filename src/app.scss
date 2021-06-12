@@ -10,26 +10,161 @@ body {
   background: radial-gradient(50% 13% at 50% 7%, main.$colorDusky, main.$colorDark);
 }
 
+.slideDown {
+  border: 2px solid main.$colorWhite;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  color: main.$colorWhite;
+  &:hover {
+    border: 2px solid main.$colorAccent;
+    color: main.$colorAccent;
+  }
+  i {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 0) {
+  .appHeader {
+    opacity: 0;
+    position: relative;
+    top: 11rem;
+    transition: all 1000ms;
+
+    &.isVisible {
+      opacity: 1;
+      top: 9rem;
+      z-index: 1;
+    }
+
+    .slideDown {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+
+  .appTitle {
+    font-size: 3.7rem;
+  }
+
+  .title1.hero {
+    font-size: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 991px) {
+
+  .appTitle {
+    margin-top: 17rem;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .appHeader {
+
+    .slideDown {
+      display: inline-block;
+    }
+
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .appTitle {
+    margin-top: 13rem;
+  }
+}
+// --------------------------------------------
+
 
 
 // APP LOGO -------------
 .appLogo {
-  border: 4px solid main.$colorWhite;
-  display: inline-block;
-  margin: 5rem 0;
-  padding: 0;
+  opacity: 0;
+  position: relative;
+  top: 2rem;
+  transition: all 1000ms;
+  text-align: center;
 
-  a {
-    border: none;
-    display: block;
-    padding: 1rem 1.5rem;
+  &.isVisible {
+    opacity: 1;
+    top: 0;
+    z-index: 1;
   }
 
-  &:hover {
-    border: 4px solid main.$colorAccent;
+  a {
+    display: inline-block;
+    border: 4px solid main.$colorWhite;
+    padding: 1rem 1.5rem;
+    &:hover {
+      border: 4px solid main.$colorAccent;
+    }
+  }
+
+
+}
+
+
+
+// META DATA -------------
+.metaData {
+  font-size: .8rem;
+}
+
+.lineMeta {
+  background-color: main.$colorLight;
+  height: 2px;
+  width: 100%;
+}
+.metaData--lined {
+  background-color: main.$colorWhite;
+  display: inline-block;
+  padding: 0 1rem;
+  position: relative;
+  top: -22px;
+  font-size: .9rem;
+}
+
+
+// FOOTER -------------
+footer {
+  textarea {
+    height: 7em;
+  }
+  .btn {
+    border-color: main.$colorDim;
+    color: main.$colorDim;
+  }
+  .addressContainer {
+    .title6 {
+      display: inline-block;
+      width: 90px;
+    }
+    address {
+      font-size: 0.8rem;
+    }
+    .postalAddress {
+      padding-top: .4rem;
+      vertical-align: top;
+    }
+  }
+  .social {
+    .icon--alt {
+      color: main.$colorDim;
+    }    
   }
 }
 
+
+// ---------------------------------
+// FROM XS TO M SCREEN 
+// ---------------------------------
 
 @media screen and (min-width: 0) and (max-width: 991px) {
 
@@ -87,7 +222,7 @@ body {
           border-radius: 50%;
           height: 1.3rem;
           width: 1.3rem;
-          font-size: 1rem;
+          font-size: 1rem !important;
           line-height: 1.3rem;
         }
       }
@@ -95,56 +230,9 @@ body {
   }
 }
 
-
-
-// META DATA -------------
-.metaData {
-  font-size: .8rem;
-}
-
-.lineMeta {
-  background-color: main.$colorLight;
-  height: 2px;
-  width: 100%;
-}
-.metaData--lined {
-  background-color: main.$colorWhite;
-  display: inline-block;
-  padding: 0 1rem;
-  position: relative;
-  top: -22px;
-  font-size: .9rem;
-}
-
-
-// FOOTER -------------
-footer {
-  textarea {
-    height: 7em;
-  }
-  .btn {
-    border-color: main.$colorDim;
-    color: main.$colorDim;
-  }
-  .addressContainer {
-    .title6 {
-      display: inline-block;
-      width: 90px;
-    }
-    address {
-      font-size: 0.8rem;
-    }
-    .postalAddress {
-      padding-top: .4rem;
-      vertical-align: top;
-    }
-  }
-  .social {
-    .icon--alt {
-      color: main.$colorDim;
-    }    
-  }
-}
+// ---------------------------------
+// END FROM XS TO M SCREEN 
+// ---------------------------------
 
 
 
