@@ -10,84 +10,40 @@ body {
   background: radial-gradient(50% 13% at 50% 7%, main.$colorDusky, main.$colorDark);
 }
 
-.slideDown {
-  border: 2px solid main.$colorWhite;
-  border-radius: 50%;
-  transition: all .2s ease-in-out;
-  color: main.$colorWhite;
-  &:hover {
-    border: 2px solid main.$colorAccent;
-    color: main.$colorAccent;
-  }
-  i {
-    height: 4rem;
-    width: 4rem;
-    line-height: 4rem;
-    font-size: 1.3rem;
-  }
-}
 
-@media screen and (min-width: 0) {
-  .appHeader {
-    opacity: 0;
-    position: relative;
-    top: 11rem;
-    transition: all 1000ms;
 
-    &.isVisible {
-      opacity: 1;
-      top: 9rem;
-      z-index: 1;
+// APP HEADER -------------
+.appHeader {
+  opacity: 0;
+  position: relative;
+  top: 11rem;
+  transition: all 1000ms;
+
+  &.isVisible {
+    opacity: 1;
+    top: 9rem;
+    z-index: 1;
+  }
+
+  // ARROW SLIDEDOWN -------------
+  .slideDown {
+    border: 2px solid main.$colorWhite;
+    border-radius: 50%;
+    display: none;
+    transition: all .2s ease-in-out;
+    color: main.$colorWhite;
+    &:hover {
+      border: 2px solid main.$colorAccent;
+      color: main.$colorAccent;
     }
-
-    .slideDown {
-      display: none;
+    i {
+      height: 4rem;
+      width: 4rem;
+      line-height: 4rem;
+      font-size: 1.3rem;
     }
   }
 }
-
-@media screen and (max-width: 575px) {
-
-  .grid.grid-from-s {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 0) and (max-width: 767px) {
-
-  .appTitle {
-    font-size: 3.7rem;
-  }
-
-  .title1.hero {
-    font-size: 2.7rem;
-  }
-}
-
-@media screen and (min-width: 0) and (max-width: 991px) {
-
-  .appTitle {
-    margin-top: 17rem;
-  }
-}
-
-
-@media screen and (min-width: 768px) {
-  .appHeader {
-
-    .slideDown {
-      display: inline-block;
-    }
-
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .appTitle {
-    margin-top: 13rem;
-  }
-}
-// --------------------------------------------
 
 
 
@@ -113,8 +69,6 @@ body {
       border: 4px solid main.$colorAccent;
     }
   }
-
-
 }
 
 
@@ -137,6 +91,7 @@ body {
   top: -22px;
   font-size: .9rem;
 }
+
 
 
 // FOOTER -------------
@@ -169,11 +124,33 @@ footer {
 }
 
 
+
 // ---------------------------------
-// FROM XS TO M SCREEN 
+// FROM XS TO S SCREEN
+// ---------------------------------
+
+@media screen and (min-width: 0) and (max-width: 767px) {
+
+  .appTitle {
+    font-size: 3.7rem;
+  }
+
+  .title1.hero {
+    font-size: 2.7rem;
+  }
+}
+
+
+
+// ---------------------------------
+// FROM XS TO M SCREEN
 // ---------------------------------
 
 @media screen and (min-width: 0) and (max-width: 991px) {
+
+  .appTitle {
+    margin-top: 17rem;
+  }
 
   // --- NAV SCROLL SPY JS COMPONENT ---
   #navTrigger.navScrollSpyTarget:not(.closeMenu) {
@@ -186,7 +163,6 @@ footer {
       color: main.$colorAccent;
     }
   }
-  // --- END NAV SCROLL SPY JS COMPONENT ---
 
   // MAIN NAV -------------
   .mainNav {
@@ -237,17 +213,43 @@ footer {
   }
 }
 
+
+
 // ---------------------------------
-// END FROM XS TO M SCREEN 
+// FROM S SCREEN
 // ---------------------------------
+
+@media screen and (max-width: 575px) {
+
+  .grid.grid-from-s {
+    display: block;
+  }
+}
 
 
 
 // ---------------------------------
-// FROM L SCREEN 
+// FROM M SCREEN
+// ---------------------------------
+
+@media screen and (min-width: 768px) {
+
+  .appHeader .slideDown {
+    display: inline-block;
+  }
+}
+
+
+
+// ---------------------------------
+// FROM L SCREEN
 // ---------------------------------
 
 @media screen and (min-width: 992px) {
+
+  .appTitle {
+    margin-top: 13rem;
+  }
 
   #navTrigger {
     display: none;
@@ -303,13 +305,9 @@ footer {
     .socialNav {
       margin: 0;
       padding-right: 1.5rem;
-      i {
+      a:not(:hover) i {
         color: #fff;
       }
     }
   }
 }
-
-// ---------------------------------
-// END FROM L SCREEN 
-// ---------------------------------
