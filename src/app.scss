@@ -46,6 +46,13 @@ body {
   }
 }
 
+@media screen and (max-width: 575px) {
+
+  .grid.grid-from-s {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 0) and (max-width: 767px) {
 
   .appTitle {
