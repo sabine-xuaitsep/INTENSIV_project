@@ -1,7 +1,7 @@
 // ./hectordenize/scss/components/_images.scss
 // IMAGES LAYOUT
 
-
+@use '../core/init';
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE IMAGES HELPERS ---------
@@ -15,9 +15,19 @@
 // --------- IMAGES SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
+// ------------- RESET -------------
+figure {
+  @include init.reset;
+}
+// ------------- END RESET -------------
+
+
+
 img {
   max-width: 100%;
 }
+
+
 
 .ratioBox {
   margin: 0;
@@ -35,6 +45,7 @@ img {
     object-fit: cover;
   }
 }
+
 
 
 .zoomBox {

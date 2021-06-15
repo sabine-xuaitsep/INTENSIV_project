@@ -20,6 +20,10 @@ $bodyMargin: 0 auto;
 // --------- INITIALIZATON SPECIFICATIONS ---------
 // ------------------------------------------------------------------
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: $boxSizingDefault;
 }
@@ -28,11 +32,3 @@ body {
   margin: $bodyMargin;
   overflow-wrap: break-word;
 }
-
-
-
-// ------------- RESET -------------
-figure {
-  @include reset;
-}
-// ------------- END RESET -------------

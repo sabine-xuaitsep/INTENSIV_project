@@ -6,5 +6,11 @@
 @forward 'nav_trigger';
 // #navTrigger, #menu
 // .menuBtn, menuIcon, .closeMenu
+/*
+<button id="navTrigger" data-target="menu" class="menuBtn" type="button">
+  <i class="menuIcon"></i>
+</button>
+<div id="menu"><nav> ... </nav></div>
+*/
 
 // ------------------------------------------------------------------

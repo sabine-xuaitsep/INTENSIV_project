@@ -21,7 +21,7 @@
 
 // ------------------------------------------------------------------
 @forward 'images';
-// .ratioContainer, .zoomContainer
+// .ratioBox, .zoomBox
 
 // ------------------------------------------------------------------
 @forward 'grid';
@@ -111,11 +111,11 @@
 // {label} === from '../core/breakpoints'
 // {i} = from 0 trough 7
 // ------------- END info ------------- 
-// .p{label}-{i}    padding: {i}em; 
+// .p{label}-{i}           padding: {i}em; 
 //    e.g.: p-1     === padding: 1rem from XS screen || ALL screens
 //    e.g.: p-l-3   === padding: 3rem from L screen
-// .pY{label}-{i}   padding-top: {i}em; padding-bottom: {i}em;
-// .pX{label}-{i}   padding-left: {i}em; padding-right: {i}em;
+// .pY{label}-{i}          padding-top: {i}em; padding-bottom: {i}em;
+// .pX{label}-{i}          padding-left: {i}em; padding-right: {i}em;
 // .pTop{label}-{i}        padding-top: {i}em;
 // .pBtm{label}-{i}        padding-bottom: {i}em;
 // .m{label}-{i}           margin: {i}em;

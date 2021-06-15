@@ -1,8 +1,6 @@
 // ./hectordenize/js/components/_nav_trigger.js
 // NAV TRIGGER COMPONENT
 
-"use strict";
-
 export function navTrigger() {
 
   const menuBtn = document.getElementById('navTrigger');
