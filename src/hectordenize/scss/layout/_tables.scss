@@ -3,6 +3,7 @@
 
 @use '../core/typography' as typo;
 @use '../core/colors';
+@use '../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE TABLES HELPERS ---------
@@ -31,6 +32,8 @@ $theadTextTransform:    uppercase;
 $theadAlign:            left;
 
 $cellPadding:           .5rem;
+
+$table-fontSize-XSonly:   .8rem;
 // ------------- END TABLE VARIABLES -------------
 
 
@@ -96,4 +99,13 @@ table {
 .table--alt {
   @extend %table;
   @include tbodyAlt;
+}
+
+
+
+@media screen and (min-width: map-get(brkpnts.$breakpoints, 'xs', 'min-width')) and (max-width: map-get(brkpnts.$breakpoints, 'xs', 'max-width')) { 
+
+  table {
+    font-size: $table-fontSize-XSonly;
+  }
 }

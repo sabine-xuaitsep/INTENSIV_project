@@ -3,6 +3,7 @@
 
 @use '../core/typography' as typo;
 @use '../core/colors';
+@use '../core/breakpoints' as brkpnts;
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE BUTTONS HELPERS ---------
@@ -36,6 +37,8 @@ $btnPrimary-color:              colors.$colorWhite;
 
 $hover-btnPrimary-bckgrndColor:  colors.$colorAccent;
 $hover-btnPrimary-color:         colors.$colorWhite;
+
+$btn-paddingLeftRight-XSonly:      1rem;
 
 
 
@@ -136,4 +139,14 @@ $btnFitWidth: 100%;
 .btn--fit {
   @extend %btn;
   width: $btnFitWidth;
+}
+
+
+
+@media screen and (min-width: map-get(brkpnts.$breakpoints, 'xs', 'min-width')) and (max-width: map-get(brkpnts.$breakpoints, 'xs', 'max-width')) { 
+
+  .btn, .btn--primary, .btn--large, .btn--small, .btn--fit {
+    padding-left: $btn-paddingLeftRight-XSonly;
+    padding-right: $btn-paddingLeftRight-XSonly;
+  }
 }

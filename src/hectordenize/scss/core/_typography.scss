@@ -2,7 +2,10 @@
 // TYPOGRAPHY CORE
 
 @use 'colors';
+@use '../core/breakpoints' as brkpnts;
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;1,300&family=Source+Sans+Pro:wght@900&display=swap');
+
+
 
 // ------------------------------------------------------------------
 // --------- AVAILABLE TYPOGRAPHY HELPERS ---------
@@ -48,15 +51,6 @@ $hover-link-borderBottom:   $hover-link-borderColor 1px dotted;
 
 
 
-// ------------- TYPORULES MIXIN -------------
-// NOT USED BUT CAN BE HELPFULL
-@mixin typoRules($property, $value) {
-  #{$property}: #{$value};
-}
-// ------------- END TYPORULES MIXIN -------------
-
-
-
 // ---------------------------------
 // DEFAULT TYPOGRAPHY
 // ---------------------------------
@@ -67,7 +61,7 @@ $hover-link-borderBottom:   $hover-link-borderColor 1px dotted;
   font-family:      $fontDefault;
   font-size:        1rem;
   font-weight:      300;
-  letter-spacing:   .025em;
+  letter-spacing:   .025rem;
   line-height:      2.5;
 }
 
@@ -129,6 +123,15 @@ $title3-fontSize: 1.5rem; // h3
 $title4-fontSize: 1.1rem; // h4
 $title5-fontSize: 1rem; // h5
 $title6-fontSize: .8rem; // h6
+
+$title0-fontSize-XSonly: 3rem; // XS h1
+$title1-fontSize-XSonly: 2rem;  // XS
+$title2-fontSize-XSonly: 1.7rem; // XS h2
+$title3-fontSize-XSonly: 1.4rem; // XS h3
+
+$title0-fontSize-Sonly: 3.7rem; // S h1
+$title1-fontSize-Sonly: 2.7rem; // S
+
 
 %titleTypoCommonValues {
   // BOX
@@ -203,7 +206,7 @@ a, .link {
   }
 }
 
-.noLink { 
+.nolink { 
   border-bottom:    none;
   text-decoration:  none;
   &:hover {
@@ -267,6 +270,42 @@ h5, .title5 {
 
 h6, .title6 { 
   font-size: $title6-fontSize;
+}
+
+
+
+// ONLY ON XS SCREEN ---------------------------------
+@media screen and (min-width: map-get(brkpnts.$breakpoints, 'xs', 'min-width')) and (max-width: map-get(brkpnts.$breakpoints, 'xs', 'max-width')) { 
+
+  h1, .title0 {
+    font-size: $title0-fontSize-XSonly;
+  }
+
+  .title1 {
+    font-size: $title1-fontSize-XSonly;
+  }
+
+  h2, .title2 {
+    font-size: $title2-fontSize-XSonly;
+  }
+
+  h3, .title3 {
+    font-size: $title3-fontSize-XSonly;
+  }
+}
+
+
+
+// ONLY ON S SCREEN ---------------------------------
+@media screen and (min-width: map-get(brkpnts.$breakpoints, 's', 'min-width')) and (max-width: map-get(brkpnts.$breakpoints, 's', 'max-width')) {
+
+  h1, .title0 {
+    font-size: $title0-fontSize-Sonly;
+  }
+
+  .title1 {
+    font-size: $title1-fontSize-Sonly;
+  }
 }
 //  ------------- END HEADERS -------------
 

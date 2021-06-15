@@ -126,17 +126,17 @@ footer {
 
 
 // ---------------------------------
-// FROM XS TO S SCREEN
+// ONLY ON XS SCREEN
 // ---------------------------------
 
-@media screen and (min-width: 0) and (max-width: 767px) {
+@media screen and (min-width: 0) and (max-width: 575px) { 
 
   .appTitle {
-    font-size: 3.7rem;
+    margin-top: 7rem;
   }
-
-  .title1.hero {
-    font-size: 2.7rem;
+  
+  .itemToHideOnXS {
+    display: none !important;
   }
 }
 
@@ -147,10 +147,6 @@ footer {
 // ---------------------------------
 
 @media screen and (min-width: 0) and (max-width: 991px) {
-
-  .appTitle {
-    margin-top: 17rem;
-  }
 
   // --- NAV SCROLL SPY JS COMPONENT ---
   #navTrigger.navScrollSpyTarget:not(.closeMenu) {
@@ -229,13 +225,31 @@ footer {
 
 
 // ---------------------------------
+// FROM S TO M SCREEN
+// ---------------------------------
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+  .appTitle {
+    margin-top: 17rem;
+  }
+}
+
+
+
+// ---------------------------------
 // FROM M SCREEN
 // ---------------------------------
 
 @media screen and (min-width: 768px) {
 
-  .appHeader .slideDown {
-    display: inline-block;
+  .appHeader {
+    .slideDown {
+      display: inline-block;
+    }
+    .appTitle {
+      margin-top: 13rem;
+    }
   }
 }
 
@@ -246,10 +260,6 @@ footer {
 // ---------------------------------
 
 @media screen and (min-width: 992px) {
-
-  .appTitle {
-    margin-top: 13rem;
-  }
 
   #navTrigger {
     display: none;
